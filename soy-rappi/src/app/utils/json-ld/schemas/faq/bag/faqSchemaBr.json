@@ -1,0 +1,19 @@
+{
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	"mainEntity": [{
+		"@type": "Question",
+		"name": "¿Necesito la mochila para empezar a hacer entregas?",
+		"acceptedAnswer": {
+			"@type": "Answer",
+			"text": "No es obligatorio tener la mochila para empezar a hacer entregas. Puedes empezar con cualquier maleta que tengas."
+		}
+	}, {
+		"@type": "Question",
+		"name": "¿Puedo empezar a entregar sin maleta?",
+		"acceptedAnswer": {
+			"@type": "Answer",
+			"text": "Sí, puedes empezar sin maleta. Sin embargo, te recomendamos usar alguna que te permita llevar los productos durante tus primeros días."
+		}
+	}]
+} 

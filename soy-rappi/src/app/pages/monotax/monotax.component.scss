@@ -1,0 +1,13 @@
+@import "../../../assets/css/tools/variable.scss";
+::ng-deep {
+  .delivery-banner {
+    h2 {
+      color: $white-color !important;
+    }
+  }
+  .image-gallary {
+    .image-gallary-sec {
+      margin: 0 !important;
+    }
+  }
+}

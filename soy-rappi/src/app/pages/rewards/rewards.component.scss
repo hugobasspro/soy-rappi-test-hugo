@@ -1,0 +1,23 @@
+@import "../../../assets/css/tools/variable.scss";
+::ng-deep{
+    .delivery-banner{
+      h2{
+        color: $white-color !important;
+      }
+    }
+    .rai-content{
+      .richtext-area{
+        .text-big{
+          @media (max-width: 1366px){
+            font-size: 1.5rem;
+          }
+          @media (max-width: 1280px){
+            font-size: 1.1rem;
+          }
+          @media (max-width: 991px){
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+}

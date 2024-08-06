@@ -1,0 +1,15 @@
+export const environment = {
+  production: true,
+  backendAPIURL: 'http://localhost:1337',
+  backendAPIPrefix: '',
+  recaptchaV3Key: 'recaptchakey',
+  rappiUrl: 'https://services.rappi.com',
+  rappiUrlAr: 'https://services.rappi.com.ar',
+  rappiUrlPe: 'https://services.rappi.pe',
+  rappiUrlEc: 'https://services.rappi.com.ec',
+  rappiUrlUy: 'https://services.rappi.com.uy',
+  rappiUrlCl: 'https://services.rappi.cl',
+  rappiUrlCr: 'https://services.rappi.co.cr',
+  rappiUrlBr: 'https://services.rappi.com.br',
+  rappiUrlMx: 'https://services.mxgrability.rappi.com',
+};

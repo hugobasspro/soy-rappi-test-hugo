@@ -1,0 +1,75 @@
+.remember {
+  display: flex;
+  flex-direction: column;
+  gap: 2.69rem;
+  padding: 0 1.63rem 8.69rem 1.62rem;
+  max-width: 1180px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 64rem) {
+    gap: 4.6875rem;
+    padding-bottom: 8.4375rem;
+  }
+
+  @media screen and (min-width: 85.375rem) {
+    padding-right: 0;
+    padding-left: 0;
+
+  }
+
+  &__title {
+    color: #FF4300;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 121%;
+  }
+
+  &__places {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.94rem;
+
+    @media screen and (min-width: 64rem) {
+      gap: 1.25rem;
+    }
+  }
+
+  &__place {
+    display: flex;
+    flex-direction: column;
+    width: min(23.75rem, 100%);
+    gap: 1rem;
+    border-radius: 1.25rem;
+    border: 0.0625rem solid #FF4300;
+    box-shadow: 0rem 0.125rem 0.625rem 0.125rem rgba(255, 67, 0, 0.10);
+
+
+
+    &-image {
+      border-radius: 1.25rem;
+    }
+
+    &-body {
+      display: flex;
+      flex-direction: column;
+      gap: 1.38rem;
+      color: #000;
+      padding: 0 1rem 4.13rem 0.81rem;
+    }
+
+    &-title {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 121%;
+    }
+
+    &-description {
+      text-align: center;
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 121%;
+    }
+  }
+}

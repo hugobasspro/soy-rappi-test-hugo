@@ -1,0 +1,144 @@
+:host ::ng-deep {
+  @media screen and (min-width: 64rem) {
+    display: flex;
+    justify-content: center;
+  }
+
+  ul.use-benefit__ul app-rich-text ul li {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000;
+  }
+
+  ul {
+    li {
+      &::before {
+        content: "";
+        background: none;
+      }
+    }
+  }
+}
+
+.use-benefit {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem max(0.94rem, 3.4976%) 5rem;
+  gap: 1.875rem;
+
+  @media screen and (min-width: 64rem) {
+    padding: 10.3125rem 8.125rem 3rem;
+    gap: 3.75rem;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9375rem;
+  }
+
+  &__title {
+    color: #000;
+    font-size: 2.8125rem;
+    font-weight: 500;
+    line-height: 121%;
+  }
+
+  &__description {
+    color: #000;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 121%;
+
+    @media screen and (min-width: 64rem) {
+      max-width: 60ch;
+    }
+
+    &--bold {
+      color: #ff4300;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.19rem;
+
+    @media screen and (min-width: 64rem) {
+      flex-direction: row;
+      gap: 7.1875rem;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 121%;
+
+    @media screen and (min-width: 64rem) {
+      gap: 2.69rem;
+    }
+  }
+
+  &__bold {
+    color: #ff4300;
+  }
+
+  &__ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.31rem;
+    margin-left: 2rem;
+    list-style: disc;
+
+    @media screen and (min-width: 64rem) {
+      max-width: 41ch;
+    }
+  }
+}
+
+.use-benefit-table {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 64rem) {
+    padding: 2.81rem max(0.94rem, 3.4976%) 0;
+    max-width: 36.3125rem;
+    padding: 0;
+  }
+
+  .table {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 121%;
+    border: 1px solid #ff4300 !important;
+    thead {
+      background: #fe3f23;
+      color: #fff;
+      th {
+        width: 14.875rem;
+        vertical-align: middle;
+        text-align: center;
+        padding: 0.625rem 1.25rem;
+      }
+    }
+    tr {
+      td {
+        padding: 0.625rem 15px;
+        border: 1px solid #ff4300 !important;
+      }
+      @media screen and (max-width: 47.9375rem) {
+        display: inherit;
+      }
+    }
+  }
+}

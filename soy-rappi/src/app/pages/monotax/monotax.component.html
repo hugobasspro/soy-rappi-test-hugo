@@ -1,0 +1,16 @@
+<app-left-text-banner [data]="monotaxData?.banner"></app-left-text-banner>
+<app-breadcrumb-tabs-block></app-breadcrumb-tabs-block>
+
+<app-title-text-block [data]="monotaxData?.monotaxTitleDescription"></app-title-text-block>
+<div class="image-gallary">
+    <app-image-gallery [bigImage]="uploadService.makeUrl(monotaxData?.gallery?.bigImage)"
+                       [smallImages]="[
+                            uploadService.makeUrl(monotaxData?.gallery?.smallImage1),
+                            uploadService.makeUrl(monotaxData?.gallery?.smallImage1),
+                            uploadService.makeUrl(monotaxData?.gallery?.smallImage1),
+                            uploadService.makeUrl(monotaxData?.gallery?.smallImage1),
+                       ]"></app-image-gallery>
+</div>
+
+<app-frequent-questions-block [data]="monotaxData?.frequentQuestions">
+</app-frequent-questions-block>

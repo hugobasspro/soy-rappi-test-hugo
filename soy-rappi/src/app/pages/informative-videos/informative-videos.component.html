@@ -1,0 +1,7 @@
+<app-left-text-banner  [data]="informative?.banner"></app-left-text-banner>
+<app-breadcrumb-tabs-block></app-breadcrumb-tabs-block>
+<section *ngFor="let section of informative?.multimedia">
+    <app-title-text-block [titleInformative]="section?.titleMultimedia"></app-title-text-block>
+    <app-multimedia-block *ngIf="section?.informativeMultimedia" [data]="(section?.informativeMultimedia) ? section?.informativeMultimedia : undefined"></app-multimedia-block>
+</section>
+<app-frequent-questions-block [data]="informative?.frequentQuestions"></app-frequent-questions-block>

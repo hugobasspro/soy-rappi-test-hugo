@@ -1,0 +1,73 @@
+
+@import "../../../assets/css/tools/variable.scss";
+.small-block-info{
+  margin-top: 200px;
+  background-color: $pink-orange-bg-color;
+  padding: 41px 0;
+  .small-block-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left-block{
+      img{
+        margin-top: -150px;
+        @media (max-width: 1024px){
+          width: 100%;
+        }
+        @media (max-width: 767px){
+          margin-top: 0;
+        }
+      }
+    }
+    .right-block{
+      max-width: 420px;
+      width: 100%;
+      margin-top: 20px;
+      .title{
+        font-family: 'pp_object_sansbold';
+        font-size: 2.375rem;
+        line-height: 46px;
+        color: $base-color;
+      }
+      .desc{
+        font-family: 'pp_object_sansregular';
+        font-size: 1.125rem;
+        line-height: 28px;
+        color: $base-color;
+        @media (max-width: 767px){
+          font-size: 1rem;
+          text-align: left;
+          padding: 0 15px;
+          line-height: initial;
+        }
+      }
+      @media (max-width: 991px){
+        text-align: center;
+      }
+    }
+    @media (max-width: 991px){
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 1024px){
+    margin-top: 140px;
+  }
+  @media (max-width: 767px){
+    margin-top: 40px;
+    padding: 25px 0;
+  }
+}
+
+
+::ng-deep{
+  .small-block-info{
+    .right-block{
+      .section-title{
+        @media (max-width: 767px){
+          font-size: 1.75rem !important;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+import { StrapiBaseModel } from '../../base/models/strapi-base-model';
+import { DepositionCard } from '../../models/blocks/deposition-card.interface';
+import { FormBanner } from '../../models/blocks/form-banner.interface';
+import { FrequentQuestionsBlock } from '../../models/blocks/frequent-questions.interface';
+import { MultimediaItemBlock } from '../../models/blocks/multimedia-item.interface';
+import { NewCard } from '../../models/blocks/new-card.interface';
+import { TabContentsBlock } from '../../models/blocks/tab-contents.interface';
+import { WelcomeMobileBlock } from '../../models/blocks/welcom-mobile.interface';
+import { NewsCards } from '../../models/partials/news-cards.interface';
+import { RegisterFormPlaceholder } from '../../models/partials/register-form-placeholder.interface';
+import { TitleDescriptionImage } from '../../models/partials/title-description-image.interface';
+import { VehicleTypeBox } from '../../models/partials/vehicle-type-box.interface';
+import { StrapiFile } from '../../upload/models/strapi-file';
+import { SeoInformation } from '../../seo/models/seo-information';
+
+export interface HomePage extends StrapiBaseModel {
+  formBanner: FormBanner;
+  benefitBoxes: TitleDescriptionImage[];
+  benefitsTitle: string;
+  created_at: Date;
+  depositionCard: DepositionCard;
+  depositionsTitle: string;
+  frequentQuestions: FrequentQuestionsBlock;
+  howToSteps: TitleDescriptionImage[];
+  howToTitle: string;
+  id: number;
+  locale: string;
+  multimedia: string[];
+  multimediaItem: MultimediaItemBlock;
+  newCard: NewCard;
+  published_at: Date;
+  readMoreButtonText: null;
+  registerFormPlaceholders: RegisterFormPlaceholder;
+  registerNow1: null;
+  registerNowBannerText: string;
+  tabContent: TabContentsBlock;
+  updated_at: Date;
+  vehicleTypeBox: VehicleTypeBox[];
+  vehicleTypeSubtitle: string;
+  vehicleTypeTitle: string;
+  welcomeMobile: WelcomeMobileBlock;
+  slug: string;
+  seoInformation: SeoInformation;
+}

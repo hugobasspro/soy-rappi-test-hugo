@@ -1,0 +1,9 @@
+<section class="blog-inner-banner" [style]="'background-image: url(' + uploadService.makeUrl((showMobileBanner) ? data!.bannerMobile : data!.banner) + ')'">
+  <div class="container">
+    <div class="blog-inner-banner-content">
+      <p class="date">{{date}}</p>
+      <h2>{{data?.title}}</h2>
+      <p class="description">{{data?.subTitle}}</p>
+    </div>
+  </div>
+</section>

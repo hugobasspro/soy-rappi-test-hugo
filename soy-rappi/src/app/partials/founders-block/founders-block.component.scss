@@ -1,0 +1,30 @@
+@import "../../../assets/css/tools/variable.scss";
+
+.fundadores{
+  background: $white-gray-color;
+  .card-title{
+    font-family: "pp_object_sansbold";
+    font-size: 2.375rem;
+    color: $base-color;
+    font-weight: bold;
+    @media (max-width: 991px) {
+      font-size: 1.75rem
+    }
+  }
+  .card{
+    img{
+      max-width: 328px;
+    }
+  }
+  .card-body {
+    padding: 1rem 0.5rem;
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+  }
+  .card-text{
+    font-family: "pp_object_sansregular";
+    color: $orange-color;
+    font-size: 1.125rem
+  }
+}

@@ -1,0 +1,14 @@
+<section class="section-content" *ngIf="">
+  <div class="additional-info-block">
+    <div class="additional-info-content">
+      <h2 class="section-title">
+        <app-rich-text [text]="title?.title"></app-rich-text>
+    </h2>
+
+      <p class="sm-dec">{{smallText}}</p>
+    </div>
+    <div class="additional-info-img">
+      <img [src]="image" class="img-fluid" />
+    </div>
+  </div>
+</section>

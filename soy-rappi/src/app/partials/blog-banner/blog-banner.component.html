@@ -1,0 +1,21 @@
+<section class="blog-banner" *ngIf="data"
+         [style]="'background-image: url(' + uploadService.makeUrl(!showMobileBanner ? data?.background : data?.backgroundMobile) + ')'">
+    <div class="container">
+        <div class="blog-banner-content">
+            <h2>{{data?.title}}</h2>
+            <div class="search-block">
+                <input type="text"
+                    placeholder="{{search}}" (keyup)="onKeyUp($event)">
+                <i class="search-icon"></i>
+            </div>
+            <div class="filter-box">
+                <span class="mt-1">{{filterText}}:</span>
+                <div>
+                    <span class="filter-label"
+                        *ngFor="let category of categories">{{category?.category}}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,11 @@
+<div class="deposition-card">
+   <img [src]="getImage(data?.image)" />
+   <div class="card-details">
+    <p class="quote">{{ data?.testimony }}</p>
+    <div class="author-details">
+      <hr>
+      <p class="author">{{ data?.name }}</p>
+      <p class="role">{{ data?.role }}</p>
+    </div>
+  </div>
+</div>

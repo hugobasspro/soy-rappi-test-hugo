@@ -1,0 +1,33 @@
+@import "../../../assets/css/tools/variable.scss";
+
+.section-title{
+  max-width: 60%;
+  margin: 0 auto;
+  @media (max-width: 767px){
+    max-width: none;
+  }
+}
+.tips-list{
+  margin: 0 7%;
+  padding-bottom: 80px;
+  li{
+    background-color: $white-color;
+    min-height: 70px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-left: 14px solid $light-orange-bg-color;
+    @media (max-width: 576px){
+      font-size: 0.875rem;
+    }
+  }
+  @media (max-width: 767px){
+    margin: 0;
+  }
+  @media (max-width: 576px){
+    padding-bottom: 40px;
+    margin: 0;
+  }
+}

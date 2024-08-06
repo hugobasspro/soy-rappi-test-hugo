@@ -1,0 +1,42 @@
+@import "../../../assets/css/tools/variable.scss";
+:host ::ng-deep {
+  .delivery-banner {
+    @media (max-width: 768px) {
+      background-position: 58% center !important;
+    }
+
+    @media (max-width: 414px) {
+      background-position: 42% 70% !important;
+    }
+    h2 {
+      color: $white-color !important;
+    }
+  }
+  .information-step {
+    .container {
+      .container {
+        padding: 0 10px;
+      }
+    }
+    .order-list {
+      li {
+        align-items: center;
+        div {
+          align-items: flex-start !important;
+          margin-bottom: 50px;
+          p {
+            min-height: 100px;
+            font-family: 'pp_object_sansregular';
+          }
+        }
+      }
+    }
+  }
+  .order-list {
+    margin-bottom: 50px;
+  }
+}
+
+.container {
+  margin-top: 50px;
+}

@@ -1,0 +1,54 @@
+@import "../../../assets/css/tools/variable.scss";
+
+.our-benefits {
+  font-family: "pp_object_sansregular";
+}
+
+.section-title {
+  font-style: normal;
+  font-weight: 800;
+  font-size: clamp(28px, 3.75vw, 32px);
+  line-height: 42px;
+  letter-spacing: -0.01em;
+  color: $base-color;
+    
+}
+.benefits-element {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  .slide-title {
+    font-family: "pp_object_sansbold";
+    font-weight: 800;
+    font-size: 24px;
+    color: $base-color;
+    @media (max-width: 475px) {
+      font-size: 20px;
+    }
+  }
+  .slide-dec {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: $base-gray-color;
+    min-height: 60px;
+    margin: 20px 5px 0px 5px;
+  }
+}
+.benefits-img {
+  width: 150px;
+  height: 150px;
+  justify-self: center;
+  align-self: center;
+  margin-bottom: 15px;
+  @media (max-width: 475px) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.owl-carousel .owl-nav {
+  position: initial !important;
+}

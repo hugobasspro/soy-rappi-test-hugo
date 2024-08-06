@@ -1,0 +1,66 @@
+@import "../../../assets/css/tools/variable.scss";
+::ng-deep {
+  .delivery-banner {
+    h2 {
+      color: $white-color !important;
+    }
+    @media (min-width: 1280px){
+      min-height: 366px !important;
+      padding-left: 76px;
+    }
+  }
+  .light-orange {
+    background-color: $pink-orange-bg-color;
+  }
+
+  .white {
+    background-color: $white-color;
+  }
+
+  .light-gray {
+    background-color: $white-gray-color;
+  }
+
+  .richtext-area ul li {
+    display: inline-block !important;
+
+    @media (min-width: 1410px) {
+      display: block !important;
+      line-height: 2.0rem !important;
+    }
+  
+  }
+  .richtext-area {
+    padding: 55px 20px;
+  }
+  .section-head{
+    .section-title{
+      .richtext-area{
+        padding: 20px 0 20px 0;
+      }
+      @media (max-width: 575px){
+        text-align: left;
+      }
+    }
+    @media (max-width: 575px){
+      padding: 0;
+    }
+  }
+
+}
+
+.top-icon-box {
+  .top-icon-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    .top-icon-block {
+      max-width: 50%;
+
+      width: 100%;
+      @media (max-width: 767px){
+        max-width: 100%;
+      }
+    }
+  }
+}

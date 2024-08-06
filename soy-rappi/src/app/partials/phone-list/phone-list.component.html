@@ -1,0 +1,24 @@
+<div class="right--list-block">
+    <div class="container">
+      <div class="right-list-content">
+        <div class="right-block">
+          <ul>
+            <li *ngFor="let listItem of listItems; let i = index">
+              <span>{{i+1}}.</span>
+              <ng-container *ngIf="listItem.btn ; else noBtn">
+                <a *ngIf="sharedFunctionsService.isExternalLink(listItem?.ctaUrl)"
+                [href]="listItem?.ctaUrl"
+                class="btn btn-gradient d-flex align-items-center justify-content-center">{{listItem?.ctaLabel}}</a>
+                <a *ngIf="!sharedFunctionsService.isExternalLink(listItem?.ctaUrl)"
+                    [routerLink]="sharedFunctionsService.removeInitialSlash(listItem?.ctaUrl)"
+                    class="btn btn-gradient d-flex align-items-center justify-content-center">{{listItem?.ctaLabel}}</a>
+              </ng-container>
+              <ng-template #noBtn>
+                <p>{{listItem.text}}</p>
+              </ng-template>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>

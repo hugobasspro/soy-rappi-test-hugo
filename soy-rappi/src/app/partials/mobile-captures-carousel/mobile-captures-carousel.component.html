@@ -1,0 +1,45 @@
+<section class="section-content" [style]="'background-color:' + (bgColor ? bgColor : '#fff0dd') + ';'" *ngIf="validateData(captures); else dinamycData">
+    <div class="container">
+        <owl-carousel-o [options]="customOptions" [ngClass]="'curiosities-slider'" (translated)="getData($event)">
+            <ng-container *ngFor="let capture of captures;let i = index">
+                <ng-template carouselSlide>
+                    <div class="slider-img-block">
+                        <img [src]="uploadService.makeUrl(capture.image)" />
+                        <span>
+                            <ng-container *ngIf="capture.description">
+                                {{capture.description}}
+                            </ng-container>
+                        </span>
+                    </div>
+                </ng-template>
+            </ng-container>
+        </owl-carousel-o>
+        <div class="slide-counter">
+            <div class="numbers"> <span class="active">0{{startPosition + 1 }}</span> / 0{{captures?.length}}</div>
+        </div>
+    </div>
+</section>
+
+<ng-template #dinamycData>
+    <section class="section-content" [style]="'background-color:' + styleColor(data) + ';'" >
+        <div class="container">
+            <owl-carousel-o [options]="customOptions" [ngClass]="'curiosities-slider'" (translated)="getData($event)">
+                <ng-container *ngFor="let capture of (data) ? data.captures : [];let i = index">
+                    <ng-template carouselSlide>
+                        <div class="slider-img-block">
+                            <img [src]="uploadService.makeUrl(capture.image)" />
+                            <span>
+                                <ng-container *ngIf="capture.description">
+                                    {{capture.description}}
+                                </ng-container>
+                            </span>
+                        </div>
+                    </ng-template>
+                </ng-container>
+            </owl-carousel-o>
+            <div class="slide-counter">
+                <div class="numbers"> <span class="active">0{{startPosition + 1 }}</span> / 0{{(data) ? data.captures.length : []}}</div>
+            </div>
+        </div>
+    </section>
+</ng-template>

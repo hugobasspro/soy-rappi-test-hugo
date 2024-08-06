@@ -1,0 +1,16 @@
+<section class="section-content depositions">
+    <div class="container">
+        <div class="section-head text-center" *ngIf="title">
+            <h2 class="section-title">
+                <app-rich-text [text]="title"></app-rich-text>
+            </h2>
+        </div>
+        <owl-carousel-o [options]="customOptions" [ngClass]="'multimedia-slider owl-loaded'" *ngIf="customOptions">
+          <ng-container *ngFor="let deposition of (data) ? data.depositionCards: []">
+                <ng-template carouselSlide>
+                    <app-deposition-card [data]="deposition"></app-deposition-card>
+                </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+    </div>
+</section>

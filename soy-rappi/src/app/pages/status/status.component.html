@@ -1,0 +1,21 @@
+<app-left-text-banner [data]="status?.banner"></app-left-text-banner>
+<app-breadcrumb-tabs-block></app-breadcrumb-tabs-block>
+
+<app-title-text-block [data]="(status?.titleTextBlock) ? status?.titleTextBlock : undefined"></app-title-text-block>
+<div class="top-icon-box">
+    <div class="container">
+        <div class="top-icon-content">
+            <app-top-icon-box *ngFor="let box of status?.iconBoxes"
+                              class="top-icon-block"
+                              [data]="(box) ? box : undefined"></app-top-icon-box>
+        </div>
+    </div>
+</div>
+<section *ngFor="let list of (status) ? status.richLists : []"
+         [ngClass]="[list?.bgColor]">
+    <div class="container">
+        <app-rich-text [text]="list?.text"></app-rich-text>
+    </div>
+</section>
+
+<app-frequent-questions-block [data]="status?.frequentQuestions"></app-frequent-questions-block>

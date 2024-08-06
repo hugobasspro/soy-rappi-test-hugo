@@ -1,0 +1,13 @@
+<section class="benefits remember">
+  <h2 class="remember__title">{{data.title}}</h2>
+
+  <ul class="remember__places">
+    <li class="remember__place" *ngFor="let card of data.cards">
+      <img class="remember__place-image" [src]="uploadService.makeUrl(card.image)" >
+      <div class="remember__place-body">
+        <h3 class="remember__place-title">{{card.title}}</h3>
+        <p class="remember__place-description">{{card.description}}</p>
+      </div>
+    </li>
+  </ul>
+</section>

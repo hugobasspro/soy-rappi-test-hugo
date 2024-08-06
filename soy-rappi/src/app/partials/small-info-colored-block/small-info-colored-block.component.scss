@@ -1,0 +1,74 @@
+.small-info-colored-block {
+  background-color: #fff0dd;
+  margin-bottom: 75px;
+  position: relative;
+  .colored-content {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+    .left-img {
+      width: 48%;
+      margin-right: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        max-width: 460px;
+        @media (max-width: 767px){
+          max-width: 100%;
+        }
+      }
+      @media (max-width: 991px) {
+        width: 100%;
+        margin-right: 0;
+      }
+      @media (max-width: 575px){
+        z-index: 1;
+        margin-top: 20px;
+      }
+    }
+    .desc {
+      width: 52%;
+      padding: 10px 2% 10px 0;
+      p {
+        color: #354360;
+        font-size: 1.875rem;
+        font-family: 'pp_object_sansbold';
+        @media (max-width: 1366px) {
+          font-size: 1.563rem;
+        }
+        @media (max-width: 1024px) {
+          font-size: 1.475rem;
+        }
+      }
+      @media (max-width: 991px) {
+        width: 100%;
+      }
+      @media (max-width: 767px) {
+        padding: 30px;
+      }
+    }
+    @media (max-width: 991px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  @media (max-width: 767px) {
+    margin-bottom: 40px;
+  }
+}
+
+::ng-deep{
+  .desc{
+    .richtext-area{
+      h1{
+        @media (min-width: 1280px){
+          font-size: 1.875rem;
+        }
+        @media (max-width: 575px){
+          font-size: 1.75rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+:host ::ng-deep{
+  .multimedia-sec {
+    background-image: url("../../../assets/img/background.png");
+  }
+  @media (max-width: 991px){
+    .richtext-area{
+      h2 {
+        font-size: 1.75rem !important;
+      }
+    }
+  }
+}
+
+.display-modal {
+  display: block;
+}
+
+
+.no-display-modal {
+  display: none;
+  }
+
+.desktop {
+  @media (max-width: 1023px){
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+  @media (max-width: 1023px){
+    display: initial;
+  }
+}

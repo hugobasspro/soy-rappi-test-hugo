@@ -1,0 +1,15 @@
+<section class="section-content dropdown-list">
+    <div class="container">
+        <div class="section-head text-left">
+            <h2 class="section-title">{{ data?.title }}</h2>
+        </div>
+        <div class="content">
+            <div class="tags-container">
+                <ng-container *ngFor="let item of data ? data.listItems : []; let i = index">
+                    <button (click)="changeSelected(i)" [class.active]="activeIndex === i">{{ item?.tag }}</button>
+                </ng-container>
+            </div>
+            <app-dropdown-list-element [data]="selectedData"></app-dropdown-list-element>
+        </div>
+    </div>  
+</section>

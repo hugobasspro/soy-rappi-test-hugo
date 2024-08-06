@@ -1,0 +1,44 @@
+<app-standard-banner [data]="scheduleReservationData?.banner"></app-standard-banner>
+<app-breadcrumb-tabs-block></app-breadcrumb-tabs-block>
+<div class="container">
+    <app-rich-text [text]="scheduleReservationData?.titleSchedule"></app-rich-text>
+</div>
+<div class="container schedule-rich-text">
+    <div class="d-flex">
+        <div>
+            <app-rich-text [text]="scheduleReservationData?.richText"></app-rich-text>
+            <div class="richtext-area">
+              <a *ngIf="sharedFunctionsService.isExternalLink(scheduleReservationData?.richTextButton?.url) && scheduleReservationData?.richTextButton"
+                  [href]="scheduleReservationData?.richTextButton?.url"
+                  class="btn btn-gradient d-flex align-items-center justify-content-center">{{scheduleReservationData?.richTextButton?.label}}</a>
+              <a *ngIf="!sharedFunctionsService.isExternalLink(scheduleReservationData?.richTextButton?.url) && scheduleReservationData?.richTextButton"
+                  [routerLink]="sharedFunctionsService.removeInitialSlash(scheduleReservationData?.richTextButton?.url) "
+                  class="btn btn-gradient d-flex align-items-center justify-content-center">{{scheduleReservationData?.richTextButton?.label}}</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="call-action-schedule-block">
+  <app-call-to-action-block [data]="scheduleReservationData?.callToAction"
+                          [title]="scheduleReservationData?.callToAction?.titleCallToAction"
+                          [description]="scheduleReservationData?.callToAction?.description"
+                          [image]="uploadService.makeUrl(scheduleReservationData?.callToAction?.image)"
+                          [btnText]="scheduleReservationData?.callToAction?.button?.label"
+                          [btnUrl]="scheduleReservationData?.callToAction?.button?.url"></app-call-to-action-block>
+</div>
+<ng-container  *ngFor="let step of scheduleReservationData?.reservationSteps; let i = index; let odd=odd; let even=even;">
+    <app-schedule-reservation-step [question]="step.title"
+    [ngClass]="{ odd: odd, even: even }"
+                                   [answer]="step.text"
+                                   [image]="(i === 9 || i === 10) ? '' : uploadService.makeUrl(step.image)"
+                                   [imageToLeft]="step.isImageLeft"
+                                   [list]="step.richTextList"
+                                   [index]="i + 1"></app-schedule-reservation-step>
+    <app-mobile-captures-carousel *ngIf="i === 7 && scheduleReservationData?.carousel"
+                                  [captures]="scheduleReservationData?.carousel?.captures"
+                                  [bgColor]="scheduleReservationData?.carousel?.bgColor"></app-mobile-captures-carousel>
+</ng-container>
+
+<app-multimedia-block *ngIf="scheduleReservationData?.multimedia" [data]="(scheduleReservationData?.multimedia) ? scheduleReservationData?.multimedia : undefined"></app-multimedia-block>
+
+<app-frequent-questions-block [data]="scheduleReservationData?.frequentQuestions"></app-frequent-questions-block>

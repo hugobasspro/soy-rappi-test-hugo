@@ -1,0 +1,17 @@
+<div class="reward-step-sec">
+  <div class="container">
+    <div class="reward-step-content">
+      <div class="left-img" *ngIf="data?.image && imageToLeft">
+        <img [src]="uploadService.makeUrl(data?.image)" />
+      </div>
+      <div class="text-block">
+        <h2 class="section-title">
+          <app-rich-text [text]="data?.titleImage?.title"></app-rich-text>
+        </h2>
+      </div>
+      <div class="right-img" *ngIf="data?.image && !imageToLeft">
+        <img [src]="uploadService.makeUrl(data?.image)" />
+      </div>
+    </div>
+  </div>
+</div>

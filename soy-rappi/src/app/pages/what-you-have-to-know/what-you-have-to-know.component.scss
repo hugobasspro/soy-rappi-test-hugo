@@ -1,0 +1,20 @@
+::ng-deep {
+  .right-multimedia-sec{
+    @media (max-width: 1024px) {
+      padding-bottom: 20px !important;
+    }
+    .right-multimedia-content{
+      .left-block{
+        .title {
+          @media (max-width: 1024px) {
+            max-width: inherit !important;
+            text-align: center;
+          }
+        }
+      }
+      .iframe-block{
+        height: auto !important;
+      }
+    }
+  }
+}

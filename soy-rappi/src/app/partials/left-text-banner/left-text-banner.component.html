@@ -1,0 +1,6 @@
+<div class="delivery-banner" *ngIf="data"
+     [style]="'background-image: url(' + uploadService.makeUrl((!showMobileBanner) ? data!.background : data!.backgroundMobile) + ')'">
+    <div class="container">
+        <h2>{{ data?.title }}</h2>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+@import "../../../assets/css/tools/variable.scss";
+::ng-deep{
+  .delivery-banner{
+    h2{
+      color: $white-color !important;
+      max-width: 60% !important;
+      line-height: 1;
+    }
+    @media (min-width: 1280px){
+      min-height: 350px !important;
+    }
+  }
+  .deliveries-tabs{
+    align-items: flex-start !important;
+    ul{
+      li::after {
+        width: 75% !important;
+      }
+    }
+    .tab-container{
+      .tab-content{
+        padding-top: 80px;
+      }
+    }
+  }
+}

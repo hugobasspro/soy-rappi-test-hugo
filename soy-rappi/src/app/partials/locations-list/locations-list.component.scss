@@ -1,0 +1,76 @@
+@import "../../../assets/css/tools/variable.scss";
+.location-list{
+  background-color: $white-color;
+  border-radius: 10px;
+  padding: 14px 0;
+  margin-bottom: 19px;
+  max-width: 596px;
+  ul{
+    li{
+      border-bottom: 1px solid $white-gray-color;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      font-family: 'pp_object_sansregular';
+      .map-label{
+        color: $base-color;
+        font-size: 1.375rem;
+        @media (max-width: 1240px){
+          font-size: 1rem;
+        }
+        @media (max-width: 767px){
+          font-size: 0.813rem;
+        }
+      }
+      .map-link{
+        color: $base-color;
+        font-size: 1rem;
+        text-decoration: none;
+        position: relative;
+        padding-right: 25px;
+        &:after{
+          content: '';
+          background: url('/assets/img/icons/right-arrow-map.png');
+          width: 8px;
+          height: 14px;
+          position: absolute;
+          right: 0;
+          top: 5px;
+        }
+        @media (max-width: 767px){
+          font-size: 0.625rem;
+        }
+      }
+      &:last-child{
+        border: 0;
+        padding-bottom: 0;
+      }
+      &.active{
+        .map-link{
+          color: $orange-color;
+          font-family: 'pp_object_sansbold';
+          &:after{
+            content: '';
+            background: url('/assets/img/icons/right-down-arrow-map.png');
+            width: 14px;
+            height: 8px;
+            position: absolute;
+            right: 0;
+            top: 5px;
+          }
+        }
+      }
+      @media (max-width: 767px){
+        padding: 15px 15px ;
+      }
+      @media (max-width: 375px){
+        padding: 6.56px 10px;
+      }
+    }
+  }
+  @media (max-width: 375px){
+    max-width: 337px;
+    margin: 0 auto;
+    margin-bottom: 19px;
+  }
+}

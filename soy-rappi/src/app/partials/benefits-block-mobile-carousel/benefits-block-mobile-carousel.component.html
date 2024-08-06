@@ -1,0 +1,25 @@
+<section class="section-content our-benefits">
+    <div class="container">
+        <div class="section-head text-center" *ngIf="title">
+            <h2 class="section-title">
+                <app-rich-text [text]="title"></app-rich-text>
+            </h2>
+        </div>
+        <owl-carousel-o [options]="customOptions" [ngClass]="'multimedia-slider owl-loaded'" *ngIf="customOptions">
+          <ng-container *ngFor="let benefit of benefits; let i = index">
+                <ng-template carouselSlide>
+                    <div class="benefits-element">
+                            <div class="benefits-img" *ngIf="benefit.image">
+                                <img [src]="uploadService.makeUrl(benefit.image)"
+                                class="img-fluid"
+                                alt="{{benefit.title}}" />
+                            </div>
+                            <h3 class="slide-title">{{benefit.title}}</h3>
+                            <p class="slide-dec">{{benefit.description}}</p>
+                    </div>
+                    <hr>
+                </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+    </div>
+</section>

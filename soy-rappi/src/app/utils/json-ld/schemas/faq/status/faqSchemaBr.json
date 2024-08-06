@@ -1,0 +1,26 @@
+{
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	"mainEntity": [{
+		"@type": "Question",
+		"name": "¿Cada cuanto cambia el estado?",
+		"acceptedAnswer": {
+			"@type": "Answer",
+			"text": "El estado cambia cada dos semanas calendario, y el estado en el que quedes al iniciar ciclo será con el que quedes durante las siguientes dos semanas."
+		}
+	}, {
+		"@type": "Question",
+		"name": "¿Cómo hago para subir de nivel?",
+		"acceptedAnswer": {
+			"@type": "Answer",
+			"text": "Para poder quedar en diamante o plata debes tener por encima las 6 métricas de los umbrales de diamante/plata (los cuáles están enlistados más arriba). Por ejemplo, si tienes 5 de las seis métricas en diamante y una en plata o bronce, tu nivel será en donde esté ubicada esta última métrica."
+		}
+	}, {
+		"@type": "Question",
+		"name": "¿Que métricas aplica mi tipo de vehículo?",
+		"acceptedAnswer": {
+			"@type": "Answer",
+			"text": "-Para carro aplican: horas de alta demanda, evaluación del cliente, número de reservas completadas, tasa de aceptación, tasa de finalización y número de ordenes completadas. -Para moto/bici aplican: horas de alta demanda, evaluación del cliente, número de reservas completadas, tasa de aceptación y tasa de finalización."
+		}
+	}]
+}

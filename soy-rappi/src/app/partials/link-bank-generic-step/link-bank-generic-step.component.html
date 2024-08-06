@@ -1,0 +1,26 @@
+<section class="section-content">
+  <div class="container">
+    <div class="d-flex">
+      <span class="number">{{currentStep}}.</span>
+      <div class="bank-link-content">
+        <ng-container *ngFor="let text of textContent; let i = index">
+          <p *ngIf="text.type === 'text'">{{text.content}}</p>
+          <ul *ngIf="text.type === 'list'">
+            <li *ngFor="let item of text.content">{{item}}</li>
+          </ul>
+        </ng-container>
+      </div>
+    </div>
+    <div class="account-media" *ngIf="media">
+      <div class="account-media-img">
+        <img [src]="media.src" class="img-fluid">
+      </div>
+      <div class="account-media-content">
+        <div class="account-block" *ngFor="let block of media.blocksContent">
+          <h4>{{block.title}}</h4>
+          <p>{{block.text}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

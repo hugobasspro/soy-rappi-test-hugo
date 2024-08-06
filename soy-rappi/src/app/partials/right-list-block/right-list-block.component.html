@@ -1,0 +1,25 @@
+<div class="right--list-block">
+  <div class="container">
+    <div class="right-list-content">
+      <div class="left-block">
+        <h2 class="section-title mb-4">
+          <app-rich-text [text]="title?.title"></app-rich-text>
+        </h2>
+        <p class="desc">{{description}}</p>
+        <ul>
+          <li *ngFor="let item of descriptionListItems">
+            {{item.title}}
+          </li>
+        </ul>
+      </div>
+      <div class="right-block">
+        <ul>
+          <li *ngFor="let listItem of items; let i = index">
+            <span>{{i+1}}.</span>
+            <p>{{listItem.title}}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

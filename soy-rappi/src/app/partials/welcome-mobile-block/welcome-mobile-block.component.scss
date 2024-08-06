@@ -1,0 +1,31 @@
+@import "../../../assets/css/tools/variable.scss";
+::ng-deep{
+  .section-head{
+    .section-title{
+      .richtext-area{
+        h2{
+          .text-big{
+            @media(max-width: 767px){
+              font-size: 20px;
+            }
+          }
+          @media(max-width: 767px){
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    margin-bottom: 15px !important;
+  }
+}
+.welcome-mobile-sec{
+  background-color: $pink-orange-bg-color;
+  padding: 30px;
+  .cta{
+    a{
+      @media(max-width: 768px){
+        font-size: 1.125rem;
+      }
+    }
+  }
+}

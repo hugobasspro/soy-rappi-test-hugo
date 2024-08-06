@@ -1,0 +1,25 @@
+<section *ngIf="image || title || description || button" class="section-content bg-gray my-5">
+  <div class="container">
+    <div class="about-section">
+      <div class="about-img about-img-left" *ngIf="image && imageToLeft">
+        <img class="img-fluid" [src]="image" />
+      </div>
+      <div class="about-content">
+        <h2>{{title}}</h2>
+        <p>{{description}}</p>
+        <a class="mt-5 text-decoration-none d-inline-flex" *ngIf="button" [href]="button.url">
+
+          <a *ngIf="sharedFunctionsService.isExternalLink(button.url)"
+            [href]="button.url"
+            class="btn btn-gradient">{{button.label}}</a>
+          <a *ngIf="!sharedFunctionsService.isExternalLink(button.url)"
+            [routerLink]="sharedFunctionsService.removeInitialSlash(button.url)"
+            class="btn btn-gradient">{{button.label}}</a>
+        </a>
+      </div>
+      <div class="about-img about-img-right" *ngIf="image && !imageToLeft">
+        <img class="img-fluid" [src]="image" />
+      </div>
+    </div>
+  </div>
+</section>

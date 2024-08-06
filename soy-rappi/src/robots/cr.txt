@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap:https://soyrappi.co.cr/sitemap-cr.xml

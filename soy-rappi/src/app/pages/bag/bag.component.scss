@@ -1,0 +1,48 @@
+@import "../../../assets/css/tools/variable.scss";
+::ng-deep{
+  .delivery-banner h2{
+    color: $white-color !important;
+  }
+  .colored-content .desc .richtext-area h1, h2{
+    @media (max-width: 575px){
+      padding: 26px 0;
+    }
+  }
+}
+
+.bag-cta{
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 304px;
+    margin: 0 auto;
+    @media (max-width: 575px){
+      font-size: 0.938rem;
+      max-width: 232px;
+      height: 42px;
+    }
+  }
+  &.bg{
+    @media (max-width: 767px){
+      background-color: $pink-orange-bg-color;
+      margin: 0 !important;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.bag-cta-2{
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 328px;
+    margin: 0 auto;
+    @media (max-width: 575px){
+      font-size: 0.845rem;
+      max-width: 235px;
+      height: 39px;
+    }
+  }
+}

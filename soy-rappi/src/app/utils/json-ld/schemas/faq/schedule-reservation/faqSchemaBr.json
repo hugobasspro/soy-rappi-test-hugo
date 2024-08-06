@@ -1,0 +1,33 @@
+{
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	"mainEntity": [{
+		"@type": "Question",
+		"name": "O que acontece se eu não me conectar no ponto de inicio que reservei?",
+		"acceptedAnswer": {
+			"@type": "Answer",
+			"text": "Se você não se conectar ao ponto de inicio que escolheu anteriormente para a primeira reserva do dia, o aplicativo não terá como lhe alocar seus pedidos. As demais reservas que você tiver no mesmo dia podem ser iniciadas em outra área, caso as entregas da reserva anterior tenham feito você se mudar para outro lugar."
+		}
+	}, {
+		"@type": "Question",
+		"name": "O que eu faço se os pedidos me levarem para outra parte da cidade?",
+		"acceptedAnswer": {
+			"@type": "Answer",
+			"text": "Se ao fazer as entregas acabar por se deslocar para outra zona diferente da que reservou, continuará a receber encomendas sem problemas. O importante é que a primeira conexão do dia seja no ponto de partida da sua primeira reserva Você pode iniciar as demais reservas em qualquer lugar, porém, o melhor a fazer para manter a prioridade sobre a aplicação é tentar sempre retornar à área reservada."
+		}
+	}, {
+		"@type": "Question",
+		"name": "O que eu faço se quiser descansar ou precisar ir ao banheiro?",
+		"acceptedAnswer": {
+			"@type": "Answer",
+			"text": "Você deve completar pelo menos 75% do tempo de sua reserva para que ela seja contabilizada como completa em suas avaliações. Isso significa que você pode usar 25% para descansar ou ir ao banheiro, caso precise. Por exemplo, em uma reserva de 2 horas (120 minutos) você deve estar conectado por pelo menos 90 minutos e tem 30 minutos para desconectar se precisar."
+		}
+	}, {
+		"@type": "Question",
+		"name": "Posso me conectar sem reserva?",
+		"acceptedAnswer": {
+			"@type": "Answer",
+			"text": "Você pode fazê-lo, no entanto, será mais difícil para o aplicativo atribuir pedidos a você, pois dará prioridade aos entregadores que indicaram previamente o local e o horário da conexão através da reserva."
+		}
+	}]
+}

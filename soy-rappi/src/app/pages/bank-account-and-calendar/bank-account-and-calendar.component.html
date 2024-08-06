@@ -1,0 +1,63 @@
+<app-left-text-banner [data]="bankAccountData?.banner"></app-left-text-banner>
+<app-breadcrumb-tabs-block></app-breadcrumb-tabs-block>
+<app-title-text-block [data]="bankAccountData?.titleTextBlock"></app-title-text-block>
+
+<ng-container *ngIf="bankAccountData">
+  <ng-container *ngFor="let step of bankAccountData!.richLists; let i = index">
+    <section class="section-content">
+      <div class="container">
+        <div class="bank-acount-rict-list">
+          <div class="d-flex mb-3">
+            <span class="number">{{ i + 1 }}.</span>
+            <app-rich-text 
+                [text]="getRichTextByIndex(i)"
+                [media]="bankAccountData!.richListMedia && i === 2 ? bankAccountData!.richListMedia : undefined"
+                [image]="bankAccountData!.richLists[i].image ? bankAccountData!.richLists[i].image : undefined"
+                [flag]="bankAccountData!.richLists[i].image || (bankAccountData?.richListMedia && i === 2) ? true : false"></app-rich-text>
+          </div>
+        </div>
+      </div>
+    </section>
+    <app-mobile-captures-carousel *ngIf="i === 0 && 
+                                  bankAccountData && bankAccountData.carousel[0] &&
+                                  bankAccountData.carousel[0].captures &&
+                                  bankAccountData.carousel[0].captures.length > 0"
+                                  [captures]="getCarouselCaptureByIndex(0)" 
+                                  [bgColor]="getCarouselBackgroundByIndex(0)"
+    ></app-mobile-captures-carousel>
+    <app-mobile-captures-carousel *ngIf="i === 1 && 
+                                  bankAccountData && bankAccountData.carousel[1] &&
+                                  bankAccountData.carousel[1].captures &&
+                                  bankAccountData.carousel[1].captures.length > 0"
+                                  [captures]="getCarouselCaptureByIndex(1)" 
+                                  [bgColor]="getCarouselBackgroundByIndex(1)"
+    ></app-mobile-captures-carousel>
+    <app-mobile-captures-carousel *ngIf="i === 3 && 
+                                  bankAccountData && bankAccountData.carousel[2] &&
+                                  bankAccountData.carousel[2].captures &&
+                                  bankAccountData.carousel[2].captures.length > 0"
+                                  [captures]="getCarouselCaptureByIndex(2)" 
+                                  [bgColor]="getCarouselBackgroundByIndex(2)"
+    ></app-mobile-captures-carousel>
+    <app-mobile-captures-carousel *ngIf="i === 6 && 
+                                  bankAccountData && bankAccountData.carousel[3] &&
+                                  bankAccountData.carousel[3].captures &&
+                                  bankAccountData.carousel[3].captures.length > 0"
+                                  [captures]="getCarouselCaptureByIndex(3)" 
+                                  [bgColor]="getCarouselBackgroundByIndex(3)"
+    ></app-mobile-captures-carousel>
+    <app-mobile-captures-carousel *ngIf="i === 8 && 
+                                  bankAccountData && bankAccountData.carousel[4] &&
+                                  bankAccountData.carousel[4].captures &&
+                                  bankAccountData.carousel[4].captures.length > 0"
+                                  [captures]="getCarouselCaptureByIndex(4)" 
+                                  [bgColor]="getCarouselBackgroundByIndex(4)"
+    ></app-mobile-captures-carousel>
+  </ng-container>
+</ng-container>
+
+
+<app-multimedia-block *ngIf="bankAccountData?.multimedia && bankAccountData?.multimedia?.multimediaFiles && bankAccountData?.multimedia?.multimediaFiles!.length > 0" [data]="(bankAccountData?.multimedia) ? bankAccountData?.multimedia : undefined"></app-multimedia-block>
+
+
+<app-frequent-questions-block [data]="bankAccountData?.frequentQuestions"></app-frequent-questions-block>

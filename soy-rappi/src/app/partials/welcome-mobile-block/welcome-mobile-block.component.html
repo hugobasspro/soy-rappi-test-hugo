@@ -1,0 +1,17 @@
+<div class="welcome-mobile-sec">
+    <div class="welcome-mobile-content text-center">
+        <div class="welcome-img">
+            <img [src]="getImage(data?.image)" />
+        </div>
+        <div class="section-head text-center">
+            <h2 class="section-title">
+                <app-rich-text [text]="data?.titleWelcome?.title"></app-rich-text>
+            </h2>
+        </div>
+        <div class="cta">
+            <a [href]="data?.welcomeButton?.url" class="btn btn-gradient d-flex align-items-center justify-content-center">
+                {{data?.welcomeButton?.label}}
+            </a>
+        </div>
+    </div>
+</div>

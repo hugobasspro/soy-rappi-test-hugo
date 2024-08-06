@@ -1,0 +1,8 @@
+<section class="faqs banner banner--{{router.url.substring(1)}}"
+  [style]="responsiveService.validateDisplay(display, displays.DESKTOP) ? 'background-image: url(' + uploadService.makeUrl(data.imageDesktop) + ')' : 'background-image: url(' + uploadService.makeUrl(data.imageMobile) + ')'">
+
+  <h1 class="banner__title banner__title--{{router.url.substring(1)}}">
+    <span>{{firstWord}}</span>
+    <span style="display: block;">{{remainingWords}}</span>
+  </h1>
+</section>

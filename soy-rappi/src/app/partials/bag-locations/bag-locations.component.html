@@ -1,0 +1,45 @@
+<div class="bag-locations-sec" *ngIf="!data">
+    <div class="container">
+        <div class="top-head">
+            <h2 class="section-title mb-4">
+                <app-rich-text [text]="title?.title"></app-rich-text>
+            </h2>
+            <p class="desc">{{description}}</p>
+        </div>
+        <div class="location-content">
+            <div class="location-left">
+                <p class="sub-title">{{subtitle}}</p>
+                <app-locations-list [items]="list"
+                                    [previewLocation]="previewLocation"></app-locations-list>
+                <p class="desc">{{subtitleDescription}}</p>
+                <ng-container *ngIf="button">
+                    <a *ngIf="sharedFunctionsService.isExternalLink(button?.url)"
+                    [href]="button?.url"
+                    class="btn btn-gradient">{{button?.label}}</a>
+                    <a *ngIf="!sharedFunctionsService.isExternalLink(button?.url)"
+                        [routerLink]="sharedFunctionsService.removeInitialSlash(button?.url)"
+                        class="btn btn-gradient">{{button?.label}}</a>
+                </ng-container>
+            </div>
+            <div class="location-right">
+                <app-google-maps *ngIf="list"
+                                 [mapsUrl]="list[sharedFunctionsService.mapUrlIndex].location"></app-google-maps>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bag-locations-sec" *ngIf="data">
+    <div class="container">
+        <div class="location-content">
+            <div class="location-left">
+                <app-locations-list [items]="(data?.locations) ? data?.locations : []"
+                    [previewLocation]="data?.previewLocationText"></app-locations-list>
+            </div>
+            <div class="location-right">
+                <app-google-maps *ngIf="data?.locations"
+                  [mapsUrl]="data.locations[sharedFunctionsService.mapUrlIndex].location"></app-google-maps>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="category-block"
+     [routerLink]="'../' + slug">
+    <div class="category-block-img" [style]="'background-image: url(' + getImage((data) ? data.image : []) + ') ;'">
+    </div>
+    <div class="category-block-content">
+        <p class="category">{{titleCategory}}</p>
+        <p class="category-date">{{date}}</p>
+        <h3 class="category-title">{{data?.title}}</h3>
+    </div>
+</div>

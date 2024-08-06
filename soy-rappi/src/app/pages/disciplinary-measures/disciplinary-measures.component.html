@@ -1,0 +1,16 @@
+<app-left-text-banner   [data]="disciplinaryData?.banner"
+                        [title]="disciplinaryData?.banner?.title"
+                        [image]="uploadService.makeUrl(disciplinaryData?.banner?.background)"></app-left-text-banner>
+<app-breadcrumb-tabs-block></app-breadcrumb-tabs-block>
+
+<app-title-text-block [titleInformative]="disciplinaryData?.titleTabs"></app-title-text-block>
+<!-- Note: app-tab-content-desktop component shows only in desktop -->
+<app-tab-content-desktop class="d-none d-md-block"
+                         [data]="disciplinaryData?.tabContent"
+                         [tabs]="disciplinaryData?.contentTabs"></app-tab-content-desktop>
+<!-- Note: app-top-content-mobile-carousel component shows only in mobile -->
+<app-top-content-mobile-carousel class="d-sm-block d-md-none"
+                                 [data]="disciplinaryData?.tabContent"
+                                 [tabs]="disciplinaryData?.contentTabs"></app-top-content-mobile-carousel>
+
+<app-frequent-questions-block   [data]="disciplinaryData?.frequentQuestions"></app-frequent-questions-block>

@@ -1,0 +1,18 @@
+<div class="multimedia-sec" 
+    [ngClass]="{'pb-5': data?.multimediaFiles?.length! <= 1}" 
+    [style]="{'background-color': (getColorCode(data?.background || default_color))}">
+    <div class="dp-container" [ngClass]="{'text-center': data?.multimediaFiles?.length! <= 1}">
+        <div class="section-head text-left mb-0" *ngIf="data?.title ">
+            <h2 class="section-title ">{{ (data?.title) ? data?.title : '' }}</h2>
+        </div>
+        <div>
+            <owl-carousel-o [options]="customOptions" [ngClass]="'multimedia-slider'" (translated)="getData($event)" *ngIf="customOptions">
+                <ng-container *ngFor="let item of (data?.multimediaFiles) ? data?.multimediaFiles : []">
+                    <ng-template carouselSlide>
+                        <app-multimedia-item [data]="(item) ? item : undefined"></app-multimedia-item>
+                    </ng-template>
+                </ng-container>
+            </owl-carousel-o>
+        </div>
+    </div>
+</div>

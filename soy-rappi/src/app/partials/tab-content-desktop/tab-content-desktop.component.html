@@ -1,0 +1,29 @@
+<section class="section-content deliveries">
+    <div class="container">
+        <div class="section-head text-center" *ngIf="data?.titleTab">
+            <h2 class="section-title">
+                <app-rich-text [text]="data?.titleTab?.title"></app-rich-text>
+            </h2>
+            <p class="text-start">{{text}}</p>
+        </div>
+        <div class="deliveries-tabs">
+            <ul [class]="{'full-width': true}">
+                <li *ngFor="let tab of tabs; let i = index" [ngClass]="{'active': isActive === i}"
+                    (click)="selectTab(i)" class="slide">
+                    <span class="slide-number">0{{i+1}}</span>
+                    <div class="d-flex flex-column">
+                        <h3 class="slide-title">{{tab.title}}</h3>
+                        <p class="slide-dec">{{tab.description}}</p>
+                    </div>
+                </li>
+            </ul>
+            <tabset #staticTabs class="tab-content" *ngIf="tabs && tabs.length > 0">
+                <tab *ngFor="let tab of tabs; let i = index">
+                    <div class="deliveries-img">
+                        <img *ngIf="tab.image" [src]="uploadService.makeUrl(tab.image)" class="img-fluid" alt="{{tab.title}}" />
+                    </div>
+                </tab>
+            </tabset>
+        </div>
+    </div>
+</section>

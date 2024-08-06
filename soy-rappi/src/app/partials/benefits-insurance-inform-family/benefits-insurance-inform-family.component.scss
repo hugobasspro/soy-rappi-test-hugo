@@ -1,0 +1,38 @@
+:host ::ng-deep {
+  .inform-family {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 3.75rem max(0.94rem, 3.4976%) 0;
+    gap: 0.625rem;
+    max-width: 64rem;
+    margin: 0 auto;
+
+    @media screen and (min-width: 64rem) {
+      padding: 8rem 8.13rem 9.375rem;
+    }
+  }
+
+  .title {
+    color: #ff4300;
+    font-size: 2.8125rem;
+    font-weight: 500;
+    line-height: 121%;
+    text-align: center;
+  }
+
+  .description {
+    color: #000;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 121%;
+
+    @media screen and (min-width: 64rem) {
+      max-width: 60ch;
+    }
+
+    &--bold {
+      color: #ff4300;
+    }
+  }
+}

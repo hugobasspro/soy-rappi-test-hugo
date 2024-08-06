@@ -1,0 +1,46 @@
+::ng-deep {
+  .standard-banner-sec {
+    .banner-title {
+      max-width: initial !important;
+      p {
+        font-size: 4rem;
+        line-height: 72px;
+      }
+    }
+  }
+  .whoweare-call-to-action {
+    background: #FFF0DD;
+    margin-bottom: 38px;
+    .section-content {
+      padding: 0;
+    }
+    .orange-color{
+      display: flex;
+    }
+  }
+  .call-action-block {
+    height: auto !important;
+    .call-action-block-img{
+      @media (max-width: 768px) {
+        margin-top: 0 !important;
+      }
+    }
+    .call-action-block-content{
+      p{
+        font-size: 3.438rem !important;
+        line-height: 1 !important;
+        @media (max-width: 991px) {
+          font-size: 1.75rem !important;
+        }
+      }
+      .orange-color{
+        font-size: 3.438rem !important;
+        @media (max-width: 991px) {
+          font-size: 1.75rem !important;
+        }
+      }
+    }
+  }
+}
+
+

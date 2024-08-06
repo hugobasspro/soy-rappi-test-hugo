@@ -1,0 +1,156 @@
+@import "../../../assets/css/tools/variable.scss";
+
+.footer-sec {
+  background-color: $white-gray-color;
+  padding: 50px 50px 30px;
+
+  .footer-content {
+    .logo {
+      padding: 2.06rem 0 1.87rem;
+
+      @media (max-width: 767px) {
+        text-align: center;
+      }
+    }
+
+    .country-list {
+      p {
+        font-family: "Poppins";
+        font-size: 2.5rem;
+        line-height: 3rem;
+        font-weight: 500;
+        color: #000000;
+      }
+
+      ul {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        padding-bottom: 5.94rem;
+        max-width: 34.375rem;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 100%;
+          right: 0;
+          width: 50%;
+          height: 0.0625rem;
+          background-color: #ff4300;
+          margin: 0 auto;
+
+          @media (min-width: 64rem) {
+            display: none;
+          }
+        }
+
+        li {
+          max-width: 33.33%;
+          width: 100%;
+          margin-bottom: 20px;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+          @media (max-width: 1024px) {
+            max-width: 50%;
+            width: 100%;
+          }
+
+          @media (max-width: 991px) {
+            max-width: 50%;
+            width: 100%;
+          }
+
+          a {
+            font-family: "Poppins";
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            gap: 27px;
+            text-decoration: none;
+            color: inherit;
+          }
+        }
+      }
+    }
+
+    .social-icons {
+      margin-bottom: 36px;
+
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 2.1875rem;
+
+        @media (max-width: 767px) {
+          justify-content: center;
+        }
+      }
+    }
+
+    .terms-link {
+      text-align: right;
+
+      a {
+        text-decoration: none;
+        color: $base-color;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        @media (max-width: 767px) {
+          text-decoration: underline;
+        }
+      }
+
+      @media (max-width: 767px) {
+        text-align: center;
+        margin-bottom: 25px;
+      }
+    }
+
+    .legal {
+      border-top: 2px solid $border-color;
+      padding-top: 32px;
+
+      p {
+        color: $base-color;
+      }
+
+      @media (max-width: 767px) {
+        text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 1023px) {
+    padding: 6.8125rem 0 1.875rem 0;
+    margin-top: 3.125rem;
+  }
+}
+
+.container {
+  @media (min-width: 64rem) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+.custom-column {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 64rem) {
+    justify-content: space-between;
+  }
+}

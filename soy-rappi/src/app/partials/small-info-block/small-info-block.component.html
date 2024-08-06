@@ -1,0 +1,15 @@
+<div class="small-block-info">
+  <div class="container">
+    <div class="small-block-content">
+      <div class="left-block">
+        <img [src]="getImage(data?.image)" />
+      </div>
+      <div class="right-block">
+        <h2 class="section-title">
+          <app-rich-text [text]="data?.titleInfo?.title"></app-rich-text>
+        </h2>
+        <p class="desc">{{ data?.text }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div *ngIf="data" class="hero-banner" [style]="'background-image: url(' + uploadService.makeUrl(getImage((showMobileBanner) ? [data!.bannerImageMobile] : data!.bannerImage)) + ')'">
+    <div class="container-banner">
+        <div class="d-flex align-items-start flex-sm-wrap flex-column">
+            <div class="title-banner">
+                <div class="col-sm-6 pb-4 mt-3">
+                    <h2>{{ data?.title }}</h2>
+                </div>
+            </div>
+            <div class="subtitle-banner-desktop">
+                <p>{{ data?.callToAction || 'Registrate ahora' }}</p>
+            </div>
+            <div class="register-form-container">
+                <app-register-form
+                  [registerFormPlaceholders]="registerFormPlaceholders"
+                  [id]="registerFormPlaceholders?.urlFragment || 'register'"
+                  [title]="(data) ? data.titleForm : ''"
+                  [callToAction]="(data) ? data.callToAction : 'Registrate ahora'">
+                </app-register-form>
+            </div>
+        </div>
+    </div>
+</div>

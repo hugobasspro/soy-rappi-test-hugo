@@ -1,0 +1,19 @@
+<section class="section-content">
+  <div class="call-action-block d-flex">
+    <div class="call-action-block-img">
+      <img [src]="getImage((data) ? data.image : undefined)" class="img-fluid" />
+    </div>
+    <div class="call-action-block-content">
+      <app-rich-text [text]="data?.titleCallToAction?.title"></app-rich-text>
+      <span class="description" *ngIf="(data) ? data.description : false">{{ (data?.description) ? data?.description : '' }}</span>
+      <ng-container *ngIf=" (data?.button?.label) ? data?.button?.label : false">
+        <a *ngIf="sharedFunctionsService.isExternalLink(data?.button?.url)"
+          [href]="data?.button?.url"
+          class="btn btn-gradient d-flex align-items-center justify-content-center">{{data?.button?.label}}</a>
+        <a *ngIf="!sharedFunctionsService.isExternalLink(data?.button?.url)"
+          [routerLink]="sharedFunctionsService.removeInitialSlash(data?.button?.url)"
+          class="btn btn-gradient d-flex align-items-center justify-content-center">{{data?.button?.label}}</a>
+      </ng-container>
+    </div>
+  </div>
+</section>

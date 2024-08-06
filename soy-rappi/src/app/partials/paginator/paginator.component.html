@@ -1,0 +1,9 @@
+<div class="pagination">
+  <ul>
+    <li class="left-btn"><img src="assets/img/icons/icon-left.svg" alt="left icon" (click)="leftPage()"></li>
+      <li *ngFor='let in of counter(numberOfPages) ;let i = index' [class]="i + 1 === currentPage ? 'active' : null" (click)="newPage(i + 1)">
+        {{i + 1}}
+      </li>
+      <li class="right-btn"><img src="assets/img/icons/icon-right.svg" alt="right icon" (click)="rightPage()"></li>
+    </ul>
+</div>

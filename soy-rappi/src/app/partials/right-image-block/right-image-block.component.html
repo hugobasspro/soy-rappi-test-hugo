@@ -1,0 +1,55 @@
+<div class="right-img-sec" *ngIf="!isMobile">
+    <div class="container">
+        <div class="right-block-content">
+            <div class="left-block">
+                <h2 class="section-title">
+                    <app-rich-text [text]="data?.titleLeft ? data?.titleLeft?.title : data?.titleRight?.title" *ngIf="data?.titleLeft?.title || data?.titleRight?.title"></app-rich-text>
+                    {{data?.titlePlain}}
+                </h2>
+                <p class="desc">{{data?.text}}</p>
+                <h4>{{data?.subtitle}}</h4>
+                <p class="sub-desc">{{data?.subtitleText}}</p>
+                <ng-container *ngIf="data?.button?.label">
+                    <a *ngIf="sharedFunctionsService.isExternalLink(data?.button?.url)"
+                    [href]="data?.button?.url"
+                    class="btn btn-gradient mt-4">{{data?.button?.label}}</a>
+                    <a *ngIf="!sharedFunctionsService.isExternalLink(data?.button?.url)"
+                        [routerLink]="sharedFunctionsService.removeInitialSlash(data?.button?.url)"
+                        class="btn btn-gradient mt-4">{{data?.button?.label}}</a>
+                </ng-container>
+            </div>
+            <div class="right-block">
+                <img [src]="uploadService.makeUrl(data?.media)"
+                     class="img-fluid" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="right-img-sec" *ngIf="isMobile">
+    <div class="container">
+        <div class="right-block-content">
+            <div class="left-block">
+                <h2 class="section-title">
+                    <app-rich-text [text]="data?.titleLeft ? data?.titleLeft?.title : data?.titleRight?.title" *ngIf="data?.titleLeft?.title || data?.titleRight?.title"></app-rich-text>
+                    {{data?.titlePlain}}
+                </h2>
+                <p class="desc">{{data?.text}}</p>
+                <h4>{{data?.subtitle}}</h4>
+                <p class="sub-desc">{{data?.subtitleText}}</p>
+            </div>
+            <div class="right-block">
+                <img [src]="uploadService.makeUrl(data?.media)"
+                     class="img-fluid" />
+            </div>
+            <ng-container *ngIf="data?.button?.label">
+                <a *ngIf="sharedFunctionsService.isExternalLink(data?.button?.url)"
+                [href]="data?.button?.url"
+                class="btn btn-gradient mt-4">{{data?.button?.label}}</a>
+                <a *ngIf="!sharedFunctionsService.isExternalLink(data?.button?.url)"
+                    [routerLink]="sharedFunctionsService.removeInitialSlash(data?.button?.url)"
+                    class="btn btn-gradient mt-4">{{data?.button?.label}}</a>
+            </ng-container>
+        </div>
+    </div>
+</div>

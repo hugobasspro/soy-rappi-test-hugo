@@ -1,0 +1,122 @@
+{
+
+  "url_app_download": "https://play.google.com/store/apps/details?id=com.rappi.storekeeper&hl=es_CO&gl=US",
+
+  "url_facebook": "https://facebook.com",
+
+  "url_youtube": "https://youtube.com",
+
+  "slider" : [
+    {
+      "imagen_fondo" : "assets/lpmx/notas/Banner-Daniela.jpg",
+      "imagen_over": "assets/lpmx/notas/letrero.png",
+      "ubicacion" : "",
+      "alt": "Gana dinero",
+      "css_active": "active",
+      "link": "./#/nota/daniela"
+    },
+    {
+      "imagen_fondo" : "assets/lpmx/notas/Banner-Oscar.jpg",
+      "imagen_over": "assets/lpmx/notas/letrero.png",
+      "ubicacion" : "",
+      "alt": "Gana dinero",
+      "css_active": "",
+      "link": "./#/nota/oscar"
+    },
+    {
+      "imagen_fondo" : "assets/lpmx/notas/Banner-Atenas.jpg",
+      "imagen_over": "assets/lpmx/notas/letrero.png",
+      "ubicacion" : "izquierda",
+      "alt": "Gana dinero",
+      "css_active": "",
+      "link": "./#/nota/atenas"
+    },
+    {
+      "imagen_fondo" : "assets/lpmx/notas/Banner-Rigoberto.jpg",
+      "imagen_over": "assets/lpmx/notas/letrero.png",
+      "ubicacion" : "izquierda",
+      "alt": "Gana dinero",
+      "css_active": "",
+      "link": "./#/nota/rigoberto"
+    }
+  ],
+
+  "videos" : [
+    {
+      "url" : "https://www.youtube.com/embed/5T2c9twDTFY",
+      "thumbnail": "https://i3.ytimg.com/vi/5T2c9twDTFY/maxresdefault.jpg",
+      "tipo": "youtube"
+    },
+    {
+      "url" : "https://www.youtube.com/embed/Exf1C8blXFM",
+      "thumbnail": "https://i3.ytimg.com/vi/Exf1C8blXFM/maxresdefault.jpg",
+      "tipo": "youtube"
+    },
+    {
+      "url" : "https://www.youtube.com/embed/qn9YNFit4eg",
+      "thumbnail": "https://i3.ytimg.com/vi/qn9YNFit4eg/maxresdefault.jpg",
+      "tipo": "youtube"
+    },
+    {
+      "url" : "https://www.youtube.com/embed/tH0NOagnfog",
+      "thumbnail": "https://i3.ytimg.com/vi/tH0NOagnfog/maxresdefault.jpg",
+      "tipo": "youtube"
+    }
+  ],
+
+  "notas" : [
+    {
+      "slug": "daniela",
+      "titulo": "HISTORIA DE DANIELA",
+      "resumen": "Nunca imaginé que entrar a Rappi fuera tan rápido y sencillo. En cuanto tomé la decisión y me registré, en menos de 24 horas ya estaba entregando mi primer pedido",
+      "texto": "Mi nombre es <b>Daniela</b> y tengo 24 años. Llevo 3 años repartiendo en Rappi y ahora lo hago en motocicleta.<br>Nunca imaginé que entrar a Rappi fuera tan rápido y sencillo. En cuanto tomé la decisión y me registré, en menos de 24 horas ya estaba entregando mi primer pedido.<br><br><strong>¡Neta es muy fácil y rápido! Y dije “¡wow!”</strong>, no puedo creer que tan rápido ya esté realizando pedidos.<br>Solo tuve que vencer el miedo a lo desconocido, para empezar a explorar un mundo de nuevas posibilidades. Desde que estoy en Rappi estoy siempre de mejor humor, empezar a repartir es algo que disfruto mucho.<br><br>Me gusta estar en contacto con el cliente, ayudarle a resolver todo tipo de problemas; desde el antojito en la oficina, hasta el regalo para el novio o la novia.<br><br><iframe width=\"100%\" height=\"500\" src=\"https://www.youtube.com/embed/5T2c9twDTFY\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe><br><br>Nunca imaginé que entrando a Rappi iba a tener tantos beneficios. Gano mucho más dinero que en mi anterior ocupación, tengo más tiempo para disfrutar a mi familia y estar al pendiente de la escuela de mi hermana menor.<br><br>Además, soy más feliz, no tengo estrés y me divierto haciendo lo que me gusta. He conocido muchos lugares padrísimos de la ciudad que antes no conocía.<br><br>No puedo creer que todo esto lo haya logrado con tan solo un clic. En cuanto tomé la decisión de registrarme en Rappi mi vida ha sido mucho más fácil y sencilla.<br><br>",
+      "imagen": "assets/lpmx/notas/DANIELA.png"
+    },
+    {
+      "slug": "oscar",
+      "titulo": "HISTORIA DE OSCAR",
+      "resumen": "Rappi ha sido lo mejor que me ha pasado en estos últimos cinco años. Aunque parezca irreal, no he encontrado algo mejor de lo que me brinda la aplicación. ",
+      "texto": "Soy <strong>Óscar Daniel</strong> y tengo 34 años de edad. Llevo casi 5 años en Rappi y reparto en Moto.<br><br>Rappi ha sido lo mejor que me ha pasado en estos últimos cinco años. Aunque parezca irreal, no he encontrado algo mejor de lo que me brinda la aplicación. Precisamente en este escenario, en el que la economía no anda muy bien, Rappi me ofrece lo que pensé que no iba a encontrar más: estabilidad económica y emocional.<br><br>En Rappi me han pasado tantas cosas buenas que es difícil saber por cual empezar. Entre las cosas que más feliz me han hecho es poderme comprar 2 motos nuevas con las ganancias de Rappi. Una la ocupo para repartir y otra para Rappi.<br><br>Otra cosa que me hace muy feliz y por la que no pienso salirme de Rappi, es el tiempo que puedo dedicarle a mi hija. Ella estudia la primaria, y por las mañanas me da tiempo de estar al pendiente de sus clases en línea y de hacer tarea con ella.<br><br>Por las tardes comemos juntos y después de haber estado atento a lo que más me importa a la vida, que es mi hija, ahora sí me puedo salir a repartir sabiendo que ya cumplí con lo más importante.<br><br><iframe width=\"100%\" height=\"500\" src=\"https://www.youtube.com/embed/Exf1C8blXFM\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe><br><br>En Rappi solo te pasan puras cosas buenas. Por ejemplo, las propinas, es algo que me motiva mucho a seguir haciendo mejor mi trabajo. En un fin de semana puedes hacer más de 3 mil pesos. ¡Es Increíble!<br><br>Una vez que le agarras la onda, te preguntas ¿por qué no descubrí antes los beneficios que da Rappi? No lo hubiera pensado dos veces.<br>Desde que estoy en Rappi tengo una mejor calidad de vida. Puedo desconectarme en cualquier momento para atender imprevistos.<br><br>Rappi es una opción muy buena. Lo que les diría a las personas que busquen una oportunidad, o que quieran generar ingresos extras, en primer lugar les recomendaría registrarse en Soy Rappi. ¡No se van a arrepentir!<br>",
+      "imagen": "assets/lpmx/notas/OSCAR.png"
+    },
+    {
+      "slug": "atenas",
+      "titulo": "HISTORIA DE ATENAS",
+      "resumen": "Nunca imaginé que entrar a Rappi fuera tan rápido y sencillo. En cuanto tomé la decisión y me registré, en menos de 24 horas ya estaba entregando mi primer pedido",
+      "texto": "Hola, yo soy <strong>Atenas</strong> y tengo 34 años. Llevo 2 años repartiendo con Rappi y lo hago en bicicleta. <br><br><strong>Nunca me imaginé llegar tan lejos con Rappi</strong>. Cada día en la aplicación es una sorpresa nueva, puede ser una propina, o cuando te das cuenta que estás sonriendo todo el día, o cuando ves el reloj y es muy temprano y aún tienes tiempo para estar con tu familia después de repartir. <br> <br>Sin Rappi, yo no sé qué hubiera hecho cuando inició la pandemia. Llevaba 16 años trabajando en la tienda de mis papás, pero después de tanto tiempo, me di cuenta que quería hacer algo más, no quería seguir pasando tanto tiempo en una tienda que me daba muy poco dinero y consumía mucho de mi tiempo. <br> <br>Pero una vez que me decidí a buscar algo nuevo, apareció Rappi y fue la mejor decisión de mi vida. El equilibrio y la estabilidad emocional y económica que me dio Rappi desde el día uno, fue asombroso. Aquí, yo pongo mis horarios, así puedo estar más tiempo con mi familia. <br> <br>De inmediato empecé a ganar más dinero, a invertir menos tiempo que el que le dedicaba a la tienda, y lo más importante empecé a pasar más tiempo con mis tres hijos. <br><br><iframe width=\"100%\" height=\"500\" src=\"https://www.youtube.com/embed/qn9YNFit4eg\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe><br><br>Rappi no solo me cambió la vida a mi, sino a toda mi familia. <br><br>Cuando la pandemia llegó, mis papás tuvieron que cerrar la tienda y se quedaron sin ingresos. Afortunadamente yo ya llevaba unos meses en Rappi y hasta me convertí en pilar de mi familia. <br><br>Pude apoyar a mis papás con sus gastos diarios, con medicamentos para sus tratamientos y además, les prometí que yo los iba a ayudar mientras reabrían su negocio. <br><br>Rappi me dio la oportunidad de sentirme productiva y de sentirme satisfecha de saber que estaba haciendo las cosas bien. Pues ahora paso más tiempo con mis hijos y puedo devolverles a mis papás un poco de lo mucho que ellos me dieron. <br>",
+      "imagen": "assets/lpmx/notas/ATENAS.png"
+    },
+    {
+      "slug": "rigoberto",
+      "titulo": "HISTORIA DE RIGOBERTO",
+      "resumen": "Antes de entrar en Rappi mi vida era muy ordinaria. Tuve muchas ocupaciones que nunca me dieron ese crecimiento profesional y personal que buscaba.",
+      "texto": "Mi nombre es Rigoberto y tengo 36 años. Voy para tres años repartiendo en Rappi.<br><br>Antes de entrar en Rappi mi vida era muy ordinaria. Tuve muchas ocupaciones que nunca me dieron ese crecimiento profesional y personal que buscaba.<br><br>Fui mesero, subgerente de tienda, jefe de adquisiciones en la Cruz Roja y Jefe de Recursos en un hospital, pero había algo que me mantenía muy intranquilo; el tiempo que e dedicaba a mi familia.<br>Sumada a esta intranquilidad, al momento de pagar las deudas, de dar gasto en la casa y de darles dinero a mis hijos para su día en la escuela, me daba cuenta de que no me alcanzaba. No importaba el tiempo que yo me esforzara, el dinero era siempre el mismo, la preocupación y la insatisfacción eran algo permanente.<br><br>Ahí fue cuando me di cuenta que necesitaba otro tipo de actividad; así fue como le di la bienvenida a Rappi. En muy poco tiempo me di cuenta de que es una app muy conveniente, te da mucha flexibilidad en tus horarios.<br>Pero no solo es el tiempo, también son las ganancias. Cuando haces esta combinación, te das cuenta de que estás en el lugar correcto. Reparto el tiempo que yo quiero, paso el tiempo que quiero con mi familia y siempre estoy de mejor humor.<br><br>Con Rappi llegaron mayores ganancias a mi bolsillo, más tiempo para dedicarle a mis hijos y sobre todo nuevos planes.<br><br><iframe width=\"100%\" height=\"500\" src=\"https://www.youtube.com/embed/tH0NOagnfog\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe><br><br>Empecé repartiendo en bici, pero a los pocos meses me di cuenta que podía juntar para comprarme una moto. En el momento en que cambié a repartir en moto mis ganancias se duplicaron. <br><br>Es algo asombroso, pues mis planes se van haciendo cada vez más grandes y ambiciosos, eso es algo que no logré en mis anteriores ocupaciones a las que dediqué casi 15 años de mi vida.<br>En tres años que llevo con Rappi, el panorama y proyección de mi vida ha cambiado a pasos agigantados.<br>",
+      "imagen": "assets/lpmx/notas/RIGOBERTO.png"
+    }
+  ],
+
+  "faqs" : [
+    {
+      "pregunta" : "Sobre la mochila",
+      "texto" : "<h6 class='titulo py-3'>¿Necesito mochila Rappi para repartir?</h6>Puedes comenzar a repartir con cualquier mochila y adquirir la de Rappi más adelante para transportar los alimentos correctamente con la temperatura ideal.<h6 class='titulo py-3'>¿Dónde puedo adquirir la mochila?</h6>Puedes adquirir tu mochila en: <a href='https://tienda-oficial.mx/' target='_blank'>https://tienda-oficial.mx/</a><h6 class='titulo py-3'>¿Cuánto cuesta la mochila?</h6>Puedes revisar el precio de la mochila en el siguiente link: <a href='https://tienda-oficial.mx/' target='_blank'>https://tienda-oficial.mx/</a><h6 class='titulo py-3'>¿Cuál es el tiempo de entrega?</h6>2-5 día"
+    },
+    {
+      "pregunta" : "Sobre la tarjeta de compras",
+      "texto" : "<h6 class='titulo py-3'>¿Necesito una tarjeta de compras?</h6> No necesitas una tarjeta de compras para hacer pedidos, pero te recomendamos adquirirla para que mejores tu experiencia en la app.<h6 class='titulo py-3'>¿Dónde puedo adquirir la tarjeta de compras y cuánto cuesta?</h6>                        Puedes adquirir tu tarjeta de compras y revisar cuánto cuesta online <a href='https://tienda-oficial.mx/' target='_blank'>https://tienda-oficial.mx/</a> o en uno de nuestros puntos <a href='https://blog.soyrappi.com/puntos-tarjeta-mx/' target='_blank'>https://blog.soyrappi.com/puntos-tarjeta-mx/</a><h6 class='titulo py-3'>¿Cuál es el tiempo de entrega de la tarjeta de compras?</h6>2-5 días<h6 class='titulo py-3'>¿Cómo activo la tarjeta de compras?</h6>Si pediste tu tarjeta por el ecommerce se activará automáticamente en las primeras 24 horas después de recibirla. Si la adquiriste en una oficina de Rappi el analista la activa en ese mismo momento."
+    },
+    {
+      "pregunta" : "Sobre la cuenta bancaria",
+      "texto" : "<h6 class='titulo py-3'>¿Tengo que registrar mi cuenta bancaria?</h6>                        Sí. Debes inscribir tu cuenta bancaria para recibir tus ganancias.                        <h6 class='titulo py-3'>¿Cómo registro mi cuenta bancaria?</h6>                        Registra tu cuenta bancaria en la app en 'Mis ganancias y deudas', opción 'Cuenta bancaria'. El proceso de validación puede tomar entre uno y tres días para que la cuenta quede activa. Adicionalmente, puedes revisar el siguiente video que te explica cómo hacerlo: <a href='https://drive.google.com/file/d/15T0Cmerbv9Waue2CcJPwb0pzXbIwSTjl/view?usp=sharing' target='_blank'>https://drive.google.com/file/d/15T0Cmerbv9Waue2CcJPwb0pzXbIwSTjl/view?usp=sharing</a>"
+    },
+    {
+      "pregunta" : "Sobre ganancias",
+      "texto" : "<h6 class='titulo py-3'>¿Dónde recibo las ganancias?</h6>                        Recibirás tus ganancias en tu cuenta bancaria previamente registrada.                        <h6 class='titulo py-3'>¿Cuándo recibo las ganancias?</h6>                        El pago se hace los martes y viernes. Los cortes van de viernes a lunes y de martes a jueves. El último corte del mes se corre hasta el día 30/31 y se paga en los siguientes 2 días hábiles del mes siguiente."
+    },
+    {
+      "pregunta" : "Sobre pedidos",
+      "texto" : "<h6 class='titulo py-3'>¿Cómo hago mi primer pedido?</h6>                        Revisa el siguiente video que te explica cómo hacer tu primer pedido: <a href='https://youtu.be/DM6lu0YEgNo' target='_blank'>https://youtu.be/DM6lu0YEgNo</a> . Adicionalmente, puedes revisar cursos cortos dentro de la applicación en la sección 'Centro Informativo' para que saques el mayor provecho de la app y obtengas las mejores ganancias posibles.                        <h6 class='titulo py-3'>¿Cómo y cuando conectarse?</h6>                        En la app verás el mapa de las zonas de cobertura en tu ciudad. Los puntos en rojo en el mapa te indican en qué parte hay más pedidos en determinado momento. Las horas de mayor demanda son las horas pico (ej:. desayuno, almuerzo y cena) y los fines de semana. Revisa el mapa aquí: <a href='https://cy3xs.app.link/zonesmap' target='_blank'>https://cy3xs.app.link/zonesmap</a>                        <h6 class='titulo py-3'>¿Es obligatorio aceptar todos los pedidos?</h6>                        No es obligatorio aceptar todos los pedidos pero la aplicación sí te va a priorizar en la asignación entre más pedidos tomes."
+    }
+
+  ]
+
+}

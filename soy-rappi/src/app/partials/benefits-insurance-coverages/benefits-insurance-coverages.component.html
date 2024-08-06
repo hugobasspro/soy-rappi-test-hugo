@@ -1,0 +1,15 @@
+<section class="benefits coverages">
+  <h2 class="coverages__title">{{data.title}}</h2>
+
+  <div class="coverages__table">
+    <div class="coverages__row coverages__row--header">
+      <div class="coverages__header coverages__header--primary">Coberturas</div>
+      <div class="coverages__header coverages__header--secondary">Valor</div>
+    </div>
+
+    <div class="coverages__row" *ngFor="let zone of data.zones">
+      <div class="coverages__item">{{zone.name}}</div>
+      <div class="coverages__item">{{zone.value}}</div>
+    </div>
+  </div>
+</section>

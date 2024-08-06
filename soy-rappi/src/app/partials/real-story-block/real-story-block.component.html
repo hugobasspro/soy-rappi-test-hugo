@@ -1,0 +1,21 @@
+<div class="block-head">
+    <h2>{{ title }}</h2>
+    <div class="d-flex align-items-center">
+        <ng-container *ngIf="label">
+            <a href="javascript:void(0)"
+                class="btn-share"><img src="assets/img/icons/icon-share.svg"
+                    alt="Share"></a>
+            <a class="btn btn-gradient"
+                (click)="openListItems($event)">{{label}}</a>
+        </ng-container>
+    </div>
+</div>
+<owl-carousel-o [options]="customOptions">
+    <ng-container *ngFor="let entry of data">
+        <ng-template carouselSlide>
+            <app-real-story-blog-entry [data]="entry?.categories"
+                                       [titleCategory]="entry?.typeCategory?.category"
+                                       [slug]="entry?.slug"></app-real-story-blog-entry>
+        </ng-template>
+    </ng-container>
+</owl-carousel-o>

@@ -1,0 +1,102 @@
+@import "../../../assets/css/tools/variable.scss";
+::ng-deep {
+  .delivery-banner {
+    h2 {
+      color: $white-color !important;
+      max-width: 75% !important;
+    }
+  }
+  .light-orange {
+    background-color: $pink-orange-bg-color;
+  }
+
+  .white {
+    background-color: $white-color;
+  }
+
+  .light-gray {
+    background-color: $white-gray-color;
+  }
+
+  app-title-text-block {
+    .section-head {
+      @media (max-width: 414px) {
+        padding: 0 !important;
+      }
+
+      .section-title {
+        @media (max-width: 414px) {
+          text-align: left !important;
+          font-size: 24px !important;
+        }
+      }
+    }
+  }
+
+  .richtext-area {
+    padding: 25px 0 !important;
+
+    @media (max-width: 414px) {
+      padding: 25px 0.9248rem !important;
+      margin-right: 0 !important;
+    }
+
+    > h3 {
+      font-size: 26px !important;
+    }
+
+    > p {
+      font-size: 1.125rem !important;
+    }
+    .text-huge{
+      font-size: 2.375rem;
+      font-family: "pp_object_sansbold";
+      @media (max-width: 767px) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .health-richtxt {
+    margin-bottom: 38px;
+    padding: 20px;
+    padding-left: 0;
+    padding-right: 0;
+
+    @media (max-width: 414px) {
+      padding: 20px 0!important;
+    }
+  }
+
+  .order-list {
+    margin: 0 7%;
+    li {
+      background-color: $white-color;
+      min-height: 70px;
+      border-radius: 10px;
+      display: flex;
+      padding: 12px 15px !important;
+      margin-bottom: 15px;
+      border-left: 14px solid $light-orange-bg-color;
+      @media (max-width: 576px) {
+        font-size: 0.875rem;
+      }
+    }
+    @media (max-width: 576px) {
+      padding-bottom: 40px;
+    }
+  }
+  .responsive-map {
+    max-width: 638px !important;
+    height: 438px !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 100px;
+  }
+
+  .responsive-map {
+    width: 96% !important;
+  }
+
+  .list-number {
+    align-self: flex-start !important;
+  }
+}

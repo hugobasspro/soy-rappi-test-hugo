@@ -1,0 +1,49 @@
+<section class="benefits where">
+  <div class="where__header">
+    <div class="where__info">
+      <h2 class="where__title">{{data.title}}</h2>
+      <!-- previously here was a P element, please check blog-rappi old repository -->
+      <div class="where__description">
+        <app-rich-text [text]="data.subtitle"></app-rich-text>
+      </div>
+    </div>
+
+    <ng-container *ngIf="!responsiveService.validateDisplay(display, displays.DESKTOP)">
+      <ng-container *ngTemplateOutlet="whereOptions"></ng-container>
+    </ng-container>
+
+  </div>
+
+  <div class="where__footer">
+    <div class="position-relative">
+      <ng-container *ngIf="responsiveService.validateDisplay(display, displays.DESKTOP)">
+        <ng-container *ngTemplateOutlet="whereOptions"></ng-container>
+        <img 
+      [src]="uploadService.makeUrl(data.image)" alt="Smartphone" class="position-relative__image">
+      </ng-container>
+    </div>
+    <div class="where__table">
+      <div class="where__row where__row--header">
+        <div class="where__table-header where__table-header--primary">PUNTO</div>
+        <div class="where__table-header where__table-header--secondary">DIRECCION</div>
+      </div>
+
+      <div class="where__row" *ngFor="let location of selectedCity.locations">
+        <div class="where__item">{{location.name}}</div>
+        <div class="where__item">{{location.address}}</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<ng-template #whereOptions>
+  <div class="where__options">
+    <div class="where__option" *ngFor="let city of data.cities; let i = index"
+      [class.where__option--active]="selectedIndex === i" (click)="selectCity(i)">
+      <div class="where__circle" [class.where__circle--active]="selectedIndex === i"></div>
+      <span>{{ city.name }}</span>
+    </div>
+  </div>
+</ng-template>

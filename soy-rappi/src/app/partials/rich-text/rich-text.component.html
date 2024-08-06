@@ -1,0 +1,13 @@
+<div class="richtext-area" [appRichText]="text"></div>
+
+<div class="account-media" *ngIf="flag">
+  <div class="account-media-img">
+    <img [src]="uploadService.makeUrl(media?.image ? media?.image : image)" class="img-fluid">
+  </div>
+  <div class="account-media-content">
+    <div class="account-block" *ngFor="let block of media?.blocksContent">
+      <h4>{{block.title}}</h4>
+      <p>{{block.text}}</p>
+    </div>
+  </div>
+</div>

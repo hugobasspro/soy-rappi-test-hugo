@@ -1,0 +1,29 @@
+<section class="seccion-reel">
+    <div id="carouselMainIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselMainIndicators" [attr.data-slide-to]="i" [class]="item.css_active" *ngFor="let item of lista; let i = index"></li>
+        </ol>
+        <div class="carousel-inner">
+
+          <!-- Lista de Items -->
+          <div class="carousel-item {{ item.css_active }}" [ngStyle]="{ 'background-image' : 'url(' + item.imagen_fondo + ')'}" *ngFor="let item of lista;">
+              <a [href]="item.link">
+                <!--<img class="d-block w-100 h-100" src="assets/baner-over.png" [alt]="item.alt">-->
+                <div class="texto {{ item.ubicacion }} animate__animated animate__lightSpeedInRight">
+                    <img class="d-block" [src]="item.imagen_over" [alt]="item.alt">
+                </div>
+              </a>
+          </div>
+
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselMainIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselMainIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </div>
+</section>

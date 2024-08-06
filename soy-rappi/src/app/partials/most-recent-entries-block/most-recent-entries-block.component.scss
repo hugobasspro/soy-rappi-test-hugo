@@ -1,0 +1,20 @@
+@import "../../../assets/css/tools/variable.scss";
+
+.multimedia-sec {
+  background-size: clamp(720px, 100vw, 1280px) 700px;
+  background-position-x: center;
+  position: relative;
+  padding: 60px 0;
+  margin-bottom: 50px;
+  .section-title {
+    font-size: clamp(36px, 3.75vw, 48px);
+    font-weight: 700;
+    color: $base-color;
+    text-align: center;
+  }
+}
+
+.section-head.text-left.mb-0 {
+  padding: 0;
+  margin: 0;
+}

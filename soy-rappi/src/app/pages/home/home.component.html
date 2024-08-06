@@ -1,0 +1,15 @@
+<ng-container *ngIf="_loadContentService.showContent">
+    <app-form-banner *ngIf="homePageData?.formBanner" [data]="homePageData?.formBanner" [registerFormPlaceholders]="homePageData?.registerFormPlaceholders" id="formRegister" ></app-form-banner>
+    <app-redirect-country-modal *ngIf="showRedirectModalLoad" [isLoaded]="showRedirectModalLoad"></app-redirect-country-modal>
+    <app-benefits-block *ngIf="!isMobile" class="desktop" [title]="homePageData?.benefitsTitle" [benefits]="homePageData?.benefitBoxes"></app-benefits-block>
+    <app-benefits-block-mobile-carousel *ngIf="isMobile" class="mobile" [title]="homePageData?.benefitsTitle" [benefits]="homePageData?.benefitBoxes"></app-benefits-block-mobile-carousel>
+    <app-tab-content-desktop *ngIf="!isMobile" class="desktop" [data]="homePageData?.tabContent" [tabs]="homePageData?.howToSteps"></app-tab-content-desktop>
+    <app-top-content-mobile-carousel *ngIf="isMobile"  class="mobile" [data]="homePageData?.tabContent" [tabs]="homePageData?.howToSteps"></app-top-content-mobile-carousel>
+    <app-vehicle-type-block *ngIf="!isMobile" class="desktop" [title]="homePageData?.vehicleTypeTitle" [subtitle]="homePageData?.vehicleTypeSubtitle" [vehicleTypeBoxes]="homePageData?.vehicleTypeBox"></app-vehicle-type-block> 
+    <app-vehicle-type-block-mobile-carousel *ngIf="isMobile" class="mobile" [title]="homePageData?.vehicleTypeTitle" [subtitle]="homePageData?.vehicleTypeSubtitle" [vehicleTypeBoxes]="homePageData?.vehicleTypeBox"></app-vehicle-type-block-mobile-carousel>  
+    <app-depositions-block *ngIf="!isMobile" class="desktop" [data]="(homePageData?.depositionCard) ? homePageData?.depositionCard : undefined" [title]="homePageData?.depositionsTitle"></app-depositions-block>
+    <app-depostions-block-mobile-carousel *ngIf="isMobile" class="mobile" [data]="(homePageData?.depositionCard) ? homePageData?.depositionCard : undefined" [title]="homePageData?.depositionsTitle"></app-depostions-block-mobile-carousel>
+    <app-multimedia-block *ngIf="homePageData?.multimediaItem" [data]="(homePageData?.multimediaItem) ? homePageData?.multimediaItem : undefined"></app-multimedia-block>
+    <app-news-block *ngIf="homePageData?.newCard" [data]="(homePageData?.newCard) ? homePageData?.newCard : undefined"  [news]="(lastThreeNew) ? lastThreeNew : []"></app-news-block>
+    <app-frequent-questions-block *ngIf="homePageData?.frequentQuestions" [data]="homePageData?.frequentQuestions"></app-frequent-questions-block>
+</ng-container>

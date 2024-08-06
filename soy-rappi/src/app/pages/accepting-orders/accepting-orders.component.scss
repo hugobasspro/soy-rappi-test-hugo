@@ -1,0 +1,71 @@
+@import "../../../assets/css/tools/variable.scss";
+:host ::ng-deep {
+  .oddStep {
+    .media-block {
+      order: 2 !important;
+      text-align: right;
+      @media (max-width: 991px) {
+        order: 1 !important;
+      }
+    }
+    .media-content {
+      order: 1 !important;
+      @media (max-width: 991px) {
+        order: 2 !important;
+      }
+    }
+  }
+
+  app-call-to-action-block {
+    .section-content {
+      .call-action-block {
+        height: 18.75rem;
+
+        @media (max-width: 768px) {
+          height: auto;
+        }
+
+        .call-action-block-img {
+          .img-fluid {
+            height: 22.4556rem;
+            position: relative;
+            bottom: 1.89rem;
+
+            @media (max-width: 768px) {
+              height: auto;
+            }
+          }
+        }
+
+        .call-action-block-content {
+          h1,h2{
+            @media(min-width: 1280px){
+              font-size: 1.875rem;
+              color: $base-color;
+              font-family: "pp_object_sansbold";
+            }
+          }
+          p,
+          .orange-color {
+            font-size: 1.875rem !important;
+          }
+          .btn.btn-gradient {
+            width: 15.25rem !important;
+          }
+        }
+      }
+    }
+  }
+
+  .acc-order-ca-block{
+    .richtext-area{
+      padding-left: 0 !important;
+      margin-bottom: 20px;
+    }
+  }
+  .add-info-content{
+    .richtext-area{
+      padding-left: 0 !important;
+    }
+  }
+}

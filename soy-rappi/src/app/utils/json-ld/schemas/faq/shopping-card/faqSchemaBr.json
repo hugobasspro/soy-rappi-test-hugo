@@ -1,0 +1,26 @@
+{
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	"mainEntity": [{
+		"@type": "Question",
+		"name": "¿Tiene algún costo obtener la tarjeta?",
+		"acceptedAnswer": {
+			"@type": "Answer",
+			"text": "Obtener la tarjeta no tiene costo como tal. Si la pides a domicilio solo debes pagar el valor del envío."
+		}
+	}, {
+		"@type": "Question",
+		"name": "¿Por qué son dos tarjetas?",
+		"acceptedAnswer": {
+			"@type": "Answer",
+			"text": "La tarjeta Pichincha es la tarjeta principal. La tarjeta Edenred te sirve de respaldo en caso que la otra no te funcione en alguna situación."
+		}
+	}, {
+		"@type": "Question",
+		"name": "¿Cuál es la clave de mis tarjetas?",
+		"acceptedAnswer": {
+			"@type": "Answer",
+			"text": "Al momento de recibir tus tarjetas de compras recibirás un folleto con cada una, al despegar la tarjeta de l folleto verás la clave personal de cada una."
+		}
+	}]
+}

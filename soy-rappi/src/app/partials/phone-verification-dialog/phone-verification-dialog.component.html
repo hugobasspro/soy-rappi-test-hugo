@@ -1,0 +1,39 @@
+<div class="modal-body h-100">
+  <div class="verification-head">
+    <a class="back-cta" (click)="close()"><img src="assets/img/icons/verification-back.svg" alt="back">
+      <span>{{texts?.phoneVerification?.goBack}}</span></a>
+
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="close()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+
+  <div class="verification-content h-100" *ngIf="!errorExist">
+    <h2>{{texts?.phoneVerification?.title}}</h2>
+    <p>{{texts?.phoneVerification?.subtitle}}: <strong>{{whatsappVerification?.country_code}} {{whatsappVerification?.phone}}</strong></p>
+
+    <form [formGroup]="verificationForm" (ngSubmit)="onSubmit()">
+      <div class="code--input">
+        <code-input [isCodeHidden]="false" [codeLength]="6" (codeChanged)="onCodeChanged($event)"
+          (codeCompleted)="onCodeCompleted($event)">
+        </code-input>
+        <div class="code-error mt-2" *ngIf="error !== ''">{{error}}</div>
+        <div class="code-resend mt-2" *ngIf="messageResend !== ''">{{messageResend}}</div>
+      </div>
+      <div class="verification-cta">
+        <button type="button" class="btn btn-download " (click)="returnCode()">{{texts?.phoneVerification?.notReceived}}</button>
+        <button class="btn btn-gradient">{{texts?.phoneVerification?.startRegistration}}</button>
+      </div>
+    </form>
+  </div>
+  <div class="verification-content" *ngIf="errorExist">
+    <div class="verification-content">
+      <img src="assets/img/{{errorImg}}" alt="">
+      <h2>{{errorTitle}}</h2>
+      <p>{{errorMessage}}</p>
+      <a *ngIf="isVisible" class="btn btn-gradient d-flex align-items-center justify-content-center" href="{{downloadApp}}">Descargar app</a>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,54 @@
+{
+
+
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+        {
+            "@type":"Question",
+            "name":"Preciso de dinheiro para me conectar com a Soy Rappi?",
+            "acceptedAnswer":
+            {
+                "@type":"Answer",
+                "text":"Não, para usar o aplicativo você não precisa de nenhuma base de dinheiro. Mesmo que você obtenha nosso cartão de compras, você pode fazer pedidos nos quais o Rappi transfere o dinheiro que você precisa para comprar os produtos."
+            }
+        },
+        {
+            "@type":"Question",
+            "name":"Como recebo os ganhos?",
+            "acceptedAnswer":
+            {
+                "@type":"Answer",
+                "text":"Dentro do aplicativo você associa uma conta bancária na qual receberá seus ganhos."
+            }
+        },
+        {
+            "@type":"Question",
+            "name":"É obrigatório ter a mochila para começar a fazer entregas?",
+            "acceptedAnswer":
+            {
+                "@type":"Answer",
+                "text":"Não, ter a mochila não é obrigatório para começar com suas primeiras entregas, no entanto, é recomendável que você use qualquer mochila de entregas ou que adquira a mochila oficial do Rappi para poder transportar os produtos em boas condições."
+            }
+        },
+        {
+            "@type":"Question",
+            "name":"Quanto tempo demora minha conta para ser aprovada?",
+            "acceptedAnswer":
+            {
+                "@type":"Answer",
+                "text":"O processo de cadastro leva aproximadamente 15 minutos. Após o envio da solicitação, a aprovação pode ocorrer em questão de minutos ou no máximo 1 dia."
+            }
+        },
+        {
+            "@type":"Question",
+            "name":"Em quais partes da cidade posso me conectar?",
+            "acceptedAnswer":
+            {
+                "@type":"Answer"
+                ,"text":"Dentro do aplicativo você pode reservar o lugar, o dia e a hora que prefere para fazer entregas."
+            }
+        }]
+
+
+}

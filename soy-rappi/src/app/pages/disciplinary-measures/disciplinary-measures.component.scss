@@ -1,0 +1,11 @@
+@import "../../../assets/css/tools/variable.scss";
+::ng-deep{
+  .delivery-banner{
+    h2{
+      color: $white-color !important;
+    }
+    @media (min-width: 1280px){
+      min-height: 350px !important;
+    }
+  }
+}

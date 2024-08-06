@@ -1,0 +1,32 @@
+<section class="benefits rules">
+  <img *ngIf="!responsiveService.validateDisplay(display, displays.DESKTOP)" class="rules__stars"
+    [src]="uploadService.makeUrl(data.rightImage)" alt="Stars">
+
+  <div class="rules__know">
+    <h2 class="rules__know-title">
+      <img *ngIf="responsiveService.validateDisplay(display, displays.DESKTOP)" class="rules__stars"
+        [src]="uploadService.makeUrl(data.rightImage)" alt="Stars">
+      <span class="rules__know-text">{{data.title}}</span>
+    </h2>
+  </div>
+
+  <div class="rules__body">
+    <div class="rules__header">
+      <img [src]="uploadService.makeUrl(data.image)" alt="Logo">
+
+      <h2 class="rules__title">
+        {{data.subtitle}}
+      </h2>
+    </div>
+
+    <div class="rules__list">
+      <div class="rules__item" *ngFor="let rule of data.rules;let i = index">
+        <span class="rules__item-number">{{i+1}}. </span>
+        <p class="rules__item-description">{{rule.item}}</p>
+      </div>
+    </div>
+  </div>
+
+  <img class="rules__overlay-image"
+    [src]="!responsiveService.validateDisplay(display, displays.DESKTOP) ? uploadService.makeUrl(data.bottomImage) : uploadService.makeUrl(data.bottomImageDesktop)">
+</section>

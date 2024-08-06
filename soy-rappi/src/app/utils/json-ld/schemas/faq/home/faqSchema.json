@@ -1,0 +1,54 @@
+{
+
+
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+        {
+            "@type":"Question",
+            "name":"¿Necesito dinero para conectarme con Soy Rappi?",
+            "acceptedAnswer":
+            {
+                "@type":"Answer",
+                "text":"No, para usar la aplicación no necesitas ninguna base de dinero. Incluso, si reclamas nuestra tarjeta de compras podrás realizar pedidos dónde Rappi te transfiere el dinero que necesites para comprar los productos."
+            }
+        },
+        {
+            "@type":"Question",
+            "name":"¿Cómo recibo las ganancias?",
+            "acceptedAnswer":
+            {
+                "@type":"Answer",
+                "text":"Dentro de la app asocias una cuenta bancaria en la cual recibirás tus ganancias."
+            }
+        },
+        {
+            "@type":"Question",
+            "name":"¿Es obligatorio tener la mochila para comenzar a repartir?",
+            "acceptedAnswer":
+            {
+                "@type":"Answer",
+                "text":"No, tener la maleta no es obligatorio para empezar con tus primeras entregas, sin embargo, es recomendable que uses cualquier maleta de entregas o que adquieras la mochila oficial de Rappi para poder llevar los productos en buenas condiciones"
+            }
+        },
+        {
+            "@type":"Question",
+            "name":"¿Cuánto tiempo demora mi cuenta para quedar aprobada?",
+            "acceptedAnswer":
+            {
+                "@type":"Answer",
+                "text":"El proceso de registro demora aproximadamente 15 minutos. Una vez hayas enviado la solicitud la aprobación puede ocurrir en cuestión de minutos o máximo 1 día."
+            }
+        },
+        {
+            "@type":"Question",
+            "name":"¿En qué partes de la ciudad me puedo conectar?",
+            "acceptedAnswer":
+            {
+                "@type":"Answer"
+                ,"text":"Dentro de la app podrás reservar la zona, el día y la hora que tu prefieras para repartir."
+            }
+        }]
+
+
+}

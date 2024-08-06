@@ -1,0 +1,79 @@
+@import "../../../assets/css/tools/variable.scss";
+.reward-step-sec {
+  position: relative;
+  margin: 50px 0;
+  .reward-step-content {
+    display: flex;
+    align-items: center;
+    .left-img {
+      width: 50%;
+      text-align: center;
+      &:before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 22%;
+        height: 390px;
+        background-color: $pink-orange-bg-color;
+        width: 35%;
+        z-index: -1;
+        @media (max-width: 991px){
+          display: none;
+        }
+      }
+      @media (max-width: 991px){
+        width: 100%;
+      }
+    }
+    .right-img {
+      width: 50%;
+      text-align: center;
+      &:after {
+        position: absolute;
+        content: "";
+        right: 0px;
+        top: 22%;
+        height: 390px;
+        background-color: $pink-orange-bg-color;
+        width: 35%;
+        z-index: -1;
+        bottom: 0;
+        @media (max-width: 991px){
+          display: none;
+        }
+      }
+      @media (max-width: 991px){
+        width: 100%;
+      }
+    }
+    .text-block {
+      width: 50%;
+      @media (max-width: 991px){
+        width: 70%;
+        margin: 25px;
+        order: 1;
+      }
+
+      @media (max-width: 767px){
+        width: 100%;
+
+      }
+    }
+    img{
+      @media (max-width: 767px){
+        width: 100%;
+        max-width: 400px;
+      }
+
+    }
+    @media (max-width: 991px){
+      flex-direction: column-reverse;
+    }
+  }
+  @media (max-width: 991px){
+    background-color: $golden-color;
+    padding: 30px 0;
+    text-align: center;
+    margin: 0;
+  }
+}

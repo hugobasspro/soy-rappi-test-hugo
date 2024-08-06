@@ -1,0 +1,43 @@
+<div *ngIf="_loadContentService.showContent" class="footer-sec">
+    <div class="footer-content">
+        <div class="container">
+
+
+
+            <div class="country-list">
+                <p>{{data?.countriesTitle}}</p>
+                <ul>
+                    <li *ngFor="let locale of data?.countries">
+                        <a [href]="locale.url">
+                            <img [src]="uploadService.makeUrl(locale?.flag)">{{locale?.label}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="custom-column">
+
+                <div class="logo">
+                    <img [src]="uploadService.makeUrl(data?.logo)">
+                </div>
+
+
+
+                <div class="social-icons">
+                    <ul>
+                        <li><a [href]="data?.facebookLink" target="_blank"><img
+                                    src="assets/img/icons/footer-facebook-icon.png" alt="Facebook"></a></li>
+                        <li><a [href]="data?.youtubeLink" target="_blank"><img
+                                    src="assets/img/icons/footer-youtube-icon.png" alt="Youtube"></a></li>
+                    </ul>
+                </div>
+                <div class="terms-link">
+                    <a [href]="data?.termsAndConditionsLink"> {{data?.termsAndConditionsText}}</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

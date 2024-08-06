@@ -1,0 +1,31 @@
+<section class="section-content deliveries">
+    <div class="container">
+        <div class="section-head text-center" *ngIf="data?.titleTab">
+            <h2 class="section-title">
+                <app-rich-text [text]="data?.titleTab?.title"></app-rich-text>
+            </h2>
+        </div>
+        <owl-carousel-o [options]="customOptions" [ngClass]="'multimedia-slider owl-loaded'" *ngIf="customOptions">
+          <ng-container *ngFor="let tab of tabs; let i = index">
+              <ng-template carouselSlide>
+                <div class="deliveries-tabs">
+                  <div class="deliveries-tabs-head d-flex">
+                    <span class="slide-number">0{{i+1}}</span>
+                    <div class="d-flex flex-column">
+                        <h3 class="slide-title">{{tab.title}}</h3>
+                        <p class="slide-dec">{{tab.description}}</p>
+                    </div>
+                  </div>
+                  <div class="deliveries-img" *ngIf="tab.image">
+                    <img [src]="uploadService.makeUrl(tab.image)"
+                      class="img-fluid"
+                      alt="{{tab.title}}" />
+                  </div>
+                </div>
+              </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+    </div>
+</section>
+
+

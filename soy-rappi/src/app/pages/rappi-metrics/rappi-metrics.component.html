@@ -1,0 +1,22 @@
+<app-left-text-banner [data]="rappiMatricsPageData?.banner"></app-left-text-banner>
+<app-breadcrumb-tabs-block></app-breadcrumb-tabs-block>
+<app-title-text-block [data]="rappiMatricsPageData?.titleTextBlock"></app-title-text-block>
+
+<section class="section-content raapi-metrics">
+    <div class="container">
+        <app-receive-orders-generic-step *ngFor="let step of (rappiMatricsPageData?.toolsStep) ? rappiMatricsPageData?.toolsStep : []; let i = index; let odd = odd"
+                                         [class.oddStep]="odd"
+                                         [data]="(step) ? step : undefined">
+        </app-receive-orders-generic-step>
+    </div>
+</section>
+
+<section class="section-content">
+    <div class="container">
+        <app-curiosities-carousel [carousel]="rappiMatricsPageData?.Carousel"
+                                  [bgColor]="rappiMatricsPageData?.CarouselBgColor">
+        </app-curiosities-carousel>
+    </div>
+</section>
+
+<app-frequent-questions-block [data]="rappiMatricsPageData?.frequentQuestions"></app-frequent-questions-block>

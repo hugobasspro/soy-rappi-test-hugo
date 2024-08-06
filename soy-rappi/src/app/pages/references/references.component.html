@@ -1,0 +1,20 @@
+<app-left-text-banner [data]="references?.banner"></app-left-text-banner>
+<app-breadcrumb-tabs-block></app-breadcrumb-tabs-block>
+
+<app-title-text-block [data]="(references?.titleTextBlock) ? references?.titleTextBlock : undefined"></app-title-text-block>
+
+<app-ordered-list [data]="(references) ? references.referencesList : []"></app-ordered-list>
+
+<app-mobile-captures-carousel *ngIf="references?.carousel"
+                              [captures]="references?.carousel?.captures"
+                              [bgColor]="references?.carousel?.bgColor">
+</app-mobile-captures-carousel>
+
+<app-ordered-list [data]="(references) ? references.orderedList : []"
+                                   [startIndex]="(references?.referencesList) ? references?.referencesList?.length : 0"></app-ordered-list>
+<section class="container">
+    <app-rich-text [text]="references?.richTextAfterList"></app-rich-text>
+</section>
+
+<app-multimedia-block *ngIf="references?.multimedia" [data]="(references?.multimedia) ? references?.multimedia : undefined"></app-multimedia-block>
+<app-frequent-questions-block [data]="references?.frequentQuestions"></app-frequent-questions-block>

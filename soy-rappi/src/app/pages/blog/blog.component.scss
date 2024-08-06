@@ -1,0 +1,55 @@
+@import "../../../assets/css/tools/variable.scss";
+
+
+.blog-page{
+  margin-top: 70px;
+  .blog-container{
+    max-width: 1160px;
+    margin: 0 auto;
+    @media (max-width: 1024px){
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  .recent-list,
+  .news-list,
+  .real-stories{
+    margin-top: 70px;
+    @media (max-width: 767px){
+      margin-top: 40px;
+    }
+  }
+}
+
+h2{
+  font-family: 'pp_object_sansbold';
+  font-size: 2.375rem;
+  color: $base-color;
+  margin: 20px 0px;
+  @media (max-width: 575px){
+    font-size: 1.375rem;
+  }
+  @media (max-width: 375px){
+    font-size: 1rem;
+  }
+  text-align: center;
+}
+
+::ng-deep{
+  .block-head{
+    @media (max-width: 575px){
+      flex-direction: column;
+      align-items: flex-start !important;
+    }
+    h2{
+      @media (max-width: 575px){
+        margin-bottom: 5px;
+      }
+    }
+    .btn{
+      @media (max-width: 575px){
+        height: 40px !important;
+      }
+    }
+  }
+}

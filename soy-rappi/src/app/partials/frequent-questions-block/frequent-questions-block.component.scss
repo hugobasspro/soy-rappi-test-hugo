@@ -1,0 +1,40 @@
+@import "../../../assets/css/tools/variable.scss";
+.preguntas-sec {
+  margin: 10px auto 30px auto;
+  width: 75%;
+
+  .section-head {
+    margin-bottom: 0 !important;
+  }
+  .section-title {
+    font-size: clamp(36px,3.75vw,48px);
+    font-weight: 700;
+    margin-bottom: 10px;
+    @media (max-width: 1024px) {
+      margin: 10px;
+    }
+  }
+  .preguntas-content {
+    .questions-sec {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  @media (max-width: 575px) {
+    margin-top: 20px;
+    width: 95%;
+  }
+}
+
+:host:ng-deep {
+  .preguntas-list {
+    &:first-child {
+      .pq-list {
+        @media (max-width: 1024px) {
+          border-top: 1px solid $border2-color;
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<div class="schedule-reservation-sec">
+    <div class="account-media-left-img" *ngIf="image && imageToLeft">
+        <img [src]="image" />
+    </div>
+    <div class="content" [ngClass]="{'no-image' : image === '' }">
+        <div class="qa-detail">
+            <div class="number-sec">
+                <p class="number">{{index}}.</p>
+            </div>
+            <div class="que-ans">
+                <p class="que">{{question}}</p>
+                <p class="ans">{{answer}}</p>
+            </div>
+        </div>
+        <div class="tips-list" *ngIf="list && list.length > 0">
+            <ul *ngFor="let item of list">
+                <li class="d-flex flex-row align-items-center">
+                    <app-rich-text [text]="item.text"></app-rich-text>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="account-media-right-img" *ngIf="image && !imageToLeft">
+        <img [src]="image" />
+    </div>
+</div>

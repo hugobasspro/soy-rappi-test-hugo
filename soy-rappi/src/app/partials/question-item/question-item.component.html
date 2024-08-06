@@ -1,0 +1,11 @@
+<div class="pq-list" (click)="onClick()">
+  <div class="p-question-container">
+    <p class="p-question">{{ (data?.question) ? data?.question : '' }}</p>
+    <div class="img-container">
+      <img [src]="isActive ? '../../../assets/img/icons/arrow_up.png' : '../../../assets/img/icons/arrow.png'">
+    </div>
+  </div>
+  <div class="p-answer-container">
+    <p class="p-answer" *ngIf="isActive">{{ (data?.answer) ? data?.answer : '' }}</p>
+  </div>
+</div>

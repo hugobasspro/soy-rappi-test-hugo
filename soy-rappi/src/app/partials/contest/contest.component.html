@@ -1,0 +1,41 @@
+<section class="activities section">
+  <h2 class="title">{{ data?.title }}</h2>
+  <div class="activities__filters">
+    <div class="activities__filters-list">
+      <ng-container *ngFor="let contest of data?.contests; let i = index">
+        <div class="activities__filter"  (click)="selectContest(i, contest.id)" [ngClass]="{'activities__filter--active': isActive === i}">
+          <img [src]="uploadService.makeUrl(contest.logo)" />
+          <h3>{{contest.name}}</h3>
+        </div>
+      </ng-container>
+    </div>
+    <div class="activities__filters-content">
+      <h2 class="activities__filters-content-title">{{contest?.title || ''}}</h2>
+      <app-contest-description *ngFor="let data of contest?.description" [data]="data"></app-contest-description>
+    </div>
+  </div>
+</section>
+
+<section class="register">
+  <div class="register-head">
+    <h2 class="register-head-title">
+      {{ contest?.form?.title }}
+    </h2>
+  </div>
+  <div class="register-section">
+    <div class="register-content">
+      <img [src]="uploadService.makeUrl(contest?.form?.image)" alt="Men" />
+      <div class="register-block">
+        <app-form-dynamic *ngIf="!formSubmitted" [data]="contest?.form" (submit)="submitForm()"></app-form-dynamic>
+
+        <div class="form--submitted" *ngIf="formSubmitted">
+          <p class="form__message">¡Formulario enviado exitosamente!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="terms-conditions section">
+  <app-contest-terms-conditions [data]="contest?.termsAndConditions"></app-contest-terms-conditions>
+</section>

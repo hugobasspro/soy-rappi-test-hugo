@@ -1,0 +1,12 @@
+<app-standard-banner [data]="(order?.banner) ? order?.banner : undefined"></app-standard-banner>
+<app-breadcrumb-tabs-block></app-breadcrumb-tabs-block>
+<div class="order-call-to-action">
+    <div class="container">
+        <app-call-to-action-block [data]="(order?.orderTypesBlock) ? order?.orderTypesBlock : undefined"></app-call-to-action-block>
+    </div>
+</div>
+
+<app-multimedia-block *ngIf="order?.multimedia" 
+                      [data]="(order?.multimedia) ? order?.multimedia : undefined"></app-multimedia-block>
+
+<app-frequent-questions-block [data]="(order?.frequentQuestions) ? order?.frequentQuestions : undefined"></app-frequent-questions-block>

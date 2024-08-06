@@ -1,0 +1,41 @@
+@import "../../../assets/css/tools/variable.scss";
+::ng-deep{
+  .delivery-banner{
+    h2{
+      color: $white-color !important;
+    }
+  }
+  .oddStep{
+    .media-block{
+      order: 2 !important;
+      text-align: right;
+      @media (max-width: 991px){
+        order: 1 !important;
+      }
+    }
+    .media-content{
+      order: 1 !important;
+      @media (max-width: 991px){
+        order: 2 !important;
+      }
+    }
+  }
+  .raapi-metrics{
+    .tips-step{
+      .media-content{
+        h2{
+          @media (max-width: 767px){
+            margin-bottom: 0 !important;
+          }
+        }
+        .description{
+          margin-top: 50px;
+          @media (max-width: 767px){
+            margin-top: 0;
+            padding-bottom: 0 !important;
+          }
+        }
+      }
+    }
+  }
+}

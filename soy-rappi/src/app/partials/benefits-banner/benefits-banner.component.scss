@@ -1,0 +1,99 @@
+:host ::ng-deep {
+  .banner {
+    display: flex;
+    align-items: flex-end;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 12.75rem max(0.94rem, 3.4976%) 12.69rem;
+    min-height: 38.9375rem;
+    max-width: 100%;
+
+    &--benefits-alpha {
+      padding: 0 max(0.94rem, 3.4976%) 7.69rem;
+      background-position: -485px;
+
+      @media screen and (min-width: 64rem) {
+        background-position: center center;
+      }
+    }
+
+    &--Benefits-Insurance {
+      padding: 0 max(0.94rem, 3.4976%) 12.69rem;
+      background-position: top;
+
+      @media screen and (min-width: 64rem) {
+        padding: 9.87rem 8.12rem 24.44rem !important;
+        height: 732px;
+      }
+    }
+
+    &--Benefits-Learn {
+      padding: 0 max(0.94rem, 3.4976%) 6.5rem;
+    }
+
+    &--Benefits-News {
+      padding: 0 max(0.94rem, 3.4976%) 7.69rem;
+      background-position: top;
+
+      @media screen and (min-width: 64rem) {
+        align-items: center;
+      }
+    }
+
+    &__title {
+      color: #fff;
+      font-weight: 700;
+      line-height: 96%;
+      font-size: 3.75rem;
+
+      &--benefits-alpha {
+        max-width: 8ch;
+
+        @media screen and (min-width: 64rem) {
+          font-size: 5rem;
+          width: 8ch;
+        }
+      }
+
+      &--Benefits-Insurance {
+        max-width: 10ch;
+        font-size: 3.25rem;
+
+        @media screen and (min-width: 26.875rem) {
+          font-size: 3.75rem;
+        }
+
+        @media screen and (min-width: 64rem) {
+          font-size: 4rem;
+          line-height: 61px;
+          min-width: 14ch;
+        }
+      }
+
+      &--Benefits-Learn {
+        max-width: 8ch;
+
+        @media screen and (min-width: 64rem) {
+          font-size: 3.75rem;
+          width: 13ch;
+        }
+      }
+
+      &--Benefits-News {
+        width: 14ch;
+
+        @media screen and (min-width: 64rem) {
+          font-size: 3.75rem;
+        }
+      }
+    }
+
+    @media screen and (min-width: 64rem) {
+      background-image: url("/assets/img/benefits/desktop-banner--benefits.png");
+      padding: 0 8.12rem 0;
+      align-items: center;
+      min-height: 33.6875rem;
+    }
+  }
+}

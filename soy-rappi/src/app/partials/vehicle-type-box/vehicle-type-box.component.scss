@@ -1,0 +1,50 @@
+@import "../../../assets/css/tools/variable.scss";
+.vehicle-block {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: $ligth-yellow;
+  border-radius: 10px;
+  width: 100%;
+  min-height: 230px;
+
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 5px;
+  }
+  .vehicle-img {
+    width: 60%;
+    height: 100%;
+  }
+  .img-fluid {
+    transform: scale(1.1);
+}
+  h3 {
+    font-size: 24px;
+    color: $base-color;
+    font-weight: 800;
+    text-align: left;
+    margin-top: 5px;
+    @media (max-width: 375px) {
+      font-size: 18px;
+    }
+  }
+  ul {
+    list-style-type: none;
+    text-align: left;
+    min-height: 120px;
+    li {
+      font-size: 16px;
+      font-weight: 400;
+      color: $base-color;
+      margin: 5px 0;
+      @media (max-width: 375px) {
+        font-size: 14px;
+      }
+    }
+  }
+}

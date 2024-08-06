@@ -1,0 +1,71 @@
+<section class="benefits partners">
+
+  <div class="partners__head">
+    <div class="partners__title">
+      <img src="../../../assets/img/category-banner.png" alt="category banner">
+      <img class="partners__stars partners__stars-big"
+        src="https://images.rappi.com/soy-rappi-api-co/Group_58_075ed61013.png">
+      <h2>{{data.title}}</h2>
+    </div>
+
+    <div class="partners__filters">
+      <div class="partners__filter-list">
+        <!-- You can use filter--active class to set active style -->
+        <div class="partners__filter" [class.partners__filter--active]="selectedIndex === i"
+          *ngFor="let category of categories; let i=index" (click)="selectCategory(i)">
+          <img [src]="uploadService.makeUrl(category.icon)" [class.partners__filter--active-icon]="selectedIndex === i">
+          <h3>{{category.title}}</h3>
+        </div>
+      </div>
+      <h2 class="partners__current"
+        *ngIf="selectedCategory">
+        <img [src]="uploadService.makeUrl(selectedCategory.icon)">
+        <h3>{{selectedCategory.title}}</h3>
+      </h2>
+    </div>
+  </div>
+
+  <div class="partners__list">
+    <div class="partners__partner partners" *ngFor="let partner of selectedCategory?.partners">
+      <div class="partners__partner-image" [class]="partner.imageBorder ? 'block-shadow' : null">
+        <img [src]="uploadService.makeUrl(partner.image)">
+        <p class="partners__partner-image-description left-align" *ngIf="partner.imageDescription">{{partner.imageDescription}}</p>
+        <div class="benefits__buttons left-align" *ngIf="partner.button3">
+          <a [href]="partner.button3.url" 
+            class="benefits__button benefits__button--light benefits__button--short benefits__button--underline  cursor--pointer">{{partner.button3.label}}</a>
+        </div>
+      </div>
+
+      <div class="partners__partner-body">
+        <div class="partners__partner-header">
+          <div class="partners__partner-headings">
+            <h3 class="partners__partner-title">{{partner.title}}</h3>
+            <h4 class="partners__partner-subtitle" *ngIf="partner.subtitle">
+              {{partner.subtitle}}
+            </h4>
+          </div>
+
+          <ul class="partners__partner-descriptions">
+            <li class="partners__partner-description" *ngFor="let benefit of partner.textList">
+              {{benefit.item}}
+            </li>
+          </ul>
+        </div>
+        <div class="benefits__buttons">
+          <a [href]="partner.button1.url" *ngIf="partner.button1"
+            class="benefits__button benefits__button--light benefits__button--short  cursor--pointer">{{partner.button1.label}}</a>
+          <a [href]="partner.button2.url" *ngIf="partner.button2"
+            class="benefits__button benefits__button--grey benefits__button--short cursor--pointer">{{partner.button2.label}}</a>
+            <a [href]="partner.exchangeButton.url" *ngIf="partner.exchangeButton"
+            class="benefits__button benefits__button--exchange benefits__button--short cursor--pointer">
+            {{partner.exchangeButton.label}}
+            <img src="assets/img/exchange.svg" class="exchange-icon">
+          </a>
+        </div>
+        <div class="partners_extra-text" *ngIf="partner.extraText">
+          <p class="partners_extra-text--text">{{partner.extraText}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

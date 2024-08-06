@@ -1,0 +1,151 @@
+:host ::ng-deep {
+  .shopping-centers {
+    font-family: "Poppins";
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8.75rem 0.9375rem 0;
+    gap: 4.56rem;
+    max-width: 72.75rem;
+    margin: 0 auto;
+
+    @media screen and (min-width: 64rem) {
+      padding: 10.6875rem 0.9375rem 0;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @media screen and (min-width: 80rem) {
+      padding: 10.6875rem 0 0;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      width: 100%;
+      min-height: 0.375rem;
+      background-color: #ff4300;
+
+      @media screen and (min-width: 64rem) {
+        display: none;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      gap: 1.17rem;
+      color: #000;
+
+      @media screen and (min-width: 80rem) {
+        max-width: 28.6875rem;
+      }
+
+      h2 {
+        font-family: "Poppins";
+        font-size: 2.8125rem;
+        font-weight: 500;
+        line-height: 3.375rem;
+        color: #000000;
+      }
+
+      p {
+        font-family: "Poppins";
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.8125rem;
+        color: #000000;
+      }
+    }
+
+    &__title {
+      font-family: "Poppins";
+      font-size: 2.8125rem;
+      font-weight: 500;
+      line-height: 121%;
+
+      &--bold {
+        color: #ff4300;
+      }
+    }
+
+    &__description {
+      font-family: "Poppins";
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 121%;
+    }
+
+    &__image {
+      width: min(18.75rem, 69.76%);
+      aspect-ratio: 18.75 / 11.0625;
+
+      @media screen and (min-width: 64rem) {
+        width: min(25rem, 93.02%);
+        aspect-ratio: 26.25 / 15.5625;
+      }
+    }
+  }
+
+  :host::ng-deep {
+    .owl-nav {
+      position: absolute;
+      top: 0;
+      left: -3.125rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: calc(100% + 6.25rem);
+      height: 100%;
+      margin: 0;
+
+      @media screen and (min-width: 64rem) {
+        width: calc(100% + 8rem);
+        left: -4rem;
+      }
+
+      .owl-prev,
+      .owl-next {
+        width: 1.875rem !important;
+        height: 1.875rem !important;
+        background: unset !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      .owl-prev {
+        background-image: url("/assets/svg/carousel--prev.svg") !important;
+      }
+
+      .owl-next {
+        background-image: url("/assets/svg/carousel--next.svg") !important;
+      }
+    }
+
+    .owl-dots {
+      position: absolute;
+      width: 100%;
+      padding-top: 1.5625rem;
+
+      @media screen and (min-width: 64rem) {
+        padding-top: 2.6875rem;
+      }
+    }
+
+    .owl-theme .owl-dots .owl-dot span {
+      width: 1.25rem;
+      height: 0.5rem;
+    }
+
+    .owl-theme .owl-dots .owl-dot.active span,
+    .owl-theme .owl-dots .owl-dot:hover span {
+      background-color: #ff4300;
+    }
+  }
+}

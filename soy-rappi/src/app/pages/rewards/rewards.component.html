@@ -1,0 +1,24 @@
+<app-left-text-banner [data]="rewaredsData?.banner"
+                      [title]="rewaredsData?.banner?.title"
+                      [image]="uploadService.makeUrl(rewaredsData?.banner?.background)"></app-left-text-banner>
+<app-breadcrumb-tabs-block></app-breadcrumb-tabs-block>
+
+<app-title-text-block [data]="rewaredsData?.titleTextBlock"></app-title-text-block>
+
+
+
+<app-rewards-step *ngFor="let step of rewaredsData?.rewardsSteps; let i = index" 
+                  [data]="step"
+                  [title]="step?.titleImage"
+                  [imageToLeft]="((i+1)%2) === 0"></app-rewards-step>
+
+<app-rewards-additional-info-block *ngIf="rewaredsData?.additionalInfo" 
+                                   [data]="rewaredsData?.additionalInfo"
+                                   [image]="uploadService.makeUrl(rewaredsData?.additionalInfo?.image)"
+                                   [text]="rewaredsData?.additionalInfo?.description"
+                                   [title]="rewaredsData?.additionalInfo?.titleCallToAction">
+</app-rewards-additional-info-block>
+
+<app-multimedia-block *ngIf="rewaredsData?.multimedia" [data]="(rewaredsData?.multimedia) ? rewaredsData?.multimedia : undefined"></app-multimedia-block>
+
+<app-frequent-questions-block [data]="rewaredsData?.frequentQuestions"></app-frequent-questions-block>

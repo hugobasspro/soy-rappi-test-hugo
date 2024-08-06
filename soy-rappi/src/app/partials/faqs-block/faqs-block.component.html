@@ -1,0 +1,66 @@
+<section class="faq">
+  <div class="faq__search">
+    <img src="/assets/img/search-icon.svg" alt="Search" />
+    <form [formGroup]="formData" class="form">
+      <input placeholder="{{data.searchLabel}}" type="text" formControlName="question"  (ngModelChange)="valuechange($event)"[matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of search" [value]="option.question" (onSelectionChange)="getOption($event.source.value, option.category.id, option.id)">
+          {{ option.question }}
+        </mat-option>
+      </mat-autocomplete>
+    </form>
+  </div>
+  <div class="faq__section">
+    <div class="faq__section-list">
+      <ul>
+        <li *ngFor="let category of categories; let i = index"
+          (click)="selectCategory(i, category.id)">
+            <span [ngClass]="{'active': isActive === i}">
+              {{ category.category }}
+            </span>
+          </li>
+      </ul>
+    </div>
+    <div class="faq__section-content">
+      <h3 class="faq__section-content-title">Generales</h3>
+      <div class="faq__section-accordian scroll">
+        <cdk-accordion class="example-accordion">
+          <cdk-accordion-item 
+            class="faq__section-accordian-list"
+            *ngFor="let item of questions; let index = index"
+            #accordionItem="cdkAccordionItem"
+            role="button"
+            tabindex="0"
+            [attr.id]="'accordion-header-' + index"
+            [attr.aria-expanded]="accordionItem.expanded"
+            [attr.aria-controls]="'accordion-body-' + index">
+            <h4 class="faq__section-accordian-title"  (click)="toggle(item)" (click)="accordionItem.toggle()">
+              {{ item.question }}
+            </h4>
+            <div class="faq__section-accordian-content"
+              [style.display]="accordionItem.expanded ? '' : item.active ? '' :'none'"
+              [attr.id]="'accordion-body-' + index"
+              [attr.aria-labelledby]="'accordion-header-' + index">
+              <div class="faq__section-accordian-content-inner">
+                <app-rich-text [text]="item.description" ></app-rich-text>
+              </div>
+            </div>
+          </cdk-accordion-item>
+        </cdk-accordion>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <ng-container>
+  <div class="questions">
+    <ng-container *ngFor="let item of questions">
+      <div class="questions--title">
+        <span class="questions--span">{{ item.question }}</span>
+        <span style="color: #FE3F23; font-size: 24px; font-family: Jornada Sans; font-weight: 500; line-height: 29.04px; word-wrap: break-word">Soy Rappi</span>
+        <span style="color: black; font-size: 24px; font-family: Jornada Sans; font-weight: 500; line-height: 29.04px; word-wrap: break-word">?</span>
+      </div>
+      <div class="questions--description">{{ item.answer }}</div>
+    </ng-container> 
+  </div>
+</ng-container> -->

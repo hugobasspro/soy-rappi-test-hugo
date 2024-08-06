@@ -1,0 +1,19 @@
+{
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	"mainEntity": [{
+		"@type": "Question",
+		"name": "¿Puedo empezar a entregar sin maleta?",
+		"acceptedAnswer": {
+			"@type": "Answer",
+			"text": "Sí, puedes empezar sin maleta. Sin embargo, te recomendamos usar alguna que te permita llevar los productos durante tus primeros días."
+		}
+	}, {
+		"@type": "Question",
+		"name": "¿Por qué es ideal la mochila de Rappi?",
+		"acceptedAnswer": {
+			"@type": "Answer",
+			"text": "La mochila de Rappi esta construida para que puedas llevar los pedidos cómodo, con la temperatura ideal y así ayudarte a brindar una mejor experiencia al usuario, lo cual te permitirá aumentar de nivel en la app y obtener mejores resultados."
+		}
+	}]
+}

@@ -1,0 +1,74 @@
+<div class="register-form">
+    <h3>{{title}}</h3>
+    <div class="subtitle-banner-mobile">
+        <p>{{ callToAction || 'Registrate ahora'}}</p>
+    </div>
+
+    <form class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+        <input type="text" class="form-control form-control--first-anmes" id="firstNames"
+            [placeholder]="registerFormPlaceholders?.name" formControlName="firstNames"
+            [ngClass]="getClass('firstNames')">
+
+        <input type="text" class="form-control form-control--input-lastnames" id="lastNames"
+            [placeholder]="registerFormPlaceholders?.alias" formControlName="lastNames"
+            [ngClass]="getClass('lastNames')">
+
+        <input type="email" class="form-control form-control--input-email" id="inputEmail"
+            [placeholder]="registerFormPlaceholders?.email" formControlName="inputEmail"
+            [ngClass]="getClass('inputEmail')">
+
+        <div class="form-control form-control--city">
+            <select class="form-control form-control--city-select" id="city" formControlName="city" [ngClass]="getClass('city')">
+                <option value="" disabled selected hidden>{{ registerFormPlaceholders?.city }}</option>
+                <option *ngFor="let city of cities" value="{{city.name}}">{{ city.name }}</option>
+            </select>
+            <img class="arrow-up" src="/assets/img/arrow-down.svg" alt="Arrow up">
+        </div>
+
+        <div class="phone-container">
+            <div class="form-control form-control--code" [ngClass]="getClass('code')">
+                <select class="form-control form-control--code-select" id="code" formControlName="code" (change)="getFlag($event)" [ngClass]="getClass('code','select')">
+                  <option value="" disabled selected hidden>+{{codeIso}}</option>
+                  <option *ngFor="let country of countries" value="{{country.code_iso_2}}">+{{ country.code_iso_2 }}</option>
+                </select>
+                <span class="flag " [ngClass]="flag"></span>
+            </div>
+
+            <input type="number" class="form-control form-control--contact-phone" id="contactPhone"
+            (input)="checkNumLength($event)"
+            [placeholder]="registerFormPlaceholders?.phoneNumber" formControlName="contactPhone"
+            [ngClass]="getClass('contactPhone')">
+        </div>
+
+        <div class="form-control form-control--password">
+            <input [type]="show ? 'text' : 'password'" class="form-control form-control--password-input" id="password"
+                [placeholder]="registerFormPlaceholders?.password" formControlName="password"
+                [ngClass]="getClass('password')">
+            <img src="/assets/img/show.png" alt="show" class="form-control--password-show" (click)="password()"
+                [class.hide]="show" />
+            <img src="/assets/img/hide.png" alt="hide" class="form-control--password-hide" (click)="password()"
+                [class.hide]="!show" />
+        </div>
+
+        <div class="mb-2 d-flex form-check">
+            <div>
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="check"
+                >
+                <label class="form-check-label"  [ngClass]="(registerForm.get('check')?.invalid  && checkSubmitted) ? 'labelCheck' : '' "
+                    for="exampleCheck1"></label>
+            </div>
+                <div class="form-check-label privacy-policies desktop" [innerHTML]="registerFormPlaceholders?.acceptPrivacyPoliciesDesktop"></div>
+                <div class="form-check-label privacy-policies mobile" [innerHTML]="registerFormPlaceholders?.acceptPrivacyPoliciesMobile"></div>
+        </div>
+        <div class="containerb-btn">
+            <button class="btn btn-gradient d-block" (click)="openModal(template)">{{registerFormPlaceholders?.buttonText}}</button>
+        </div>
+    </form>
+
+</div>
+
+<ng-template #template>
+    <app-phone-verification-dialog (modalClose)="closeModal()" [errorResponse]="errorResponse" [errorExist]="errorExist" [whatsappVerification]="verification" [texts]="texts" [userData]="userData" class="h-100">
+    </app-phone-verification-dialog>
+</ng-template>

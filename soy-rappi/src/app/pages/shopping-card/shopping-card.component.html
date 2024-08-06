@@ -1,0 +1,21 @@
+<app-left-text-banner [data]="shoppingCardData?.banner"></app-left-text-banner>
+<app-breadcrumb-tabs-block></app-breadcrumb-tabs-block>
+<app-small-info-block [data]="shoppingCardData?.info"></app-small-info-block>
+
+<section class="section-content">
+    <div class="container">
+        <app-curiosities-carousel [carousel]="shoppingCardData?.Carousel"
+                                  [bgColor]="shoppingCardData?.CarouselBgColor">
+        </app-curiosities-carousel>
+    </div>
+</section>
+<div class="sc-multimedia">
+    <app-multimedia-block [data]="(shoppingCardData?.shoppingCardMultimedia) ? shoppingCardData?.shoppingCardMultimedia : undefined"></app-multimedia-block>
+</div>
+<section class="section-content zero-padding">
+    <div class="container">
+        <app-receive-orders-generic-step [data]="shoppingCardData?.step"></app-receive-orders-generic-step>
+    </div>
+</section>
+
+<app-frequent-questions-block [data]="shoppingCardData?.frequentQuestions"></app-frequent-questions-block>

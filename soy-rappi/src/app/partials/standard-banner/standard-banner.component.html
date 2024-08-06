@@ -1,0 +1,5 @@
+<div  *ngIf="data" class="standard-banner-sec" [ngStyle]="{'background': 'url(' + uploadService.makeUrl((!showMobileBanner) ? data!.background : data!.backgroundMobile) + ') no-repeat 0 0 / cover'}">
+  <div class="banner-title">
+    <p>{{ (data) ? data.title : '' }}</p>
+  </div>
+</div>

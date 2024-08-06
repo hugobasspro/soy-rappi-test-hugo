@@ -1,0 +1,40 @@
+{
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	"mainEntity": [{
+		"@type": "Question",
+		"name": "¿Puedo referirme a mis amigos de otras ciudades?",
+		"acceptedAnswer": {
+			"@type": "Answer",
+			"text": "¡Si! Ahora puedes referir a tus amigos que no se encuentran en la misma ciudad que tú."
+		}
+	}, {
+		"@type": "Question",
+		"name": "¿Cuántas personas puedo referir?",
+		"acceptedAnswer": {
+			"@type": "Answer",
+			"text": "¡Todas las que quieras! No hay ningún límite"
+		}
+	}, {
+		"@type": "Question",
+		"name": "¿Cuánto dinero puedo ganar?",
+		"acceptedAnswer": {
+			"@type": "Answer",
+			"text": "Todo depende de ti y de las personas que refieras, el valor de la ganancia varía dependiendo del valor de la campaña."
+		}
+	}, {
+		"@type": "Question",
+		"name": "¿Cómo sé qué personas se están registrando con mi código?",
+		"acceptedAnswer": {
+			"@type": "Answer",
+			"text": "¡Nosotros te haremos llegar un correo notificándote cuando una persona se registre con tu código!"
+		}
+	}, {
+		"@type": "Question",
+		"name": "¿Cuándo voy a recibir el pago de mis ganancias?",
+		"acceptedAnswer": {
+			"@type": "Answer",
+			"text": "Apenas tu referido complete la meta de órdenes, podrás ver tu pago reflejado la próxima semana."
+		}
+	}]
+}

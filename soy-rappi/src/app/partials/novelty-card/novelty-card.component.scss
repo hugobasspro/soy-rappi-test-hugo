@@ -1,0 +1,52 @@
+@import "../../../assets/css/tools/variable.scss";
+
+.category-block{
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  .category-block-img{
+    border-radius: 10px;
+    height: 240px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .category-block-content{
+    padding: 15px 0 40px 0;
+    .category{
+      border: 1px solid #707070;
+      border-radius: 15px;
+      display: inline-flex;
+      padding: 4px 15px 7px 15px;
+      font-size: 0.875rem;
+      color: $base-color;
+      margin-bottom: 15px;
+    }
+    .category-date{
+      color: $base-color;
+      margin-bottom: 10px;
+    }
+    .category-title{
+      font-family: 'pp_object_sansbold';
+      font-size: 1.5rem;
+      color: $base-color;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      @media (max-width: 575px){
+        font-size: 1.1rem;
+      }
+    }
+    @media (max-width: 675px){
+      padding: 15px 0 20px 0;
+    }
+  }
+  @media (max-width: 767px){
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}

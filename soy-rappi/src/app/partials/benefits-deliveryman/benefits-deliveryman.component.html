@@ -1,0 +1,15 @@
+<section class="benefits deliveryman">
+  <img class="deliveryman__header"
+    [src]="!responsiveService.validateDisplay(display, displays.DESKTOP) ? uploadService.makeUrl(data.image) : uploadService.makeUrl(data.desktopImage)">
+  <div class="deliveryman__body">
+    <div class="deliveryman__title">
+      <app-rich-text [text]="data.title"></app-rich-text>
+    </div>
+
+
+    <div class="deliveryman__description">
+      <p class="deliveryman__paragraph">{{data.paragraph1}}</p>
+      <p class="deliveryman__paragraph">{{data.paragraph2}}</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,37 @@
+<section class="use-benefit">
+    <div class="use-benefit__header">
+        <h2 class="use-benefit__title">{{data.title}}</h2>
+        <p class="use-benefit__description">
+            {{data.description}}
+        </p>
+    </div>
+    <div class="use-benefit__content">
+        <div class="use-benefit__body">
+            <ul class="use-benefit__ul">
+                <app-rich-text [text]="data.richText"></app-rich-text>
+            </ul>
+        </div>
+        <div class="use-benefit-table">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Dias</th>
+                        <th>Horario de
+                            descuentos</th>
+                        <th>Valor del
+                            descuentos en
+                            gasolina corriente y deisel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let row of data.tableRows">
+                        <td>{{row.days}}</td>
+                        <td>{{row.discounts}}</td>
+                        <td>{{row.price}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a [href]="data.button.url" class="benefits__button benefits__button--grey benefits__button--short cursor--pointer">{{data.button.label}}</a>
+        </div>
+    </div>
+</section>

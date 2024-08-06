@@ -1,0 +1,97 @@
+@import "../../../assets/css/tools/variable.scss";
+.bag-locations-sec {
+  background-color: #fff0dd;
+  margin-top: 40px;
+  padding: 70px 0;
+  .top-head {
+    text-align: center;
+    max-width: 730px;
+    margin: 0 auto;
+    .title {
+      font-size: 2.375rem;
+      font-family: 'pp_object_sansbold';
+      margin-bottom: 25px;
+      color: $base-color;
+    }
+    @media (max-width: 767px){
+      text-align: left;
+    }
+  }
+  .desc {
+    font-size: 1.125rem;
+    font-family: 'pp_object_sansregular';
+    margin-bottom: 40px;
+    color: $base-color;
+    @media (max-width: 767px){
+      font-size: 1rem;
+    }
+  }
+  .location-content {
+    display: flex;
+    .location-left {
+      width: 50%;
+      .sub-title {
+        color: $base-color;
+        font-size: 1.5rem;
+        font-family: 'pp_object_sansbold';
+        margin-bottom: 10px;
+        @media (max-width: 575px){
+          font-size: 1.75rem;
+          text-align: center;
+        }
+
+        @media (max-width: 320px){
+          font-size: 1.2rem;
+        }
+      }
+      .btn {
+        padding: 12px 56px;
+        height: auto;
+        @media (max-width: 575px){
+          max-width: 133px;
+          height: 39px;
+          font-size: 0.875rem;
+          padding: 10px 20px;
+          margin: 0 auto;
+          display: flex;
+        }
+      }
+      @media (max-width: 991px){
+        width: 100%;
+      }
+    }
+    .location-right {
+      width: 45%;
+      padding-left: 5%;
+      padding-top: 40px;
+      @media (max-width: 991px){
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+    @media (max-width: 991px){
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 767px){
+    padding: 40px 0;
+  }
+}
+
+
+::ng-deep{
+  .bag-locations-sec{
+    .top-head{
+      .section-title{
+        .richtext-area{
+          h1{
+            @media (min-width: 1366px){
+              font-size: 2.5rem;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

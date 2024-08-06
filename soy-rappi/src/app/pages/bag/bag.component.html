@@ -1,0 +1,44 @@
+<app-left-text-banner [data]="bagData?.banner"></app-left-text-banner>
+<app-breadcrumb-tabs-block></app-breadcrumb-tabs-block>
+<app-title-text-block [data]="bagData?.titleTextBlock"></app-title-text-block>
+<app-acquire-bag-content [benefits]="bagData?.benefitBoxes"></app-acquire-bag-content>
+<div class="bag-cta mt-4 pb-5" *ngIf="bagData?.firstButtonTitle">
+  <a *ngIf="sharedFunctionsService.isExternalLink(bagData?.firstButtonUrl)"
+        [href]="bagData?.firstButtonUrl"
+        class="btn btn-gradient">{{bagData?.firstButtonTitle}}</a>
+  <a *ngIf="!sharedFunctionsService.isExternalLink(bagData?.firstButtonUrl)"
+    [routerLink]="sharedFunctionsService.removeInitialSlash(bagData?.firstButtonUrl)"
+    class="btn btn-gradient">{{bagData?.firstButtonTitle}}</a>
+</div>
+<app-small-info-colored-block [data]="bagData?.info"></app-small-info-colored-block>
+<app-right-list-block [items]="bagData?.listItems"
+                      [title]="bagData?.titleList"
+                      [description]="bagData?.listDescription"
+                      [descriptionListItems]="bagData?.listDescriptionItems"></app-right-list-block>
+<div class="bag-cta-2 mt-4 mb-4" *ngIf="bagData?.secondButtonTitle">
+  <a *ngIf="sharedFunctionsService.isExternalLink(bagData?.secondButtonUrl)"
+    [href]="bagData?.secondButtonUrl"
+    class="btn btn-gradient">{{bagData?.secondButtonTitle}}</a>
+  <a *ngIf="!sharedFunctionsService.isExternalLink(bagData?.secondButtonUrl)"
+    [routerLink]="sharedFunctionsService.removeInitialSlash(bagData?.secondButtonUrl)"
+    class="btn btn-gradient">{{bagData?.secondButtonTitle}}</a>
+</div>
+<ng-container *ngIf="bagData?.useLocation">
+  <app-bag-locations [title]="bagData?.titleLocations"
+  [description]="bagData?.locationsDescription"
+  [subtitle]="bagData?.locationsSubtitle"
+  [list]="bagData?.locationsBlock?.locations"
+  [button]="bagData?.locationsBlock?.button"
+  [previewLocation]="bagData?.locationsBlock?.previewLocationText"
+  [subtitleDescription]="bagData?.locationsSubtitleDescription"></app-bag-locations>
+</ng-container>
+
+<div class="bag-cta bg mt-4 mb-4" *ngIf="bagData?.thirdButtonTitle">
+  <a *ngIf="sharedFunctionsService.isExternalLink(bagData?.thirdButtonUrl)"
+    [href]="bagData?.thirdButtonUrl"
+    class="btn btn-gradient">{{bagData?.thirdButtonTitle}}</a>
+  <a *ngIf="!sharedFunctionsService.isExternalLink(bagData?.thirdButtonUrl)"
+    [routerLink]="sharedFunctionsService.removeInitialSlash(bagData?.thirdButtonUrl)"
+    class="btn btn-gradient">{{bagData?.thirdButtonTitle}}</a>
+</div>
+<app-frequent-questions-block [data]="bagData?.frequentQuestions"></app-frequent-questions-block>

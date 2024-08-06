@@ -1,0 +1,15 @@
+<div class="multimedia-items">
+    <p class="title">{{ (data?.title) ? data?.title : ''}}</p>
+    <img *ngIf="data?.type === multimediaTypes.IMAGE"
+         [src]="data?.contentURL ? data?.contentURL! : uploadService.makeUrl(data?.image)" />
+    <!-- RECOMMENDED RESOLUTION ASPECT RATIO IS 16:9 OR 21:9 -->
+    <div class="video-width" *ngIf="data?.type === multimediaTypes.YOUTUBE">
+        <div class="video-container">
+            <iframe class="video" 
+                    [src]="data?.contentURL | sanitizer:'resourceUrl'"
+                    loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+</div>

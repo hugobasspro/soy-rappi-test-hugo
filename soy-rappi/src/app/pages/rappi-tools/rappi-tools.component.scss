@@ -1,0 +1,130 @@
+@import "../../../assets/css/tools/variable.scss";
+::ng-deep {
+  .delivery-banner {
+    h2 {
+      color: $white-color !important;
+    }
+  }
+  .oddStep {
+    .media-block {
+      order: 2 !important;
+      text-align: right;
+      @media (max-width: 991px) {
+        order: 1 !important;
+      }
+    }
+    .media-content {
+      order: 1 !important;
+      @media (max-width: 991px) {
+        order: 2 !important;
+      }
+    }
+  }
+
+  .multimedia-sec {
+    margin-bottom: 0 !important;
+
+    .multimedia-items {
+      iframe {
+
+        @media (max-width: 768px) {
+          max-width: auto !important;
+          min-height: auto !important;
+        }
+
+        @media (max-width: 414px) {
+          max-width: 100% !important;
+          min-height: auto !important;
+        }
+      }
+    }
+  }
+
+  .curiosities-slider-block {
+
+
+    @media (max-width: 1400px) {
+      width: 100%;
+    }
+
+    @media (max-width: 414px) {
+      height: auto;
+    }
+  }
+
+  .earn-more {
+    .order-list {
+      margin: 0 7%;
+      li {
+        background-color: $white-color;
+        min-height: 70px;
+        border-radius: 10px;
+        display: flex;
+        padding: 12px 15px;
+        margin-bottom: 15px;
+        border-left: 14px solid $light-orange-bg-color;
+        @media (max-width: 576px) {
+          font-size: 0.875rem;
+        }
+      }
+      @media (max-width: 576px) {
+        padding-bottom: 40px;
+      }
+    }
+  }
+
+  .call-action-block {
+    margin: 0 !important;
+    height: 15.75rem !important;
+    position: relative !important;
+
+    @media (max-width: 768px) {
+      height: auto !important;
+    }
+
+    .call-action-block-img {
+      margin: 0 !important;
+      position: absolute !important;
+      bottom: 0 !important;
+      height: 18.85rem !important;
+
+      @media (max-width: 768px) {
+        position: relative !important;
+        top: -3.6em;
+        height: auto !important;
+      }
+
+      @media (max-width: 414px) {
+        position: relative !important;
+        top: -2em;
+        height: auto !important;
+      }
+
+      .img-fluid {
+        height: 100% !important;
+        width: 100%;
+      }
+    }
+    .call-action-block-content {
+      margin: 0 0 0 2% !important;
+      margin-left: auto !important;
+      p {
+        font-size: 2.375rem !important;
+        line-height: 46px !important;
+      }
+    }
+  }
+  .raapi-tools-cta{
+    .richtext-area{
+      h1{
+        .text-big{
+          font-size: 2.375rem;
+          color: $base-color ;
+          @media (max-width: 1024px) {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}

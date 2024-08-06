@@ -1,0 +1,19 @@
+<section class="benefits intro">
+  <div class="intro__header">
+
+    <h2 class="intro__title">
+      {{data.title}}
+    </h2>
+
+    <img class="intro__image" [src]="uploadService.makeUrl(data.image)" alt="Seguros sura">
+  </div>
+
+  <div class="intro__footer">
+    <ng-container *ngFor="let description of data.description; let i = index">
+      <p >
+        {{description.item}}
+      </p>
+      <br *ngIf="i !== data.description.length - 1">
+    </ng-container>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+<div class="right-multimedia-sec">
+    <div class="container">
+        <div class="right-multimedia-content">
+            <div class="left-block">
+                <h2 class="title">
+                    <app-rich-text [text]="data?.titleRight?.title"></app-rich-text>
+                </h2>
+                <p class="desc">{{data?.text}}</p>
+            </div>
+            <div class="iframe-block">
+                <iframe width="420" height="180" [src]="data?.youtubeEmbedURL | sanitizer:'resourceUrl'">
+        </iframe>
+            </div>
+        </div>
+    </div>
+</div>

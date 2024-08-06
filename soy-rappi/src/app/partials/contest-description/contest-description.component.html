@@ -1,0 +1,13 @@
+<div class="section-one" *ngIf="!data?.position">
+  <img [src]="uploadService.makeUrl(data?.image)" alt="img1" />
+  <div class="section-one-content">
+    <app-rich-text [text]="data?.description"></app-rich-text>
+  </div>
+</div>
+
+<div class="section-two" *ngIf="data?.position">
+  <div class="section-two-content">
+    <app-rich-text [text]="data?.description"></app-rich-text>
+  </div>
+  <img [src]="uploadService.makeUrl(data?.image)" alt="img2" />
+</div>

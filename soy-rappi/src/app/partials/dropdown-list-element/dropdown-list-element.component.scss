@@ -1,0 +1,36 @@
+@import "../../../assets/css/tools/variable.scss";
+@import "../../../assets/css/fonts.scss";
+
+h3 {
+    font-family: 'pp_object_sansbold';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: -0.04em;
+    color: $base-color;
+}
+
+p {
+    font-family: 'pp_object_sansregular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $base-color;
+}
+
+.selected-container {
+    border: 2px solid $button-gray;
+    border-radius: 8px;
+    padding: 40px 32px 48px 32px;
+}
+
+@media (max-width: 560px) {
+    h3 {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .selected-container {
+        padding: 16px 16px 28px 16px;
+    }
+}

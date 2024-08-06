@@ -1,0 +1,59 @@
+@import "../../../assets/css/tools/variable.scss";
+
+::ng-deep {
+  .delivery-banner {
+    min-height: 21.875rem !important;
+
+    @media (max-width: 414px) {
+      min-height: 17.5rem;
+    }
+    h2 {
+      color: $white-color !important;
+    }
+  }
+
+  .left-img-block-sec {
+    .img-block,
+    .img-fluid {
+      width: 400px !important;
+      aspect-ratio: 1/1 !important;
+
+      @media (max-width: 400px) {
+        width: 100% !important;
+      }
+    }
+  }
+
+  .right-img-sec {
+    .left-block {
+      .btn.btn-gradient {
+        width: 27.5rem !important;
+        height: 55px !important;
+
+        @media (max-width: 575px) {
+          max-width: 244px !important;
+          height: 31px !important;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.625rem;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  .delivery-banner{
+    @media (max-width: 1280px) {
+      min-height: 305px !important;
+    }
+    @media (max-width: 1080px) {
+      min-height: 275px !important;
+    }
+    @media (max-width: 950px) {
+      min-height: 250px !important;
+    }
+    @media (max-width: 768px) {
+      min-height: 21.875rem !important;
+    }
+  }
+}

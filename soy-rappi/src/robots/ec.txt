@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap:https://soy-rappi.com.ec/sitemap-ec.xml

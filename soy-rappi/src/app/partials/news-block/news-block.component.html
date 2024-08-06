@@ -1,0 +1,24 @@
+<div class="news-block-sec">
+    <div class="container">
+
+        <div class="section-head text-center">
+            <h2 class="section-title">{{ data?.title }}</h2>
+        </div>
+
+        <div class="row">
+            <ng-container *ngFor="let notice of (news) ? news : []">
+                <app-news-card [ngClass]="'col-md-4'"
+                               [data]="(notice) ? notice : undefined"></app-news-card>
+            </ng-container>
+        </div>
+        <div class="load-more-cta"
+             *ngIf="data?.button?.label">
+            <a *ngIf="sharedFunctionsService.isExternalLink(data?.button?.url)"
+               [href]="data?.button?.url"
+               class="btn btn-gradient">{{data?.button?.label}}</a>
+            <a *ngIf="!sharedFunctionsService.isExternalLink(data?.button?.url)"
+               [routerLink]="sharedFunctionsService.removeInitialSlash(data?.button?.url)"
+               class="btn btn-gradient">{{data?.button?.label}}</a>
+        </div>
+    </div>
+</div>

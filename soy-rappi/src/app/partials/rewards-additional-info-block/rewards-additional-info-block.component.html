@@ -1,0 +1,14 @@
+<div class="reward-additional-info-sec">
+  <div class="rai-content">
+    <div class="left-img">
+      <img [src]="uploadService.makeUrl(data?.image)" />
+    </div>
+    <div class="right-text">
+        <p>{{data?.description}}</p>
+        <h2 class="section-title">
+          <app-rich-text [text]="data?.titleCallToAction?.title"></app-rich-text>
+        </h2>
+    </div>
+  </div>
+</div>
+

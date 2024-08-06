@@ -1,0 +1,109 @@
+@import "../../../assets/css/tools/variable.scss";
+::ng-deep {
+  .delivery-banner h2 {
+    color: $white-color !important;
+    max-width: 45%;
+  }
+  .section-content {
+    padding: 20px 0 !important;
+  }
+  .richtext-area {
+    display: flex;
+    justify-content: center;
+    margin-right: 0 !important;
+    div {
+      margin-top: 25px;
+      @media (max-width: 768px){
+        margin-top: 0;
+      }
+    }
+    h3 {
+      background-color: #f5e5ce;
+      width: 70px;
+      height: 96px;
+      border-radius: 35px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "pp_object_sansbold" !important;
+      font-size: 2.5rem !important;
+      color: #354360 !important;
+      margin-right: 30px;
+      flex: none;
+      @media (max-width: 768px){
+        background-color: $light-orange-bg-color;
+        width: 43px;
+        height: 43px;
+        font-size: 1rem !important;
+        margin-right: 15px;
+      }
+    }
+    strong {
+      font-family: "pp_object_sansbold";
+    }
+  }
+  .sc-multimedia{
+    @media (max-width: 767px){
+      .multimedia-sec{
+        padding-top: 40px !important;
+        text-align: center !important;
+        .dp-container{
+          padding: 0 25px !important;
+          .section-title{
+            font-size: 0.675rem !important;
+          }
+          .slide-counter{
+            padding-right: 0 !important;
+            padding-bottom: 25px !important;
+          }
+        }
+      }
+    }
+  }
+  .bank-acount-rict-list{
+    .richtext-area{
+      flex-direction: column;
+      margin-top: 40px;
+      @media (max-width: 767px) {
+        margin-top: 0;
+      }
+    }
+    .account-media{
+      .account-block{
+        @media (max-width: 575px){
+          margin: 0 !important;
+          margin-top: 25px !important;
+          margin-bottom: 25px !important;
+        }
+      }
+    }
+  }
+  .section-title{
+    max-width: none !important;
+    @media (max-width: 575px){
+
+    }
+  }
+}
+
+.bank-acount-rict-list{
+  .number{
+    background-color: #f5e5ce;
+    width: 70px;
+    height: 96px;
+    border-radius: 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "pp_object_sansbold";
+    font-size: 2.5rem;
+    color: #354360;
+    margin-right: 15px;
+    flex: none;
+    @media (max-width: 767px) {
+      width: 40px;
+      height: 60px;
+      font-size: 1.25rem;
+    }
+  }
+}

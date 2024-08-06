@@ -1,0 +1,12 @@
+<div class="breadcrumb-sec">
+    <div class="container">
+        <p>
+            <ng-container *ngFor="let part of parts; let i= index">
+                <ng-container *ngIf="i > 0">
+                    /
+                </ng-container>
+                <a class="fragments">{{part}}</a>
+            </ng-container>
+        </p>
+    </div>
+</div>

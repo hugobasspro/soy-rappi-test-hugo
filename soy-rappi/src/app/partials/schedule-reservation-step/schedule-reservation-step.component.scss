@@ -1,0 +1,136 @@
+@import "../../../assets/css/tools/variable.scss";
+.tips-list {
+  margin: 0 7%;
+  padding: 15px 0 0px;
+  li {
+    background-color: $white-gray-color;
+    min-height: 70px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-left: 14px solid $light-orange-bg-color;
+    @media (max-width: 576px) {
+      font-size: 0.875rem;
+    }
+  }
+  @media (max-width: 576px) {
+    margin: 0;
+  }
+}
+
+::ng-deep{
+  .tips-list{
+    li{
+      .richtext-area{
+        p{
+          @media (max-width: 575px){
+            background-color: #f7f8f9;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+            border-left: 14px solid #F4DFF6;
+            border-radius: 10px;
+            min-height: 98px;
+          }
+        }
+      }
+      @media (max-width: 575px){
+        border-left: 0 !important;
+        padding: 0 !important;
+        background-color: transparent !important;
+      }
+    }
+  }
+}
+
+.schedule-reservation-sec {
+  display: flex;
+  margin: 30px 0;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin: 0;
+  }
+  .account-media-left-img, .account-media-right-img {
+    width: 46.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 991px) {
+      min-width: 340px;
+      margin-left: 50px;
+    }
+    @media (max-width: 768px) {
+      width: 95%;
+      margin: 0 auto;
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+    img{
+      @media (max-width: 575px) {
+        max-width: 80%;
+      }
+    }
+
+  }
+
+  .content {
+    width: 53.5%;
+    padding: 0 2em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    &.no-image{
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      width: 95%;
+      margin: 0 auto;
+    }
+  }
+
+  .qa-detail {
+    display: flex;
+    margin: 10px 0;
+
+    .number-sec {
+      .number {
+        background-color: #f5e5ce;
+        width: 64px;
+        height: 64px;
+        border-radius: 35px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "pp_object_sansbold";
+        font-size: 1.875rem;
+        color: $base-color;
+        margin-right: 20px;
+        flex: none;
+        @media (max-width: 767px) {
+          width: 40px;
+          height: 60px;
+          font-size: 1.25rem;
+        }
+      }
+    }
+
+    .que-ans {
+      .que {
+        font-family: "pp_object_sansbold";
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: $base-color;
+      }
+      .ans {
+        font-family: "pp_object_sansregular";
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        color: $base-color;
+      }
+    }
+  }
+}

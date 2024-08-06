@@ -1,0 +1,158 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+@import "../../../assets/css/tools/variable.scss";
+
+.register {
+  font-family: Poppins, sans-serif;
+  background: url(/assets/img/register-bg.png) no-repeat center bottom;
+  &-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 73.75rem;
+    width: 93%;
+    margin: 0 auto;
+    border-bottom: 1px solid #cecdcc;
+    padding-bottom: 4.125rem;
+  }
+
+  &-head {
+    padding: 2.5rem 1.3125rem 2.5625rem;
+    background: linear-gradient(136deg, #f3663d 0%, #ff3d55 100%);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 121%;
+    margin-bottom: 5.625rem;
+    &-title {
+      max-width: 80%;
+      text-align: center;
+      margin: 0 auto;
+      color: #fff;
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  &-data {
+    border-radius: 20px;
+    border: 1px solid #ff4300;
+    padding: 1.5rem 0.3125rem 1.5rem 1.3125rem;
+    height: 25.625rem;
+    @media screen and (min-width: 64rem) {
+      padding: 2rem 0.3125rem 2rem 5.3125rem;
+    }
+  }
+  &-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4.6875rem;
+    @media screen and (min-width: 64rem) {
+      flex-direction: row;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+  &-block {
+    border: 1px solid #ffefdc;
+    background: #fff;
+    max-width: 36.25rem;
+    width: 100%;
+    &-head {
+      background: #ffefdc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 6.625rem;
+    }
+    &-footer {
+      background: #ffefdc;
+      height: 2.8125rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 1.25rem;
+    }
+    &-info {
+      padding: 1.875rem 1.125rem 1.125rem;
+      text-align: center;
+      p {
+        color: #848484;
+        font-size: 1rem;
+        line-height: 20px;
+        font-weight: 600;
+        margin-bottom: 0.875rem;
+      }
+      h4 {
+        color: #fe3f23;
+        font-size: 1.25rem;
+        line-height: 24px;
+        font-weight: 800;
+      }
+      @media screen and (min-width: 64rem) {
+        padding: 1.875rem 8.125rem 1.125rem;
+      }
+    }
+    &-btnwrap {
+      padding: 1.875rem;
+      text-align: center;
+      .btn-registrarse {
+        max-width: 20.3125rem;
+        width: 100%;
+        height: 3.25rem;
+        border: 0;
+        border-radius: 68px;
+        background: var(
+          --gradient-turq,
+          linear-gradient(90deg, #1fd8b5 0%, #23aeb9 100%)
+        );
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+  &-form {
+    border-radius: 16px;
+    background: #ffefdc;
+    padding: 1.5rem 2rem;
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1875rem;
+      margin-bottom: 5px;
+    }
+    .label {
+      color: #1e1e1e;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .form-input {
+      border-radius: 4px;
+      background: #fff;
+      height: 38px;
+      padding: 0.625rem 1.25rem;
+      border: 0;
+    }
+  }
+}
+
+.error {
+  padding-left: 1rem;
+  color: $error;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 130%;
+}

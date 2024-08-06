@@ -1,0 +1,18 @@
+<section class="how-communicate">
+  <div class="how-communicate__content">
+    <h2 class="how-communicate__title">{{data.title}}</h2>
+
+    <div class="how-communicate__body">
+      <ul class="how-communicate__ul">
+        <li class="how-communicate__ul-item" *ngFor="let listItem of data.list">{{listItem.item}}</li>
+      </ul>
+
+      <ol class="how-communicate__ol">
+        <li class="how-communicate__ol-item" *ngFor="let step of data.steps">{{step.item}}</li>
+      </ol>
+    </div>
+  </div>
+
+  <img
+    [src]="!responsiveService.validateDisplay(display, displays.DESKTOP) ? uploadService.makeUrl(data.image) : uploadService.makeUrl(data.desktopImage)">
+</section>

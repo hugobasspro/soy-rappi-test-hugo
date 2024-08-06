@@ -1,0 +1,8 @@
+<app-standard-banner [data]="whatYouHaveToKnowData?.banner"></app-standard-banner>
+<app-breadcrumb-tabs-block></app-breadcrumb-tabs-block>
+<app-right-multimedia-block [data]="whatYouHaveToKnowData?.rightMedia"></app-right-multimedia-block>
+<app-register-block [image]="whatYouHaveToKnowData?.secondBannerImage"
+                    [form]="whatYouHaveToKnowData?.form"
+                    [id]="whatYouHaveToKnowData?.form?.urlFragment || 'register'">
+</app-register-block>
+<app-frequent-questions-block [data]="whatYouHaveToKnowData?.frequentQuestions"></app-frequent-questions-block>

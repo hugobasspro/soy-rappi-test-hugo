@@ -1,0 +1,43 @@
+@import "../../../assets/css/tools/variable.scss";
+
+// .tips-call-to-action{
+//   background: linear-gradient(#FFF 26%, #fff0dd 26%);
+// }
+
+:host ::ng-deep{
+  .section-content{
+    padding-bottom: 0;
+  }
+  .call-action-block{
+    background: $light-orange-bg-color !important;
+    .call-action-block-img{
+      margin-top: -62px;
+    }
+    .call-action-block-content{
+      margin: 0 4% 0 4% !important;
+      padding: 0 !important;
+      p{
+        font-size: 2.375rem !important;
+        line-height: 46px !important;
+      }
+      span{
+        display: flex;
+      }
+    }
+  }
+  .tips-call-to-action{
+    .call-action-block{
+      height: auto !important;
+      align-items: flex-start;
+      .call-action-block-img{
+        margin-top: 0 !important;
+      }
+    }
+  }
+
+  .delivery-banner{
+    h2{
+      color: $white-color !important;
+    }
+  }
+}

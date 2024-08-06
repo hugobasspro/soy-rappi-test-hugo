@@ -1,0 +1,21 @@
+<div class="block-head">
+    <h2>{{title}}</h2>
+    <div class="d-flex align-items-center">
+        <ng-container *ngIf="label">
+            <a href="javascript:void(0)"
+                class="btn-share"><img src="assets/img/icons/icon-share.svg"
+                    alt="Share"></a>
+          <a class="btn btn-gradient"
+            (click)="openListItems($event)">{{label}}</a>
+        </ng-container>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4"
+         *ngFor="let entry of data; let i = index">
+        <app-novelty-card [data]="entry?.categories"
+                          [titleCategory]="entry?.typeCategory?.category"
+                          [slug]="entry?.slug"
+                          *ngIf="i <= 2"></app-novelty-card>
+    </div>
+</div>

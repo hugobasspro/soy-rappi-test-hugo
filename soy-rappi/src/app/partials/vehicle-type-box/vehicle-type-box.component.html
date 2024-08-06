@@ -1,0 +1,13 @@
+<div class="vehicle-block">
+    <div class="vehicle-img">
+        <img [src]="vehicleImage" class="img-fluid" />
+    </div>
+    <div class="text-content">
+        <h3>{{type}}</h3>
+        <ul>
+            <li *ngFor="let requirement of requirements">
+                {{requirement.title}}
+            </li>
+        </ul>
+    </div>
+</div>

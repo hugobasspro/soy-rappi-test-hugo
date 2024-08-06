@@ -1,0 +1,84 @@
+<app-blog-banner (searchData)="onSearch($event)"
+                 (count)="onSearchCountPage($event)"
+                 (searchText)="onSearchData($event)"
+                 [data]="blog?.banner"
+                 [filterText]="(blog) ? blog.filterText : ''"
+                 [search]="(blog) ? blog.searchPlaceholder : ''"
+                 [categories]="(categories) ? categories : []"
+                 [page]="currentPage"
+                 [limit]="limitSearch"></app-blog-banner>
+
+<section class="blog-page"
+         *ngIf="!searchData.length && !listMostRecent  && !listNews  && !listRealStories">
+    <div class="container">
+        <!-- ultima historia real -->
+        <ng-container *ngIf="lastStory">
+            <app-real-story-blog-entry [data]="lastStory?.categories"
+                [titleCategory]="lastStory?.typeCategory?.category"
+                [slug]="lastStory?.slug"></app-real-story-blog-entry>
+        </ng-container>
+        
+        <div class="recent-list">
+            <!-- mas recientes maximos 2 de cualquier categoria -->
+            <app-most-recent-entries-block [title]="blog?.mostRecentsTitle"
+                                           [label]="blog?.mostRecentsLabel"
+                                           [url]="blog?.mostRecentsUrl"
+                                           [data]="(mostRecent) ? mostRecent : []"
+                                           (listItems)="openMostRecent($event)">
+            </app-most-recent-entries-block>
+        </div>
+        <div class="news-list">
+            <!-- ultimas tres novedades -->
+            <app-novelties-block [title]="blog?.newsTitle"
+                                 [label]="blog?.newsLabel"
+                                 [url]="blog?.newsUrl"
+                                 [data]="(lastNews) ? lastNews : []"
+                                 (listItems)="openNews($event)">
+            </app-novelties-block>
+        </div>
+        <div class="real-stories mb-5">
+            <!-- todas las que sean historias reales en un carrousel [data]="blog?.realStories"-->
+            <app-real-story-block [title]="blog?.realStoriesTitle"
+                                  [label]="blog?.realStoriesLabel"
+                                  [url]="blog?.realStoriesUrl"
+                                  [data]="(realStories) ? realStories : []"
+                                  (listItems)="openRealStories($event)">
+            </app-real-story-block>
+        </div>
+    </div>
+</section>
+
+<ng-container *ngIf="searchData.length">
+    <app-real-story-blog-entry *ngFor="let item of (searchData) ? searchData : []"
+                               [data]="item?.categories"
+                               [titleCategory]="item?.typeCategory?.category"
+                               [slug]="item?.slug"></app-real-story-blog-entry>
+    <app-paginator (page)="onSearchNextPage($event)"
+                   *ngIf="numberOfPages > 1"
+                   [numberOfPages]="numberOfPages"
+                   [currentPage]="currentPage"></app-paginator>
+</ng-container>
+
+<ng-container *ngIf="!searchData.length && listMostRecent">
+    <h2>{{blog?.mostRecentsTitle}}</h2>
+    <app-real-story-blog-entry *ngFor="let recent of (mostRecent) ? mostRecent : []"
+                               [data]="recent?.categories"
+                               [titleCategory]="recent?.typeCategory?.category"
+                               [slug]="recent?.slug"></app-real-story-blog-entry>
+</ng-container>
+
+<ng-container *ngIf="!searchData.length && listNews">
+    <h2>{{blog?.newsTitle}}</h2>
+    <app-real-story-blog-entry *ngFor="let novelty of (lastNews) ? lastNews : []"
+                               [data]="novelty?.categories"
+                               [titleCategory]="novelty?.typeCategory?.category"
+                               [slug]="novelty?.slug"></app-real-story-blog-entry>
+</ng-container>
+
+<ng-container *ngIf="!searchData.length && listRealStories">
+    <h2>{{blog?.realStoriesTitle}}</h2>
+    <app-real-story-blog-entry *ngFor="let story of (realStories) ? realStories : []"
+                               [data]="story?.categories"
+                               [titleCategory]="story?.typeCategory?.category"
+                               [slug]="story?.slug"></app-real-story-blog-entry>
+</ng-container>

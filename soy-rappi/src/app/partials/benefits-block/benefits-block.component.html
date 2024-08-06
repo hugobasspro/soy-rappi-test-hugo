@@ -1,0 +1,12 @@
+<section class="section-content our-benefits">
+    <div class="container">
+        <div class="section-head text-center">
+            <h2 class="section-title">{{title}}</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-4" *ngFor="let benefit of benefits">
+                <app-top-icon-box [data]="(benefit) ? benefit : undefined"></app-top-icon-box>
+            </div>
+        </div>
+    </div>
+</section>

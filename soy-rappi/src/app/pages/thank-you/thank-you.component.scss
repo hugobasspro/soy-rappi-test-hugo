@@ -1,0 +1,7 @@
+:host ::ng-deep { 
+  & + app-footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+}

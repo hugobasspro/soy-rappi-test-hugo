@@ -1,0 +1,26 @@
+@import "../../../assets/css/tools/variable.scss";
+::ng-deep{
+  .delivery-banner{
+    h2{
+      color: $white-color !important;
+    }
+    @media (min-width: 1280px){
+      min-height: 350px !important;
+    }
+  }
+  .section-head{
+    margin-bottom: 70px !important;
+  }
+  .dp-container .section-head {
+    margin-bottom: 15px !important;
+  }
+
+  @media (max-width: 675px) {
+    .multimedia-sec{
+      .section-title {
+        max-width: initial !important;
+        font-size: 9px;
+      }
+    }
+  }
+}

@@ -1,0 +1,455 @@
+@import "~@angular/cdk/overlay-prebuilt.css";
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+.owl-carousel,
+.owl-carousel .owl-item {
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+}
+
+.faq {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 90rem;
+  margin: 0 auto;
+  overflow: hidden;
+  font-family: Poppins, sans-serif;
+
+  @media screen and (min-width: 64rem) {
+    padding-bottom: 5.31rem;
+    padding: 15px;
+  }
+
+  &__search {
+    max-width: 835px;
+    width: 100%;
+    height: 71px;
+    background: #f6f9fc;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);
+    margin: 50px auto 65px;
+    padding: 10px 20px 10px 26px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: "Jornada Sans", sans-serif;
+    position: relative;
+
+    @media screen and (max-width: 900px) {
+      padding: 15px;
+      width: 90%;    
+    }
+
+    input {
+      flex: 5;
+      height: 40px;
+      border-radius: 8px !important;
+      background: #fff;
+      border: 0;
+    }
+
+    &-btn {
+      border-radius: 8px;
+      background: var(
+        --gradient-turquesa,
+        linear-gradient(90deg, #1fd8b5 0%, #23aeb9 100%)
+      );
+      width: 110px;
+      height: 50px;
+      border: 0;
+      font-size: 20px;
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+    }
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: 2.1875rem;
+
+    @media screen and (min-width: 64rem) {
+      flex-direction: row;
+      gap: 3rem;
+    }
+  }
+
+  &__section-content {
+    flex: 1;
+  }
+
+  &__section-content-title {
+    color: #fe3f23;
+    font-size: 32px;
+    font-family: "Jornada Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
+    padding: 0;
+    margin: 0 0 20px 0;
+  }
+
+  &__section-list {
+    overflow-x: auto;
+    width: auto;
+
+    @media screen and (max-width: 900px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      grid-gap: 1rem;
+      gap: 32px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      flex-direction: column !important;
+
+      @media screen and (max-width: 900px) {
+        padding: 70px 0 15px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px !important;
+      }
+
+      li {
+        height: 3.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4.375rem;
+        border-radius: 60px;
+        width: 345px !important;
+        background: linear-gradient(90deg, #1fd8b5 0%, #23aeb9 100%);
+        color: #fff;
+        font-size: 1.25rem;
+        font-weight: 600;
+        cursor: pointer;
+
+        &.active,
+        &:hover {
+          background: #ff4300;
+        }
+      }
+
+      @media screen and (max-width: 900px) {
+        flex-direction: column;
+        font-size: 12px !important;
+        font-weight: 500 !important;
+
+        li {
+          width: 140px !important;
+          height: 40px !important;
+          font-size: 12px !important;
+          font-weight: 500 !important;
+        }
+        span {
+              padding: 1rem;
+        }
+      }
+    }
+  }
+
+  &__section-accordian {
+    height: 32.8125rem;
+    padding-right: 30px;
+    overflow-y: auto;
+
+    @media screen and (max-width: 900px) {
+      padding-right: 0 !important;
+    }
+
+    &-list {
+      border-bottom: 5px solid #848484;
+    }
+
+    &-title {
+      position: relative;
+      color: #000;
+      font-size: 22px;
+      font-weight: 600;
+      padding: 1rem 0rem 1rem 0;
+      margin: 0;
+
+      @media screen and (max-width: 900px) {
+        font-size: 20px !important;
+        margin: 5px;
+        padding: 1rem;
+      }
+
+      span {
+        color: #ff4300;
+        font-family: "Jornada Sans", sans-serif; 
+        font-size: 24px;
+        font-weight: 500; 
+        line-height: 29.04px;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 26px;
+        right: 0.75rem !important;
+        background: url(/assets/img/arrwo-accordian-down.png) no-repeat 0 0;
+        width: 0.9375rem;
+        height: 0.875rem;
+      }
+    }
+
+    &-content {
+      padding: 20px 10px 20px 40px;
+
+      @media screen and (max-width: 900px) {
+        padding: 0 !important;
+      }
+
+      &-inner {
+        background: url(/assets/img/list-icon.svg) no-repeat 0 7px;
+        padding-left: 40px;
+      }
+
+      @media screen and (max-width: 900px) {
+        padding: 0 !important;
+      }
+    }
+
+    &-description {
+      p {
+        color: #000;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.categories {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 32px;
+  display: inline-flex;
+
+  &--block {
+    width: 345px;
+    height: 60px;
+    position: relative;
+  }
+
+  &--button {
+    width: 345px;
+    height: 60px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: linear-gradient(90deg, #1fd8b5 0%, #23aeb9 100%);
+    border-radius: 38px;
+  }
+
+  &--text {
+    width: 216.86px;
+    height: 30.26px;
+    left: 63.89px;
+    top: 13.85px;
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    font-family: Jornada Sans;
+    font-weight: 700;
+    word-wrap: break-word;
+  }
+}
+
+.active {
+  height: 3.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 1.12rem 0.25rem 1.31rem;
+  border-radius: 4.375rem;
+  border-radius: 60px;
+  background: linear-gradient(90deg, #ff4300 0%, #ff4300 100%);
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  width: 100%;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .active {
+    width: 180px !important;
+    height: 40px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+  }
+}
+
+.questions {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  &--title {
+    left: 4px;
+    top: 61px;
+    position: relative;
+  }
+
+  &--span {
+    color: black;
+    font-size: 24px;
+    font-family: Jornada Sans;
+    font-weight: 500;
+    line-height: 29.04px;
+    word-wrap: break-word;
+  }
+
+  &--description {
+    width: 610px;
+    left: 131px;
+    top: 130px;
+    position: relative;
+    color: black;
+    font-size: 18px;
+    font-family: Jornada Sans;
+    font-weight: 400;
+    line-height: 21.78px;
+    word-wrap: break-word;
+  }
+}
+
+.form {
+  text-align: center;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 12px;
+}
+
+.scroll::-webkit-scrollbar-track {
+  background: #cacaca;
+  border-radius: 10px;
+  height: 5px!important;
+
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background: #ff4300;
+  border-radius: 10px;
+  scrollbar-width: thin;
+}
+
+.faq__section-content {
+  height: 525px;
+}
+
+@media screen and (max-width: 900px) {
+  .faq__section-content {
+    padding: 15px;
+  }
+}
+
+.mat-autocomplete-panel {
+  background: white;
+  border-radius: 0 !important;
+}
+
+input {
+  width: 270% !important;
+  font-size: 24px !important;
+  color: #000 !important;
+}
+
+@media screen and (max-width: 900px) {
+  input {
+    width: 100% !important;
+  }
+}
+
+input:focus {
+  background-color: white;
+  border: 1px solid white;
+  outline: none;
+}
+
+.mat-option {
+  font-family: "Jornada Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.6px;
+  color: #000;
+  background: white;
+}
+
+.mat-option-text {
+  font-family: "Jornada Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.6px;
+  color: #000;
+}
+
+.btn-buscar {
+  position: absolute;
+  right: 0;
+  background: linear-gradient(90deg, #1fd8b5 0%, #23aeb9 100%);
+  width: 110px;
+  height: 52px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Jornada Sans", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+}
+
+@media screen and (max-width: 900px) {
+  .btn-buscar {
+    right: 0;
+    bottom: -70px;
+    width: 90%;
+  }
+}
+
+.imgFaqs {
+  width: 24px;
+  height: 24px;
+}
+
+.answer{
+  font-family: 'Jornada Sans', sans-serif; 
+  font-weight: 400; 
+  font-size: 18px; 
+  line-height: 21.78px; 
+  color: #000000;
+} 
+

@@ -1,0 +1,55 @@
+@import "../../../assets/css/tools/variable.scss";
+.register-block-sec {
+  background-color: $light-orange-bg-color;
+  padding: 63px 140px 63px 0;
+
+  @media (max-width: 1180px) {
+    padding: 63px 0 63px;
+  }
+
+  .register-block-content {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 1180px) {
+      flex-direction: column;
+      gap: 3.5em;
+
+      img {
+        position: relative;
+        left: 3em;
+      }
+    }
+
+    .left-img-block {
+      margin-right: 72px;
+     img{
+       max-width: 640px;
+      @media (max-width: 1365px) {
+        width: 100%;
+      }
+     }
+    }
+  }
+  @media (max-width: 1365px) {
+   padding-right: 20px;
+  }
+}
+
+::ng-deep {
+  .register-block-sec {
+    .register-block-content {
+      .register-form {
+        h3 {
+          color: $orange-color !important;
+          font-size: 2.375rem !important;
+          font-family: "pp_object_sansbold" !important;
+          margin-bottom: 21px !important;
+        }
+        .form-check-label {
+          color: $base-color;
+        }
+      }
+    }
+  }
+}

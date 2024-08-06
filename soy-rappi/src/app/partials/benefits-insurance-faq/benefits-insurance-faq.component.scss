@@ -1,0 +1,154 @@
+.faq {
+  font-family: "Poppins";
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 9.44rem;
+  gap: 1.5rem;
+
+  &__title {
+    max-width: 7.5ch;
+    margin: 0 auto;
+
+    @media screen and (min-width: 80rem) {
+      max-width: max-content;
+      margin: 0;
+    }
+  }
+
+  &__stars {
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+    transform: rotate(-17deg);
+    width: 12rem;
+
+    @media screen and (min-width: 64rem) {
+      top: 1.2rem;
+      right: calc(40.0569rem + 21.3825rem);
+      left: 0;
+      margin: 0 auto;
+      width: 21.3825rem;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(180deg, #fe3f23 0%, #fe454f 100%);
+    padding: 4rem 0 3.94rem;
+    color: #fff;
+    font-size: 3.75rem;
+    font-weight: 500;
+    line-height: 121%;
+
+    @media screen and (min-width: 64rem) {
+      padding: 2.19rem 0;
+    }
+  }
+
+  &__dropdowns {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.4rem;
+    list-style: none;
+    width: min(73.75rem, 100%);
+    margin: 0 auto;
+    gap: 0.0625rem;
+  }
+
+  &__item {
+    position: relative;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 121%;
+
+    @media screen and (min-width: 64rem) {
+      font-weight: 400;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: calc(0.7ch + 2.5rem);
+      left: 1ch;
+      width: 0.6ch;
+      aspect-ratio: 1 / 1;
+      background-color: #000000;
+      border-radius: 100%;
+    }
+  }
+
+  &__question {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem 1.12rem 2.5rem 1.5rem;
+    gap: 2.25rem;
+    cursor: pointer;
+    z-index: 1;
+    background-color: #fff;
+
+    p {
+      position: relative;
+      padding-left: 2ch;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0.25rem;
+        height: 0.25rem;
+        border-radius: 50%;
+        background: #000000;
+        transform: translate(0, 8px);
+      }
+    }
+  }
+
+  &__answer {
+    position: relative;
+    left: 0;
+    top: 0;
+    padding: 0 2.12rem 2.5rem 2.5rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    animation: 0.25s ease 0s activateDropdown;
+
+    @media screen and (min-width: 64rem) {
+      font-weight: 300;
+    }
+  }
+
+  &__line {
+    &::before {
+      position: absolute;
+      content: "";
+      top: 100%;
+      left: 0;
+      width: 100%;
+      min-height: 0.0625rem;
+      background-color: #d9d9d9;
+    }
+  }
+
+  &__arrow {
+    transition: transform 0.25s ease;
+
+    &--active {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+@keyframes activateDropdown {
+  from {
+    top: -6.21rem;
+  }
+
+  to {
+    top: 0;
+  }
+}

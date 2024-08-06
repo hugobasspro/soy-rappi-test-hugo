@@ -1,0 +1,29 @@
+<app-standard-banner [data]="whoWeArePageData?.banner"></app-standard-banner>
+<app-breadcrumb-tabs-block></app-breadcrumb-tabs-block>
+<app-title-text-block [data]="whoWeArePageData?.titleTextBlock"></app-title-text-block>
+<section class="whoweare-call-to-action">
+    <div class="container">
+        <app-call-to-action-block [data]="whoWeArePageData?.callToAction"></app-call-to-action-block>
+    </div>
+</section>
+
+<app-founders-block [data]="whoWeArePageData?.ourFoundersBlock"></app-founders-block>
+
+<section class="section-content bg-gray my-5">
+    <div class="container text-center">
+        <app-title-text-block [data]="whoWeArePageData?.missionBlock"></app-title-text-block>
+        <app-rich-text [text]="whoWeArePageData?.missionBlockDescription"></app-rich-text>
+
+    </div>
+</section>
+<ng-container *ngFor="let step of whoWeArePageData?.steps; let i = index">
+    <app-principles-block  *ngIf="i === getStapsLen(whoWeArePageData?.steps)"
+                        [data]="whoWeArePageData?.principles"></app-principles-block>
+    <app-about-us-step [image]="uploadService.makeUrl(step.image)"
+                       [imageToLeft]="step.imageToLeft"
+                       [title]="step.title"
+                       [description]="step.description"
+                       [button]="step.button"></app-about-us-step>
+</ng-container>
+
+<app-frequent-questions-block [data]="whoWeArePageData?.frequentQuestions"></app-frequent-questions-block>

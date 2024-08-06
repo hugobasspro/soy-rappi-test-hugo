@@ -1,0 +1,25 @@
+<section [style]="{'background-color': (data?.background)}">
+    <div class="container">
+        <div class="section-head mb-4 text-center" *ngIf="!!data?.titleBlock?.title || !!titleInformative?.title" >
+            <h2 class="section-title">
+                <app-rich-text [text]="data?.titleBlock?.title" *ngIf="!!data?.titleBlock?.title" ></app-rich-text>
+                <ng-container *ngIf="titleInformative">
+                    <app-rich-text [text]="titleInformative?.title" *ngIf="!!titleInformative?.title"></app-rich-text>
+                </ng-container>
+            </h2>
+            <app-rich-text [text]="data?.description" *ngIf="!!data?.description" ></app-rich-text>
+        </div>
+        <div class="d-flex justify-content-center">
+            <ng-container *ngIf="data?.button?.label">
+                <a *ngIf="sharedFunctionsService.isExternalLink(data?.button?.url)"
+                    [href]="data?.button?.url"
+                    class="btn btn-gradient mt-4">{{data?.button?.label}}
+                </a>
+                <a *ngIf="!sharedFunctionsService.isExternalLink(data?.button?.url)"
+                    [routerLink]="sharedFunctionsService.removeInitialSlash(data?.button?.url)"
+                    class="btn btn-gradient mt-4">{{data?.button?.label}}
+                </a>
+            </ng-container>
+        </div>
+    </div>
+</section>

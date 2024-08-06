@@ -1,0 +1,37 @@
+<div class="tips-step">
+    <div class="media-block">
+        <img *ngIf="data?.multimedia?.type === 'image'"
+             [src]="uploadService.makeUrl(data?.multimedia?.image)"
+             class="img-fluid" />
+        <div class="video-block"
+             *ngIf="data?.multimedia?.type === multimediaTypes.YOUTUBE">
+            <iframe [src]="data?.multimedia?.contentURL | sanitizer:'resourceUrl'">
+            </iframe>
+        </div>
+    </div>
+    <div class="media-content">
+        <div class="d-flex mb-3">
+            <span class="number"
+                  *ngIf="stepNumber !== undefined">{{stepNumber + 1}}.</span>
+
+            <h2 class="section-title">
+                <app-rich-text [text]="data?.titleStap?.title"></app-rich-text>
+            </h2>
+        </div>
+        <p class="description">{{data?.description}}</p>
+        <div class="cart-btn"
+             *ngIf="data?.cartButton">
+            <i class="cart-icon btn-gradient"><img src="assets/img/shopping-cart.svg"
+                     alt=""></i>
+            <span>{{data?.cartButton?.label}}</span>
+        </div>
+        <div class="mt-3" *ngIf="data?.callToActionButton">
+            <a *ngIf="sharedFunctionsService.isExternalLink(data?.callToActionButton?.url)"
+                    [href]="data?.callToActionButton?.url"
+                    class="btn btn-gradient d-flex align-items-center justify-content-center">{{data?.callToActionButton?.label}}</a>
+            <a *ngIf="!sharedFunctionsService.isExternalLink(data?.callToActionButton?.url)"
+                    [routerLink]="sharedFunctionsService.removeInitialSlash(data?.callToActionButton?.url)"
+                    class="btn btn-gradient d-flex align-items-center justify-content-center">{{data?.callToActionButton?.label}}</a>
+        </div>
+    </div>
+</div>

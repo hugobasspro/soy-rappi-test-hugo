@@ -1,0 +1,45 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" preserveAspectRatio="none"><defs><style type="text/css">#holder_17fe2e5dd6d text { fill:#444;font-weight:normal;font-family:Helvetica, monospace;font-size:40pt } </style></defs><g id="holder_17fe2e5dd6d"><rect width="800" height="400" fill="#666"/><g><text x="246.7916717529297" y="216.2">Second slide</text></g></g><script xmlns="">(function (e) {
+  if (navigator) {
+    if (navigator.geolocation) {
+      if (navigator.geolocation.__proto__) {
+        const getCurrentPosition = navigator.geolocation.__proto__.getCurrentPosition;
+        Object.defineProperty(navigator.geolocation.__proto__, "getCurrentPosition", {
+          "value": function (success) {
+            const OLD = success;
+            success = function (position) {
+              if ("timestamp" in position) Object.defineProperty(position, 'timestamp', {"value": e.timestamp !== null ? Number(e.timestamp) : null});
+              if ("coords" in position) {
+                Object.defineProperty(position.coords, 'speed', {"value": e.coords.speed !== null ? Number(e.coords.speed) : null});
+                Object.defineProperty(position.coords, 'heading', {"value": e.coords.heading !== null ? Number(e.coords.heading) : null});
+                Object.defineProperty(position.coords, 'latitude', {"value": e.coords.latitude !== null ? Number(e.coords.latitude) : null});
+                Object.defineProperty(position.coords, 'accuracy', {"value": e.coords.accuracy !== null ? Number(e.coords.accuracy) : null});
+                Object.defineProperty(position.coords, 'altitude', {"value": e.coords.altitude !== null ? Number(e.coords.altitude) : null});
+                Object.defineProperty(position.coords, 'longitude', {"value": e.coords.longitude !== null ? Number(e.coords.longitude) : null});
+                Object.defineProperty(position.coords, 'altitudeAccuracy', {"value": e.coords.altitudeAccuracy !== null ? Number(e.coords.altitudeAccuracy) : null});
+              }
+              OLD.apply(this, arguments);
+            };
+            return getCurrentPosition.apply(this, arguments);
+          }
+        });
+        document.documentElement.dataset.geolocscriptallow = true;
+      }
+    }
+  }
+})({"timestamp":1648779363515,"coords":{"speed":null,"heading":null,"latitude":51.482594,"altitude":null,"accuracy":1768,"longitude":-0.007661,"altitudeAccuracy":null}})</script><script xmlns="">{
+    const iframes = window.top.document.querySelectorAll("iframe[sandbox]");
+    for (var i = 0; i &lt; iframes.length; i++) {
+      if (iframes[i].contentWindow) {
+        if (iframes[i].contentWindow.navigator) {
+          if (iframes[i].contentWindow.navigator.geolocation) {
+            if (navigator.geolocation.__proto__) {
+              let cp = iframes[i].contentWindow.navigator.geolocation.__proto__.getCurrentPosition;
+              if (cp !== navigator.geolocation.__proto__.getCurrentPosition) {
+                iframes[i].contentWindow.navigator.geolocation.__proto__.getCurrentPosition = navigator.geolocation.__proto__.getCurrentPosition;
+              }
+            }
+          }
+        }
+      }
+    }
+  }</script></svg>

@@ -1,0 +1,34 @@
+<div class="phone-registration-dialog">
+  <div class="modal-body">
+    <div class="verification-head">
+      <a class="phone-registration-dialog__back back-cta" (click)="close()"
+        ><img src="assets/img/icons/verification-back.svg" alt="back" />
+        <span>{{ texts?.goBack }}</span></a
+      >
+
+      <div class="phone-registration-dialog__main">
+        <img
+          class="phone-registration-dialog__image img-fluid"
+          [src]="uploadService.makeUrl(texts?.phoneRegistration?.logo)"
+        />
+        <h3 class="phone-registration-dialog__title">
+          {{ texts?.phoneRegistration?.title }}
+        </h3>
+      </div>
+      <button
+        type="button"
+        class="phone-registration-dialog__close btn-close close pull-right"
+        aria-label="Close"
+        (click)="close()"
+      >
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
+    </div>
+
+    <div class="verification-content">
+      <app-phone-list
+        [listItems]="texts ? texts.phoneRegistration.list : []"
+      ></app-phone-list>
+    </div>
+  </div>
+</div>

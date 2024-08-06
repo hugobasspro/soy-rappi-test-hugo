@@ -1,0 +1,39 @@
+<app-left-text-banner [data]="acceptingOrder?.banner"></app-left-text-banner>
+
+<section class="bg-gray">
+    <app-breadcrumb-tabs-block></app-breadcrumb-tabs-block>
+    <app-title-text-block [data]="acceptingOrder?.titleTextBlock"></app-title-text-block>
+    <app-list-block [items]="acceptingOrder?.tipsList"></app-list-block>
+</section>
+<section class="section-content pb-0">
+    <div class="container">
+        <app-receive-orders-generic-step *ngFor="let step of (acceptingOrder?.tipsStep) ? acceptingOrder?.tipsStep : []; let i = index; let odd = odd"
+                                         [class.oddStep]="odd"
+                                         [step]="step"
+                                         [stepNumber]="i"
+                                         [data]="(step) ? step : undefined">
+        </app-receive-orders-generic-step>
+    </div>
+</section>
+
+<section class="section-content">
+    <div class="container">
+        <app-curiosities-carousel [carousel]="acceptingOrder?.Carousel"
+                                  [bgColor]="acceptingOrder?.CarouselBgColor">
+        </app-curiosities-carousel>
+    </div>
+</section>
+
+<div class="acc-order-ca-block" *ngIf="acceptingOrder?.callToAction">
+  <app-call-to-action-block [data]="acceptingOrder?.callToAction"></app-call-to-action-block>
+</div>
+<div class="add-info-content" *ngIf="acceptingOrder?.additionalInfo">
+  <app-additional-info-block
+      [title]="acceptingOrder?.additionalInfo?.titleAdditionalInfo"
+      [image]="uploadService.makeUrl(acceptingOrder?.additionalInfo?.image)"
+      [description]="acceptingOrder?.additionalInfo?.description"
+      [smallText]="acceptingOrder?.additionalInfo?.smallText">
+  </app-additional-info-block>
+</div>
+
+<app-frequent-questions-block [data]="acceptingOrder?.frequentQuestions"></app-frequent-questions-block>

@@ -1,0 +1,26 @@
+<div class="preguntas-sec">
+  <div class="section-head text-center" *ngIf="isTitle(data?.title)">
+    <h2 class="section-title">{{ (data?.title) ? data?.title : '' }}</h2>
+  </div>
+  <div class="section-head text-center" *ngIf="isTitle(title)">
+    <h2 class="section-title">{{ title }}</h2>
+  </div>
+  <div class="container">
+    <div class="preguntas-content">
+      <div class="questions-sec" *ngIf="isQuestions((data) ? data.questions : [])">
+        <ng-container *ngFor="let question of (data?.questions) ? data?.questions : []">
+          <div class="preguntas-list">
+            <app-question-item [data]="(question) ? question : undefined"></app-question-item>
+          </div>
+        </ng-container>
+      </div>
+      <div class="questions-sec" *ngIf="isQuestions(questions)">
+        <ng-container *ngFor="let question of questions">
+          <div class="preguntas-list">
+            <app-question-item [data]="(question) ? question : undefined"></app-question-item>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

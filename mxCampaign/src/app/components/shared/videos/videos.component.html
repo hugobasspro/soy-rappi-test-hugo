@@ -1,0 +1,43 @@
+<section class="seccion-videos container mt-5 reveal animate__animated" data-effect="animate__lightSpeedInRight">
+  <h1 class="titulo text-center animate__animated animate__flipInX"><img src="assets/logo_solo.png" width="150"> <span style="color: #F9432F;">oportunidades</span></h1>
+  <p class="p-5 text-center animate__animated animate__flipInX" style="font-size: 20px;">Las <strong>Rappioportunidades</strong> aparecen muchas veces en la vida. <br>Decídete y elige una; si quieres más tiempo con tu familia, estabilidad, horarios flexibles o <span style="color: #F9432F;">ganar más dinero en menos tiempo</span> <br> </p>
+  <h3 class="text-center"><img src="assets/logo.png" width="150"> es para ti.</h3>
+
+    <div class="row mt-5 video-grid">
+        <div  class="col col-12 col-md-6 col-lg-6 video-thumb"
+              data-toggle="modal"
+              data-target="#myModalVideo"
+              [attr.data-tipo]="item.tipo"
+              [attr.data-src]="item.url"
+              [ngStyle]="{ 'background-image' : 'url(' + item.thumbnail + ')'}"
+              *ngFor="let item of lista"
+                (click)="showVideo(item.url)"
+              >
+
+                <img src="assets/video_icono.png">
+        </div>
+    </div>
+</section>
+
+
+<!--
+-----------------------------------------
+Modal Video
+-----------------------------------------
+-->
+
+<div class="modal fade" id="myModalVideo" tabindex="-1" role="dialog" aria-labelledby="contactoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <!-- 16:9 aspect ratio -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" [src]="videoSrc | domseguro" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

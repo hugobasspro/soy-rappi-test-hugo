@@ -1,0 +1,102 @@
+<section class="faq">
+  <div class="faq__search">
+    <img class="imgFaqs" src="/assets/img/search-icon.svg" alt="Search" />
+    <form [formGroup]="formData" class="form">
+      <input
+        #searchInput
+        placeholder="{{ data.searchLabel }}"
+        type="text"
+        formControlName="question"
+        (ngModelChange)="valuechange($event)"
+        [matAutocomplete]="auto"
+      />
+      <mat-autocomplete class="custom-scroll" #auto="matAutocomplete">
+        <mat-option
+          *ngFor="let option of search"
+          [value]="option.text"
+          (onSelectionChange)="
+            getOption($event.source.value, option.id, option.id)
+          "
+        >
+          {{ option.text }}
+        </mat-option>
+      </mat-autocomplete>
+    </form>
+
+    <button (click)="searchQuestion()" class="btn-buscar">
+      {{ data.searchButton }}
+    </button>
+  </div>
+
+  <div class="faq__section">
+    <div class="faq__section-list">
+      <ul>
+        <li
+          *ngFor="let category of categoryFaqs; let i = index"
+          (click)="selectCategory(i, category.id)"
+        >
+          <span [ngClass]="{ active: isActive === i }">
+            {{ category.name }}
+          </span>
+        </li>
+      </ul>
+    </div>
+    <div class="faq__section-content">
+      <h3 class="faq__section-content-title" *ngIf="activeCategory">
+        {{ activeCategory.name }}
+      </h3>
+      <div class="faq__section-accordian scroll">
+        <cdk-accordion class="example-accordion">
+          <cdk-accordion-item
+            class="faq__section-accordian-list"
+            *ngFor="let item of questionsFaqs; let index = index"
+            #accordionItem="cdkAccordionItem"
+            role="button"
+            tabindex="0"
+            [expanded]="item.id === selectedQuestion?.id"
+            [attr.id]="'accordion-header-' + index"
+            [attr.aria-expanded]="accordionItem.expanded"
+            [attr.aria-controls]="'accordion-body-' + index"
+          >
+            <h4
+              class="faq__section-accordian-title"
+              (click)="toggle(item)"
+              (click)="accordionItem.toggle()"
+            >
+              <span
+                [ngStyle]="{
+                  color: splitText(item).lastTwoWords ? 'black' : '#E53E00'
+                }"
+              >
+                {{ splitText(item).firstPart }}
+              </span>
+              <span
+                *ngIf="splitText(item).lastTwoWords"
+                [ngStyle]="{ color: '#E53E00' }"
+              >
+                {{ splitText(item).lastTwoWords }}
+              </span>
+            </h4>
+            <div
+              class="faq__section-accordian-content"
+              [style.display]="
+                accordionItem.expanded ? '' : item.active ? '' : 'none'
+              "
+              [attr.id]="'accordion-body-' + index"
+              [attr.aria-labelledby]="'accordion-header-' + index"
+            >
+              <div
+                class="faq__section-accordian-content-inner"
+                *ngFor="let index of answersFaqs"
+              >
+                <div *ngIf="item.answer === index.id">
+                  <p class="answer" [innerHTML]="index.text"></p>
+                </div>
+              </div>
+            </div>
+          </cdk-accordion-item>
+        </cdk-accordion>
+      </div>
+    </div>
+  </div>
+</section>

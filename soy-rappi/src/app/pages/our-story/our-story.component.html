@@ -1,0 +1,21 @@
+<app-standard-banner [data]="ourStoryPageData?.banner"></app-standard-banner>
+<app-breadcrumb-tabs-block></app-breadcrumb-tabs-block>
+<app-image-gallery [bigImage]="uploadService.makeUrl(ourStoryPageData?.mainImage)"></app-image-gallery>
+<div class="text-one">
+  <app-title-text-block [text]="ourStoryPageData?.mainImageText"></app-title-text-block>
+</div>
+<div class="text-second">
+  <app-title-text-block [text]="ourStoryPageData?.mainImageHighlightedText"
+                        [textColor]="'red'"></app-title-text-block>
+</div>
+<app-multimedia-block *ngIf="ourStoryPageData?.multimedia" 
+                      [data]="(ourStoryPageData?.multimedia) ? ourStoryPageData?.multimedia : undefined"></app-multimedia-block>
+
+<section class="section-content bg-gray">
+    <div class="container story">
+        <app-rich-text [text]="ourStoryPageData?.richContent"></app-rich-text>
+    </div>
+</section>
+
+
+<app-frequent-questions-block [data]="ourStoryPageData?.frequentQuestions"></app-frequent-questions-block>

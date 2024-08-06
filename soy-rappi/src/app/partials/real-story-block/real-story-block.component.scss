@@ -1,0 +1,105 @@
+@import "../../../assets/css/tools/variable.scss";
+
+.block-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  h2{
+    font-family: 'pp_object_sansbold';
+    font-size: 2.375rem;
+    color: $base-color;
+    @media (max-width: 575px){
+      font-size: 1.375rem;
+    }
+    @media (max-width: 375px){
+      font-size: 1rem;
+    }
+  }
+  .btn-share{
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #1FD8B5;
+    border-radius: 50%;
+    margin-right: 20px;
+    @media (max-width: 675px){
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+  }
+  .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 146px;
+    height: 55px;
+    padding: 0;
+  }
+}
+
+:host ::ng-deep {
+  .owl-nav{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50px);
+    margin: 0;
+    width: 100%;
+    >div{
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      background-color: $white-color !important;
+      border: 2px solid #1FD8B5;
+      border-radius: 50% !important;
+      text-indent: -9000px;
+      margin: 0 !important;
+      &:hover{
+        background: #23aeb9 !important;
+        background: linear-gradient(270deg, #23aeb9 0%, #1fd8b5 100%) !important;
+      }
+    }
+    .owl-next{
+      right: -34px;
+      &::after{
+        content: "";
+        position: absolute;
+        background: url(/assets/img/next-arrow.svg) no-repeat 0 0;
+        width: 17px;
+        height: 30px;
+        left: 26px;
+        top: 18px;
+        transform: rotate(180deg);
+      }
+      &:hover{
+        &::after{
+          content: "";
+          background: url(/assets/img/right-arrow-hover.svg) no-repeat 0 0;
+          transform: rotate(0);
+        }
+      }
+    }
+    .owl-prev{
+      left: -34px;
+      &::after{
+        content: "";
+        position: absolute;
+        background: url(/assets/img/prev-arrow.svg) no-repeat 0 0;
+        width: 17px;
+        height: 30px;
+        left: 26px;
+        top: 18px;
+      }
+      &:hover{
+        &::after{
+          content: "";
+          background: url(/assets/img/right-arrow-hover.svg) no-repeat 0 0;
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}

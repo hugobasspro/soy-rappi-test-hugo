@@ -1,0 +1,31 @@
+<app-left-text-banner [data]="rappi?.banner"></app-left-text-banner>
+<app-breadcrumb-tabs-block></app-breadcrumb-tabs-block>
+<div class="raapi-tools-cta">
+  <app-call-to-action-block [data]="(rappi?.rappiToolsBlock) ? rappi?.rappiToolsBlock : undefined"></app-call-to-action-block>
+</div>
+
+<app-multimedia-block *ngIf="rappi?.multimedia" [data]="(rappi?.multimedia) ? rappi?.multimedia : undefined"></app-multimedia-block>
+<section class="bg-gray section-content earn-more">
+    <app-title-text-block [data]="(rappi?.titleTextBlock) ? rappi?.titleTextBlock : undefined"></app-title-text-block>
+    <app-ordered-list [data]="(rappi) ? rappi.orderedList : []"></app-ordered-list>
+</section>
+
+<section class="section-content">
+    <div class="container">
+        <app-receive-orders-generic-step *ngFor="let step of (rappi?.toolsStep) ? rappi?.toolsStep : []; let i = index; let odd = odd"
+                                         [class.oddStep]="odd"
+                                         [stepNumber]="i"
+                                         [data]="(step) ? step : undefined">
+        </app-receive-orders-generic-step>
+    </div>
+</section>
+
+<section class="section-content">
+    <div class="container">
+        <app-curiosities-carousel [carousel]="rappi?.carousel"
+                                  [bgColor]="rappi?.CarouselBgColor">
+        </app-curiosities-carousel>
+    </div>
+</section>
+
+<app-frequent-questions-block [data]="rappi?.frequentQuestions"></app-frequent-questions-block>

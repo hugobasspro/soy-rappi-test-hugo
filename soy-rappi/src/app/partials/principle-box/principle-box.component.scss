@@ -1,0 +1,23 @@
+@import "../../../assets/css/tools/variable.scss";
+
+.principal-block{
+  background: $white-color;
+  border: 2px solid #DEDEDE;
+  border-radius: 20px;
+  padding: 20px;
+  width: 260px;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 35px;
+  img{
+    margin-bottom: 25px;
+  }
+  p{
+    font-family: "pp_object_sansregular";
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    color: $base-color;
+  }
+}

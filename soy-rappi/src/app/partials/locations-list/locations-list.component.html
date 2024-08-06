@@ -1,0 +1,9 @@
+<div class="location-list">
+    <ul>
+        <li *ngFor="let item of items; let i = index;"
+            [ngClass]="{'active': currentIndex === i}">
+            <span class="map-label">{{item.label}}</span> <a href="javascript:void(0)"
+               class="map-link" (click)="clickIndex(i);">{{previewLocation}}</a>
+        </li>
+    </ul>
+</div>

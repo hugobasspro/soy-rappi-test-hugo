@@ -1,0 +1,21 @@
+<div class="content-tab-sec">
+    <div class="container">
+        <div class="tab-contents">
+          <ul class="nav nav-tabs">
+            <li class="nav-item" *ngFor="let item of navItems">
+              <a *ngIf="headerService.isNavItemExternal(item)"
+                 [ngClass]="{'nav-link': true, active: isItemEnabled(item)}"
+                 [href]="headerService.getLinkFromNavItem(item)">
+                {{item.label}}
+              </a>
+              <a *ngIf="!headerService.isNavItemExternal(item)"
+                 [ngClass]="{'nav-link': true, active: isItemEnabled(item)}"
+                 [routerLink]="getInternalLink(item)"
+                 (click)="itemClicked(item)">
+                {{item.label}}
+              </a>
+            </li>
+          </ul>
+        </div>
+    </div>
+</div>

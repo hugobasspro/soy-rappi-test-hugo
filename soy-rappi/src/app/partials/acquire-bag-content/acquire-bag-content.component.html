@@ -1,0 +1,18 @@
+<div *ngIf="benefits && benefits.length > 0" class="acquire-bag-benefit">
+  <div class="container">
+    <div class="benefit-content">
+      <div class="row">
+        <div class="col-md-4" *ngFor="let benefit of benefits">
+          <div class="text-center">
+            <div class="benefit-img">
+              <img class="img-fluid" [src]="uploadService.makeUrl(benefit.image)" />
+            </div>
+            <div class="benefit-text">
+              <p>{{benefit.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

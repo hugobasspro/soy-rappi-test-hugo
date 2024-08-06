@@ -1,0 +1,12 @@
+@import "../../../assets/css/tools/variable.scss";
+.vehicle {
+  padding: 60px 0 0 0;
+  .section-title {
+    font-size: clamp(36px, 3.75vw, 48px);
+    font-weight: 700;
+  }
+  .line {
+    color: $light-white-gray;
+    height: 2px;
+  }
+}

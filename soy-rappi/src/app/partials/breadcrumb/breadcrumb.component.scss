@@ -1,0 +1,25 @@
+@import "../../../assets/css/tools/variable.scss";
+.breadcrumb-sec {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .fragments {
+    font-size: 1rem;
+    font-family: "pp_object_sansregular";
+    text-decoration: none;
+    color: $base-color;
+    cursor: pointer;
+    &:last-child {
+      font-family: "pp_object_sansbold";
+    }
+    @media (max-width: 767px) {
+      font-size: 0.75rem;
+    }
+  }
+  .container {
+    padding-left: 4.9em;
+
+    @media (max-width: 1366px) {
+      padding-left: 1em;
+    }
+  }
+}

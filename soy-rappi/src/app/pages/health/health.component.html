@@ -1,0 +1,20 @@
+<app-left-text-banner [data]="(health?.banner) ? health?.banner : undefined"></app-left-text-banner>
+<app-breadcrumb-tabs-block></app-breadcrumb-tabs-block>
+
+<app-title-text-block [data]="(health?.titleTextBlock) ? health?.titleTextBlock : undefined"></app-title-text-block>
+
+<section *ngFor="let list of (health?.grayBlocks) ? health?.grayBlocks : []; let i = index" [ngClass]="[list?.bgColor || '']">
+  <div class="container">
+    <div class="health-richtxt">
+      <app-title-text-block [titleInformative]="list?.titleGray" *ngIf="list?.titleGray"></app-title-text-block>
+      <app-rich-text [text]="list?.richText"></app-rich-text>
+      <ng-container>
+        <app-ordered-list [data]="(list) ? list.orderedList : []"></app-ordered-list>
+        <app-rich-text [text]="list?.textAfterList"></app-rich-text>
+        <app-google-maps [mapsUrl]="(list.mapsUrl) ? list.mapsUrl: ''"></app-google-maps>
+      </ng-container>
+    </div>
+  </div>
+</section>
+
+<app-frequent-questions-block [data]="health?.frequentQuestions"></app-frequent-questions-block>

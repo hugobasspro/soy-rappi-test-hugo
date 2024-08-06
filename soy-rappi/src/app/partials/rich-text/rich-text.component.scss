@@ -1,0 +1,221 @@
+@import "../../../assets/css/tools/variable.scss";
+
+:host::ng-deep {
+  .richtext-area {
+    font-family: "pp_object_sansregular";
+    font-weight: 400;
+    color: $base-color;
+
+    h1 {
+      font-size: 64px;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: 56px;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: 45px;
+      font-weight: 700;
+    }
+
+    h4 {
+      font-size: 40px;
+      font-weight: 700;
+    }
+    strong {
+      font-weight: 700;
+    }
+
+    .text-huge {
+      font-size: 32px;
+    }
+
+    .text-big {
+      font-size: 24px;
+    }
+
+    .text-small {
+      font-size: 16px;
+    }
+
+    .text-tiny {
+      font-size: 8px;
+    }
+
+    ol,
+    ul {
+      margin-bottom: 0.938rem;
+      li {
+        font-family: "pp_object_sansregular";
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.5rem;
+        color: $base-color;
+        display: flex;
+        align-items: center;
+        text-align: initial !important;
+      }
+    }
+
+    ol {
+      li {
+        margin-bottom: 10px;
+        counter-increment: item;
+        text-align: initial !important;
+        &:before {
+          content: counter(item) ".";
+          background-color: $light-orange-bg-color;
+          width: 43px;
+          height: 43px;
+          border-radius: 50%;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          color: $purple-color;
+          margin-right: 15px;
+          flex: none;
+        }
+      }
+    }
+
+    ul {
+      margin: 20px 0 20px 0;
+      li {
+        color: $base-color;
+        margin: 5px 0;
+        position: relative;
+        padding-left: 25px;
+        display: block;
+        text-align: initial !important;
+        &::before {
+          content: "";
+          background: url(/assets/img/bullet.svg) no-repeat 0 0;
+          width: 7px;
+          height: 7px;
+          position: absolute;
+          left: 0;
+          top: 8px;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .list-number {
+      background-color: $light-orange-bg-color;
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "pp_object_sansbold";
+      color: $purple-color;
+      margin-right: 15px;
+      flex: none;
+      font-size: 1.5rem;
+      @media (max-width: 575px) {
+        width: 58px;
+        height: 58px;
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 460px) {
+      h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 28px;
+        line-height: 32px;
+      }
+
+      h3 {
+        font-size: 24px;
+        line-height: 30px;
+      }
+
+      h4 {
+        font-size: 20px;
+      }
+
+      .text-huge {
+        font-size: 16px;
+      }
+
+      .text-big {
+        font-size: 12px;
+      }
+
+      .text-small {
+        font-size: 8px;
+      }
+
+      .text-tiny {
+        font-size: 4px;
+      }
+
+      ol,
+      ul {
+        li {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.account-media {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  .account-media-img {
+    min-width: 400px;
+    margin-right: 100px;
+    @media (max-width: 991px) {
+      min-width: 340px;
+      margin-right: 50px;
+    }
+    @media (max-width: 767px) {
+      min-width: auto;
+      margin: 0 auto;
+    }
+  }
+  .account-media-content {
+    margin-left: auto;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+    .account-block {
+      background-color: $pink-orange-bg-color;
+      border-radius: 10px;
+      padding: 25px 25px 25px 35px;
+      margin: 30px 0;
+      font-family: "pp_object_sansregular";
+      font-size: 1.125rem;
+      color: $base-color;
+      max-width: 560px;
+      min-height: 163px;
+      width: 100%;
+      h4 {
+        font-family: "pp_object_sansbold";
+        margin-bottom: 5px;
+      }
+      p {
+        @media (max-width: 767px) {
+          font-size: 0.875rem;
+          line-height: 1.5rem;
+        }
+      }
+      @media (max-width: 575px) {
+        margin: 30px -12px;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+}

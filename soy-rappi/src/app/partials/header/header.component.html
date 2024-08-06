@@ -1,0 +1,71 @@
+<nav *ngIf="headerPageData?.items" class="navbar navbar-expand-lg bg-white fixed-top">
+  <ng-container *ngIf="_loadContentService.showContent">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/"><img [src]="uploadService.makeUrl(headerPageData?.logo)" alt="Logo"></a>
+      <div class="collapse navbar-collapse" id="collapseBasic" #collapse="bs-collapse" [collapse]="isOpen">
+        <div class="nav-head d-flex justify-content-between">
+          <a class="navbar-brand d-lg-none" routerLink="/"><img [src]="uploadService.makeUrl(headerPageData?.logo)"
+              alt="Logo"></a>
+          <button class="navbar-toggler" type="button" (click)="collapse.hide()" aria-controls="collapseManual">
+            <span class="navbar-toggler-icon navbar-toggler-icon--close">
+              <img src="assets/img/close-icon.svg" alt="Close">
+            </span>
+          </button>
+        </div>
+        <ul class="navbar-nav ms-auto mt-2 mb-2 mb-lg-0" #toggleButton>
+          <li class="nav-item" *ngFor="let principal of headerPageData?.items, let i = index" (click)="navClick(i)">
+            <a class="nav-link" *ngIf="headerService.isSingleMenuItemExternal(principal)"
+              [href]="headerService.getLinkFromSingleMenuItem(principal)"
+              (click)="navItemClicked(principal);collapse.hide()"
+              [ngClass]="{'dropdown-toggle': !principal.singleItem, 'active': isNavItemActive(principal) && principal?.isOpen === true}"
+              role="button" aria-current="page">
+              {{principal?.label}}
+            </a>
+            <a class="nav-link" *ngIf="!headerService.isSingleMenuItemExternal(principal)"
+              [routerLink]="principal.singleItem ? [headerService.getLinkFromSingleMenuItem(principal)] : undefined"
+              (click)="navItemClicked(principal); principal.singleItem ? collapse.hide() : undefined"
+              [ngClass]="{'dropdown-toggle': !principal.singleItem, 'active': (isNavItemActive(principal) && principal.isOpen)}"
+              role="button" aria-current="page">
+              {{principal?.label}}
+            </a>
+            <ng-container *ngIf="!principal.singleItem && principal.items.length">
+              <div Class="dropdown-menu" *ngIf="isNavItemActive(principal) && principal.isOpen === true">
+                <ul [ngClass]="childrenOneColumn(principal.items) ? 'one-column': 'two-column'">
+                  <ng-container *ngFor="let child of principal.items">
+                    <li>
+                      <a class="dropdown-item" *ngIf="headerService.isNavItemExternal(child)"
+                        [href]="headerService.getLinkFromNavItem(child)" (click)="navClickSub(child);collapse.hide()">
+                        {{child?.label}}
+                      </a>
+                      <a class="dropdown-item" *ngIf="!headerService.isNavItemExternal(child)"
+                        [routerLink]="[headerService.getLinkFromNavItem(child)]"
+                        (click)="navClickSub(child);collapse.hide()">
+                        {{child?.label}}
+                      </a>
+                    </li>
+                  </ng-container>
+                </ul>
+              </div>
+            </ng-container>
+          </li>
+        </ul>
+
+        <button type="button" class="btn btn-gradient d-sm-block d-lg-none hide-mobile"
+          (click)="clickMenuActions(whatYouHaveToKnowFormUrl); collapse.hide()">
+          {{headerPageData?.registerButtonText}}
+        </button>
+      </div>
+      <div *ngIf="headerPageData?.registerButtonText" class="btn-register">
+        <a *ngIf="sharedFunctionsService.isExternalLink(headerPageData?.registerButtonUrl)"
+          [href]="headerPageData?.registerButtonUrl"
+          class="btn btn-gradient d-flex align-items-center justify-content-center">{{headerPageData?.registerButtonText}}</a>
+        <a *ngIf="!sharedFunctionsService.isExternalLink(headerPageData?.registerButtonUrl)"
+          class="btn btn-gradient d-flex align-items-center justify-content-center"
+          [href]="urlform">{{headerPageData?.registerButtonText}}</a>
+      </div>
+      <button class="navbar-toggler" type="button" (click)="collapse.show()" aria-controls="collapseManual">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </ng-container>
+</nav>

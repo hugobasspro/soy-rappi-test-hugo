@@ -1,0 +1,15 @@
+<app-left-text-banner [data]="earnWithRappiData?.banner"></app-left-text-banner>
+<app-breadcrumb-tabs-block></app-breadcrumb-tabs-block>
+<app-title-text-block [data]="earnWithRappiData?.howWorksTitleText"></app-title-text-block>
+<app-left-image-block [data]="earnWithRappiData?.leftImage"></app-left-image-block>
+<app-right-image-block [data]="earnWithRappiData?.calendar"></app-right-image-block>
+<app-mobile-captures-carousel *ngIf="earnWithRappiData?.carousel" [captures]="earnWithRappiData?.carousel?.captures"
+                              [bgColor]="earnWithRappiData?.carousel?.bgColor"></app-mobile-captures-carousel>
+<app-image-gallery [bigImage]="uploadService.makeUrl(earnWithRappiData?.gallery?.bigImage)"
+                   [smallImages]="[
+                        uploadService.makeUrl(earnWithRappiData?.gallery?.smallImage1),
+                        uploadService.makeUrl(earnWithRappiData?.gallery?.smallImage2),
+                        uploadService.makeUrl(earnWithRappiData?.gallery?.smallImage3),
+                        uploadService.makeUrl(earnWithRappiData?.gallery?.smallImage4)
+                   ]"></app-image-gallery>
+<app-frequent-questions-block [data]="earnWithRappiData?.frequentQuestions"></app-frequent-questions-block>

@@ -1,0 +1,62 @@
+@import "../../../assets/css/tools/variable.scss";
+.slide-counter {
+  position: relative;
+  text-align: right;
+  padding-top: 22px;
+  .numbers {
+    font-size: 1.625rem;
+    color: $base-color;
+    .active {
+      font-weight: bold;
+    }
+    @media (max-width: 767px){
+      font-size: 0.875rem;
+    }
+  }
+  &:before {
+    position: absolute;
+    content: "";
+    width: 90px;
+    height: 5px;
+    background-color: $base-color;
+    right: 10%;
+    top: 38px;
+    @media (max-width: 991px) {
+      right: 14%;
+    }
+    @media (max-width: 767px){
+      width: 60px;
+      height: 3px;
+      top: 30px;
+    }
+    @media (max-width: 375px) {
+      right: 17%;
+    }
+
+  }
+  @media (max-width: 767px){
+    right: 15px;
+  }
+}
+.slider-img-block{
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  height: 100%;
+  gap: 10px;
+  align-items: center;
+  span {
+    width: 80%;
+    word-wrap: break-word;
+    text-align: center;
+  }
+}
+
+:host ::ng-deep {
+  .owl-carousel .owl-item img{
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+}

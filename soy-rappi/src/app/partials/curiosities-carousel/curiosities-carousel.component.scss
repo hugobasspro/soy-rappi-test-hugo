@@ -1,0 +1,145 @@
+@import "../../../assets/css/tools/variable.scss";
+.curiosities-slider {
+  position: relative;
+  .curiosities-slider-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    min-height: 425px;
+    padding: 61.5px 75px;
+    margin: 0 30px;
+    background: $golden-color;
+    .image-block {
+      width: 285px;
+      height: 285px;
+      background-color: $pink-orange-bg-color;
+      box-shadow: 0px 13px 8px #ba9d7460;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: none;
+      margin-right: 65px;
+      img {
+        width: auto;
+        max-width: 100%;
+        @media (max-width: 991px) {
+          width: 80%;
+        }
+      }
+      @media (max-width: 991px) {
+        width: 240px;
+        height: 240px;
+      }
+      @media (max-width: 767px) {
+        margin-right: 0;
+        margin-bottom: 30px;
+        width: 150px;
+        height: 150px;
+      }
+    }
+    .content-block {
+      width: calc(100% - 285px);
+      h3 {
+        font-family: "pp_object_sansbold";
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: $base-color;
+        @media (max-width: 767px) {
+          font-size: 1.25rem;
+        }
+      }
+      ul {
+        margin-bottom: 30px;
+        li {
+          font-family: "pp_object_sansregular";
+          font-size: 1.125rem;
+          color: $base-color;
+          margin: 5px 0;
+          position: relative;
+          padding-left: 25px;
+          &::before {
+            content: "";
+            background-color: $orange-color;
+            width: 11px;
+            height: 11px;
+            position: absolute;
+            border-radius: 50%;
+            left: 0;
+            top: 5px;
+            @media (max-width: 767px) {
+              left: 5px;
+              width: 8px;
+              height: 8px;
+              display: none;
+            }
+
+          }
+          @media (max-width: 1024px) {
+            font-size: 1rem;
+          }
+          @media (max-width: 767px) {
+            font-size: 0.875rem;
+          }
+          @media (max-width: 767px) {
+            font-size: 0.875rem;
+            padding-left: 0;
+          }
+        }
+      }
+      p {
+        font-family: "pp_object_sansregular";
+        font-size: 1.125rem;
+        line-height: 28px;
+        margin-bottom: 30px;
+        color: $base-color;
+      }
+      .btn {
+        width: 100%;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (min-width: 1200px) {
+          max-width: 186px;
+        }
+        @media (max-width: 767px) {
+          max-width: 134px;
+          height: 31px;
+          font-size: 0.688rem;
+          margin: 0 auto;
+          width: 100%;
+        }
+      }
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+    }
+    @media (max-width: 1200px) {
+      min-height: 508px;
+    }
+    @media (max-width: 1024px) {
+      margin: 0 20px;
+    }
+    @media (max-width: 991px) {
+      padding: 40px 40px 100px 40px;
+    }
+    @media (max-width: 767px) {
+      flex-direction: column;
+      padding: 20px 20px 60px 20px;
+    }
+  }
+}
+
+::ng-deep{
+  .curiosities-slider-block{
+    .section-title{
+      .richtext-area{
+        .text-big{
+          font-size: 1.375rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import "../../../assets/css/tools/variable.scss";
+
+.our-benefits {
+  font-family: "pp_object_sansregular";
+  .section-title {
+    font-size: clamp(36px,3.75vw,48px);
+    font-weight: 700;
+  }
+}

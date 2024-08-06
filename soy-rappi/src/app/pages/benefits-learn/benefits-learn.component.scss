@@ -1,0 +1,26 @@
+:host ::ng-deep {
+  .deliveryman__title {
+    width: 13ch;
+  }
+}
+
+.news {
+  &__always {
+    padding: 2.56rem 1.69rem 2.75rem 1.5rem;
+    color: #000;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 121%;
+    max-width: 73.75rem;
+    margin: 0 auto;
+
+    @media screen and (min-width: 64rem) {
+      font-size: 2.8125rem;
+      padding: 4.56rem 1.69rem 1.94rem 1.5rem;
+    }
+
+    @media screen and (min-width: 85.375rem) {
+      padding: 4.56rem 0 1.94rem;
+    }
+  }
+}

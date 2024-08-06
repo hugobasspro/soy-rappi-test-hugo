@@ -1,0 +1,23 @@
+<section class="seccion-noticias mt-5 reveal animate__animated" data-effect="animate__lightSpeedInLeft">
+    <div class="container container-fluid content-row">
+
+        <h1 class="titulo text-center animate__animated animate__flipInX">Historias de nuestros Rappitenderos</h1>
+
+        <div class="row mt-5">
+
+            <div class="col col-12 col-md-6 col-lg-4 col-xl-3 mt-4" *ngFor="let nota of notas">
+                <a [routerLink]="['/nota', nota.slug]">
+                  <div class="card bounce-effect h-100" >
+                      <img class="card-img-top" [src]="nota.imagen" [alt]="nota.titulo">
+                      <div class="card-body">
+                          <h5 class="titulo">{{ nota.titulo }}</h5>
+                          <p class="card-text">{{ nota.resumen }}</p>
+                      </div>
+                  </div>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>

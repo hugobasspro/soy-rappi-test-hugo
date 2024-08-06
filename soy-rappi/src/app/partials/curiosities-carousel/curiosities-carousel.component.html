@@ -1,0 +1,32 @@
+<owl-carousel-o [options]="customOptions"
+                [ngClass]="'curiosities-slider'"
+                (translated)="getData($event)">
+    <ng-container *ngFor="let carouselItem of carousel">
+        <ng-template carouselSlide>
+            <div class="curiosities-slider-block"
+                 [style]="'background-color:'+ bgColor + ';'">
+                <div class="image-block" *ngIf="carouselItem.image">
+                    <img [src]="uploadService.makeUrl(carouselItem.image)" />
+                </div>
+                <div class="content-block">                    
+                    <h2 *ngIf="carouselItem?.titleCarousel?.title" class="section-title">
+                        <app-rich-text [text]="carouselItem?.titleCarousel?.title"></app-rich-text>
+                    </h2>
+                    <ul *ngIf="carouselItem.textList">
+                        <li *ngFor="let item of carouselItem?.textList">{{item.title}}</li>
+                    </ul>
+                    <p *ngIf="carouselItem.description">{{carouselItem?.description}}</p>
+                    <a *ngIf="sharedFunctionsService.isExternalLink(carouselItem?.button?.url) && carouselItem?.button"
+                        [href]="carouselItem?.button?.url"
+                        class="btn btn-gradient">{{carouselItem?.button?.label}}</a>
+                    <a *ngIf="!sharedFunctionsService.isExternalLink(carouselItem?.button?.url) && carouselItem?.button"
+                        [routerLink]="sharedFunctionsService.removeInitialSlash(carouselItem?.button?.url)"
+                        class="btn btn-gradient">{{carouselItem?.button?.label}}</a>
+                </div>
+                <div class="slide-counter">
+                    <div class="numbers"> <span class="active">0{{startPosition + 1 }}</span> / 0{{carousel?.length!}}</div>
+                </div>
+            </div>
+        </ng-template>
+    </ng-container>
+</owl-carousel-o>

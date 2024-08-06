@@ -1,0 +1,12 @@
+<div class="small-info-colored-block">
+  <div class="container">
+    <div class="colored-content">
+      <div class="left-img">
+        <img class="img-fluid" [src]="uploadService.makeUrl(data?.image)" />
+      </div>
+      <div class="desc">
+        <app-rich-text [text]="data?.titleInfo?.title"></app-rich-text>
+      </div>
+    </div>
+  </div>
+</div>

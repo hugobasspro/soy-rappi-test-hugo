@@ -1,0 +1,34 @@
+<section class="videos">
+  <div class="videos__top">
+    <img
+      [src]="!responsiveService.validateDisplay(display, displays.DESKTOP) ? uploadService.makeUrl(data.topImage) : uploadService.makeUrl(data.topImageDesktop)">
+
+    <div class="videos__head">
+      <div class="videos__header">
+        <img class="videos__stars" [src]="uploadService.makeUrl(data.rightImage)">
+        <h2 class="videos__title">{{data.title}}</h2>
+      </div>
+
+      <div class="videos__filters">
+        <div class="videos__filter-list">
+          <div class="videos__filter" [class.videos__filter--active]="selectedIndex === i" *ngFor="let category of data.categories; 
+                let i = index" (click)="selectCategory(i)">
+            <img [src]="uploadService.makeUrl(category.icon)">
+            <h3>{{category.name}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="videos__gallery">
+    <div class="videos__video" *ngFor="let video of selectedCategory.videos" (click)="openVideo(video)">
+      <div class="videos__thumbnail">
+        <img [src]="video.thumbnail">
+        <!-- Uncomment to show video time thumbnail, need to develop get duration by video  -->
+        <span class="videos__thumbnail-time">  {{(video.minutes < 10 ? '0' : '') + video.minutes.toString()}} : {{(video.seconds < 10 ? '0' : '') + video.seconds.toString()}}</span>
+      </div>
+      <h3 class="videos__video-title">{{video.title}}</h3>
+    </div>
+  </div>
+</section>

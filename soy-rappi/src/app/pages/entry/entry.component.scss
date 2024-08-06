@@ -1,0 +1,22 @@
+:host ::ng-deep {
+  .image-gallary-sec {
+    margin-top: 40px !important;
+  }
+  .entry-right-img-block {
+    .right-img-sec {
+      background-color: #fff;
+      padding-top: 0;
+      .desc {
+        margin-bottom: 10px !important;
+      }
+      .left-block {
+        button {
+          margin-top: 10px !important;
+          @media (max-width: 768px) {
+            margin: initial !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@import "../../../assets/css/tools/variable.scss";
+
+.number{
+  background-color: #F5E5CE;
+  width: 70px;
+  height: 96px;
+  border-radius: 35px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'pp_object_sansbold';
+  font-size: 2.5rem;
+  color: $base-color;
+  margin-right: 30px;
+  flex: none;
+  @media (max-width: 767px){
+    width: 40px;
+    height: 60px;
+    font-size: 1.25rem;
+  }
+}
+.bank-link-content{
+  font-family: 'pp_object_sansregular';
+  font-size: 1.125rem;
+  line-height: 28px;
+  color: $base-color;
+  padding-top: 20px;
+  p{
+    margin-bottom: 20px;
+  }
+  ul{
+    margin: 20px 0 20px -24px;
+    li{
+      font-family: 'pp_object_sansregular';
+      font-size: 1.125rem;
+      color: $base-color;
+      margin: 5px 0;
+      position: relative;
+      padding-left: 25px;
+      &::before{
+        content: "";
+        background: url(/assets/img/bullet.svg) no-repeat 0 0;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        left: 0;
+        top: 8px;
+      }
+    }
+  }
+}
+.account-media{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  .account-media-img{
+    min-width: 400px;
+    margin-right: 100px;
+    @media (max-width: 991px){
+      min-width: 340px;
+      margin-right: 50px;
+    }
+    @media (max-width: 767px){
+      min-width: auto;
+      margin: 0 auto;
+    }
+  }
+  .account-media-content{
+    .account-block{
+      background-color: $pink-orange-bg-color;
+      border-radius: 10px;
+      padding: 25px 25px 25px 35px;
+      margin: 30px 0;
+      font-family: 'pp_object_sansregular';
+      font-size: 1.125rem;
+      color: $base-color;
+      h4{
+        font-family: 'pp_object_sansbold';
+        margin-bottom: 5px;
+      }
+    }
+  }
+  @media (max-width: 767px){
+    flex-direction: column;
+  }
+}

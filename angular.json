@@ -1,0 +1,673 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "blog-rappitenderos-frontend": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "soy-rappi",
+      "sourceRoot": "soy-rappi/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "build",
+            "index": "soy-rappi/src/index.html",
+            "main": "soy-rappi/src/main.ts",
+            "polyfills": "soy-rappi/src/polyfills.ts",
+            "tsConfig": "soy-rappi/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "soy-rappi/src/favicon.ico",
+              "soy-rappi/src/assets",
+              "soy-rappi/src/robots.txt"
+            ],
+            "styles": [
+              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
+              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
+              "node_modules/animate.css/animate.css",
+              "soy-rappi/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1.5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "5kb",
+                  "maximumError": "20kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "soy-rappi/src/environments/environment.ts",
+                  "with": "soy-rappi/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "stage": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1.5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "5kb",
+                  "maximumError": "20kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "soy-rappi/src/environments/environment.ts",
+                  "with": "soy-rappi/src/environments/environment.stage.ts"
+                }
+              ],
+              "outputHashing": "all",
+              "sourceMap": true
+            },
+            "rappi": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "5kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "soy-rappi/src/environments/environment.ts",
+                  "with": "soy-rappi/src/environments/environment.rappi.ts"
+                }
+              ],
+              "outputHashing": "all",
+              "sourceMap": true
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            },
+            "es-co": {
+              "fileReplacements": [
+                {
+                  "replace": "soy-rappi/src/environments/locale/locale.ts",
+                  "with": "soy-rappi/src/environments/locale/locale.es-co.ts"
+                },
+                {
+                  "replace": "soy-rappi/src/environments/environment.ts",
+                  "with": "soy-rappi/src/environments/environment.rappi.ts"
+                }
+              ],
+              "assets": [
+                "soy-rappi/src/favicon.ico",
+                "soy-rappi/src/assets",
+                "soy-rappi/src/sitemap-co.xml",
+                "soy-rappi/src/robots.txt"
+              ]
+            },
+            "pt-br": {
+              "fileReplacements": [
+                {
+                  "replace": "soy-rappi/src/environments/locale/locale.ts",
+                  "with": "soy-rappi/src/environments/locale/locale.pt-br.ts"
+                },
+                {
+                  "replace": "soy-rappi/src/environments/environment.ts",
+                  "with": "soy-rappi/src/environments/environment.rappi.ts"
+                }
+              ],
+              "assets": [
+                "soy-rappi/src/favicon.ico",
+                "soy-rappi/src/assets",
+                "soy-rappi/src/sitemap-br.xml",
+                "soy-rappi/src/robots.txt"
+              ]
+            },
+            "es-mx": {
+              "fileReplacements": [
+                {
+                  "replace": "soy-rappi/src/environments/locale/locale.ts",
+                  "with": "soy-rappi/src/environments/locale/locale.es-mx.ts"
+                },
+                {
+                  "replace": "soy-rappi/src/environments/environment.ts",
+                  "with": "soy-rappi/src/environments/environment.rappi.ts"
+                }
+              ],
+              "assets": [
+                "soy-rappi/src/favicon.ico",
+                "soy-rappi/src/assets",
+                "soy-rappi/src/sitemap-mx.xml",
+                "soy-rappi/src/robots.txt"
+              ]
+            },
+            "es-ar": {
+              "fileReplacements": [
+                {
+                  "replace": "soy-rappi/src/environments/locale/locale.ts",
+                  "with": "soy-rappi/src/environments/locale/locale.es-ar.ts"
+                },
+                {
+                  "replace": "soy-rappi/src/environments/environment.ts",
+                  "with": "soy-rappi/src/environments/environment.rappi.ts"
+                }
+              ],
+              "assets": [
+                "soy-rappi/src/favicon.ico",
+                "soy-rappi/src/assets",
+                "soy-rappi/src/sitemap-ar.xml",
+                "soy-rappi/src/robots.txt"
+              ]
+            },
+            "es-cl": {
+              "fileReplacements": [
+                {
+                  "replace": "soy-rappi/src/environments/locale/locale.ts",
+                  "with": "soy-rappi/src/environments/locale/locale.es-cl.ts"
+                },
+                {
+                  "replace": "soy-rappi/src/environments/environment.ts",
+                  "with": "soy-rappi/src/environments/environment.rappi.ts"
+                }
+              ],
+              "assets": [
+                "soy-rappi/src/favicon.ico",
+                "soy-rappi/src/assets",
+                "soy-rappi/src/sitemap-cl.xml",
+                "soy-rappi/src/robots.txt"
+              ]
+            },
+            "es-pe": {
+              "fileReplacements": [
+                {
+                  "replace": "soy-rappi/src/environments/locale/locale.ts",
+                  "with": "soy-rappi/src/environments/locale/locale.es-pe.ts"
+                },
+                {
+                  "replace": "soy-rappi/src/environments/environment.ts",
+                  "with": "soy-rappi/src/environments/environment.rappi.ts"
+                }
+              ],
+              "assets": [
+                  "soy-rappi/src/favicon.ico",
+                  "soy-rappi/src/assets",
+                  "soy-rappi/src/sitemap-pe.xml",
+                  "soy-rappi/src/robots.txt"
+                ]
+            },
+            "es-ec": {
+              "fileReplacements": [
+                {
+                  "replace": "soy-rappi/src/environments/locale/locale.ts",
+                  "with": "soy-rappi/src/environments/locale/locale.es-ec.ts"
+                },
+                {
+                  "replace": "soy-rappi/src/environments/environment.ts",
+                  "with": "soy-rappi/src/environments/environment.rappi.ts"
+                }
+              ],
+              "assets": [
+                "soy-rappi/src/favicon.ico",
+                "soy-rappi/src/assets",
+                "soy-rappi/src/sitemap-ec.xml",
+                "soy-rappi/src/robots.txt"
+              ]
+            },
+            "es-cr": {
+              "fileReplacements": [
+                {
+                  "replace": "soy-rappi/src/environments/locale/locale.ts",
+                  "with": "soy-rappi/src/environments/locale/locale.es-cr.ts"
+                },
+                {
+                  "replace": "soy-rappi/src/environments/environment.ts",
+                  "with": "soy-rappi/src/environments/environment.rappi.ts"
+                }
+              ],
+              "assets": [
+                "soy-rappi/src/favicon.ico",
+                "soy-rappi/src/assets",
+                "soy-rappi/src/sitemap-cr.xml",
+                "soy-rappi/src/robots.txt"
+              ]
+            },
+            "es-uy": {
+              "fileReplacements": [
+                {
+                  "replace": "soy-rappi/src/environments/locale/locale.ts",
+                  "with": "soy-rappi/src/environments/locale/locale.es-uy.ts"
+                },
+                {
+                  "replace": "soy-rappi/src/environments/environment.ts",
+                  "with": "soy-rappi/src/environments/environment.rappi.ts"
+                }
+              ],
+              "assets": [
+                "soy-rappi/src/favicon.ico",
+                "soy-rappi/src/assets",
+                "soy-rappi/src/sitemap-uy.xml",
+                "soy-rappi/src/robots.txt"
+              ]
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "blog-rappitenderos-frontend:build:production"
+            },
+            "stage": {
+              "browserTarget": "blog-rappitenderos-frontend:build:stage"
+            },
+            "development": {
+              "browserTarget": "blog-rappitenderos-frontend:build:development"
+            },
+            "rappi": {
+              "browserTarget": "blog-rappitenderos-frontend:build:rappi"
+            },
+            "es-ar": {
+              "browserTarget": "blog-rappitenderos-frontend:build:es-ar"
+            },
+            "pt-br": {
+              "browserTarget": "blog-rappitenderos-frontend:build:pt-br"
+            },
+            "es-cl": {
+              "browserTarget": "blog-rappitenderos-frontend:build:es-cl"
+            },
+            "es-co": {
+              "browserTarget": "blog-rappitenderos-frontend:build:es-co"
+            },
+            "es-cr": {
+              "browserTarget": "blog-rappitenderos-frontend:build:es-cr"
+            },
+            "es-ec": {
+              "browserTarget": "blog-rappitenderos-frontend:build:es-ec"
+            },
+            "es-mx": {
+              "browserTarget": "blog-rappitenderos-frontend:build:es-mx"
+            },
+            "es-pe": {
+              "browserTarget": "blog-rappitenderos-frontend:build:es-pe"
+            },
+            "es-uy": {
+              "browserTarget": "blog-rappitenderos-frontend:build:es-uy"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "blog-rappitenderos-frontend:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "soy-rappi/src/test.ts",
+            "polyfills": "soy-rappi/src/polyfills.ts",
+            "tsConfig": "soy-rappi/tsconfig.spec.json",
+            "karmaConfig": "soy-rappi/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "soy-rappi/src/favicon.ico",
+              "soy-rappi/src/assets"
+            ],
+            "styles": [
+              "soy-rappi/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/blog-rappitenderos-frontend/server",
+            "main": "soy-rappi/server.ts",
+            "tsConfig": "soy-rappi/tsconfig.server.json",
+            "inlineStyleLanguage": "scss"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "soy-rappi/src/environments/environment.ts",
+                  "with": "soy-rappi/src/environments/environment.prod.ts"
+                }
+              ]
+            },
+            "stage": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "soy-rappi/src/environments/environment.ts",
+                  "with": "soy-rappi/src/environments/environment.stage.ts"
+                }
+              ],
+              "sourceMap": true
+            },
+            "rappi": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "soy-rappi/src/environments/environment.ts",
+                  "with": "soy-rappi/src/environments/environment.rappi.ts"
+                }
+              ],
+              "sourceMap": true
+            },
+            "development": {
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false
+            },
+            "es-co": {
+              "fileReplacements": [
+                {
+                  "replace": "soy-rappi/src/environments/locale/locale.ts",
+                  "with": "soy-rappi/src/environments/locale/locale.es-co.ts"
+                }
+              ]
+            },
+            "pt-br": {
+              "fileReplacements": [
+                {
+                  "replace": "soy-rappi/src/environments/locale/locale.ts",
+                  "with": "soy-rappi/src/environments/locale/locale.pt-br.ts"
+                }
+              ]
+            },
+            "es-mx": {
+              "fileReplacements": [
+                {
+                  "replace": "soy-rappi/src/environments/locale/locale.ts",
+                  "with": "soy-rappi/src/environments/locale/locale.es-mx.ts"
+                }
+              ]
+            },
+            "es-ar": {
+              "fileReplacements": [
+                {
+                  "replace": "soy-rappi/src/environments/locale/locale.ts",
+                  "with": "soy-rappi/src/environments/locale/locale.es-ar.ts"
+                }
+              ]
+            },
+            "es-cl": {
+              "fileReplacements": [
+                {
+                  "replace": "soy-rappi/src/environments/locale/locale.ts",
+                  "with": "soy-rappi/src/environments/locale/locale.es-cl.ts"
+                }
+              ]
+            },
+            "es-pe": {
+              "fileReplacements": [
+                {
+                  "replace": "soy-rappi/src/environments/locale/locale.ts",
+                  "with": "soy-rappi/src/environments/locale/locale.es-pe.ts"
+                }
+              ]
+            },
+            "es-ec": {
+              "fileReplacements": [
+                {
+                  "replace": "soy-rappi/src/environments/locale/locale.ts",
+                  "with": "soy-rappi/src/environments/locale/locale.es-ec.ts"
+                }
+              ]
+            },
+            "es-cr": {
+              "fileReplacements": [
+                {
+                  "replace": "soy-rappi/src/environments/locale/locale.ts",
+                  "with": "soy-rappi/src/environments/locale/locale.es-cr.ts"
+                }
+              ]
+            },
+            "es-uy": {
+              "fileReplacements": [
+                {
+                  "replace": "soy-rappi/src/environments/locale/locale.ts",
+                  "with": "soy-rappi/src/environments/locale/locale.es-uy.ts"
+                }
+              ]
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "blog-rappitenderos-frontend:build:development",
+              "serverTarget": "blog-rappitenderos-frontend:server:development"
+            },
+            "stage": {
+              "browserTarget": "blog-rappitenderos-frontend:build:stage",
+              "serverTarget": "blog-rappitenderos-frontend:server:stage"
+            },
+            "rappi": {
+              "browserTarget": "blog-rappitenderos-frontend:build:rappi",
+              "serverTarget": "blog-rappitenderos-frontend:server:rappi"
+            },
+            "production": {
+              "browserTarget": "blog-rappitenderos-frontend:build:production",
+              "serverTarget": "blog-rappitenderos-frontend:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "blog-rappitenderos-frontend:build:production",
+              "serverTarget": "blog-rappitenderos-frontend:server:production"
+            },
+            "stage": {
+              "browserTarget": "blog-rappitenderos-frontend:build:stage",
+              "serverTarget": "blog-rappitenderos-frontend:server:stage"
+            },
+            "rappi": {
+              "browserTarget": "blog-rappitenderos-frontend:build:rappi",
+              "serverTarget": "blog-rappitenderos-frontend:server:rappi"
+            },
+            "development": {
+              "browserTarget": "blog-rappitenderos-frontend:build:development",
+              "serverTarget": "blog-rappitenderos-frontend:server:development"
+            },
+            "es-co": {
+              "browserTarget": "blog-rappitenderos-frontend:build:es-co",
+              "serverTarget": "blog-rappitenderos-frontend:server:es-co"
+            },
+            "pt-br": {
+              "browserTarget": "blog-rappitenderos-frontend:build:pt-br",
+              "serverTarget": "blog-rappitenderos-frontend:server:pt-br"
+            },
+            "es-mx": {
+              "browserTarget": "blog-rappitenderos-frontend:build:es-mx",
+              "serverTarget": "blog-rappitenderos-frontend:server:es-mx"
+            },
+            "es-ar": {
+              "browserTarget": "blog-rappitenderos-frontend:build:es-ar",
+              "serverTarget": "blog-rappitenderos-frontend:server:es-ar"
+            },
+            "es-cl": {
+              "browserTarget": "blog-rappitenderos-frontend:build:es-cl",
+              "serverTarget": "blog-rappitenderos-frontend:server:es-cl"
+            },
+            "es-pe": {
+              "browserTarget": "blog-rappitenderos-frontend:build:es-pe",
+              "serverTarget": "blog-rappitenderos-frontend:server:es-pe"
+            },
+            "es-ec": {
+              "browserTarget": "blog-rappitenderos-frontend:build:es-ec",
+              "serverTarget": "blog-rappitenderos-frontend:server:es-ec"
+            },
+            "es-cr": {
+              "browserTarget": "blog-rappitenderos-frontend:build:es-cr",
+              "serverTarget": "blog-rappitenderos-frontend:server:es-cr"
+            },
+            "es-uy": {
+              "browserTarget": "blog-rappitenderos-frontend:build:es-uy",
+              "serverTarget": "blog-rappitenderos-frontend:server:es-uy"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "soy-rappi/src/**/*.ts",
+              "soy-rappi/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "mxCampaign": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "mxCampaign",
+      "sourceRoot": "mxCampaign/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "build",
+            "index": "mxCampaign/src/index.html",
+            "main": "mxCampaign/src/main.ts",
+            "polyfills": "mxCampaign/src/polyfills.ts",
+            "tsConfig": "mxCampaign/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "mxCampaign/src/favicon.ico",
+              "mxCampaign/src/assets"
+            ],
+            "styles": [
+              "mxCampaign/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "mxCampaign/src/environments/environment.ts",
+                  "with": "mxCampaign/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "mxCampaign:build:production"
+            },
+            "development": {
+              "browserTarget": "mxCampaign:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "mxCampaign:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "mxCampaign/src/test.ts",
+            "polyfills": "mxCampaign/src/polyfills.ts",
+            "tsConfig": "mxCampaign/tsconfig.spec.json",
+            "karmaConfig": "mxCampaign/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "mxCampaign/src/favicon.ico",
+              "mxCampaign/src/assets"
+            ],
+            "styles": [
+              "mxCampaign/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "blog-rappitenderos-frontend",
+  "cli": {
+    "analytics": "66daeaeb-cdaa-4ed9-adb6-f248c1b1b77e",
+    "defaultCollection": "@angular-eslint/schematics"
+  }
+}

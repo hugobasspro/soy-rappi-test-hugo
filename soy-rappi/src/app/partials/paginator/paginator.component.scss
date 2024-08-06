@@ -1,0 +1,44 @@
+@import "../../../assets/css/tools/variable.scss";
+
+.active {
+    font-weight: 900;
+}
+
+.pagination{
+  justify-content: center;
+  margin-top: 50px;
+  ul{
+    display: flex;
+    li{
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-family: 'pp_object_sansregular';
+      font-size: 1.25rem;
+      color: $base-color;
+      margin: 0 2px;
+      cursor: pointer;
+      &.active,
+      &:hover{
+        font-family: 'pp_object_sansbold';
+        background: #23aeb9 !important;
+        background: linear-gradient(270deg, #23aeb9 0%, #1fd8b5 100%) !important;
+        color: $white-color;
+      }
+      @media (max-width: 575px){
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+      }
+      &.left-btn,
+      &.right-btn{
+        img{
+          width: 10px;
+        }
+      }
+    }
+  }
+}

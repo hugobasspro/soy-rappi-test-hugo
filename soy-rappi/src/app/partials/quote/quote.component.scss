@@ -1,0 +1,53 @@
+@import "../../../assets/css/tools/variable.scss";
+
+.quote {
+  background-color: #f5e5ce;
+  padding: 70px 0;
+  margin-bottom: 70px;
+  .quite-txt {
+    font-family: "pp_object_sansbold";
+    font-size: 1.875rem;
+    color: $base-color;
+    position: relative;
+    padding: 0 18% 0 22%;
+    &::before {
+      content: "";
+      position: absolute;
+      background: url(/assets/img/icons/icon-quote.png);
+      left: 10%;
+      top: -76px;
+      width: 112px;
+      height: 91px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      @media (max-width: 991px) {
+        left: 5%;
+      }
+      @media (max-width: 575px) {
+        width: 80px;
+        height: 59px;
+        top: -40px;
+      }
+    }
+    @media (max-width: 1400px) {
+      padding: 0 9% 0 22%;
+    }
+    @media (max-width: 1200px) {
+      padding: 0 0% 0 25%;
+    }
+    @media (max-width: 767px) {
+      padding: 0 0% 0 30%;
+    }
+    @media (max-width: 575px) {
+      padding: 0 4% 0 26%;
+      font-size: 1.25rem;
+    }
+    @media (max-width: 400px) {
+      padding: 0 4% 0 33%;
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 575px) {
+    padding: 35px 0;
+  }
+}

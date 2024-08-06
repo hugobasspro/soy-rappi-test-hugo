@@ -1,0 +1,16 @@
+<section class="section-content vehicle">
+    <div class="container">
+        <div class="section-head text-center">
+            <h2 class="section-title">{{title}}</h2>
+        </div>
+        <owl-carousel-o [options]="customOptions" [ngClass]="'vehicle-slider'" (translated)="getData($event)">
+            <ng-container *ngFor="let vehicleTypeBox of vehicleTypeBoxes">
+                <ng-template carouselSlide>
+                    <app-vehicle-type-box [vehicleImage]="uploadService.makeUrl(vehicleTypeBox.image)" [type]="vehicleTypeBox.title" [requirements]="vehicleTypeBox?.textItems">
+                    </app-vehicle-type-box>
+                </ng-template>
+            </ng-container>
+        </owl-carousel-o>
+        <hr>
+    </div>
+</section>

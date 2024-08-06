@@ -1,0 +1,22 @@
+<app-left-text-banner [data]="exclusive?.banner"></app-left-text-banner>
+<app-breadcrumb-tabs-block></app-breadcrumb-tabs-block>
+
+<app-title-text-block [data]="(exclusive?.titleTextBlock) ? exclusive?.titleTextBlock : undefined"></app-title-text-block>
+
+<section *ngFor="let list of (exclusive?.grayBlocks) ? exclusive?.grayBlocks : []; let i = index"
+         [ngClass]="[list?.bgColor || '']">
+    <div class="container">
+        <div class="health-richtxt">
+            <app-title-text-block [titleInformative]="list.titleGray" *ngIf="list.titleGray"></app-title-text-block>
+            <app-rich-text [text]="list?.richText"></app-rich-text>
+            <ng-container>
+                <app-ordered-list [data]="(list) ? list.orderedList : []"  *ngIf="!!list?.orderedList"></app-ordered-list>
+                <app-rich-text [text]="list?.textAfterList" *ngIf="!!list?.textAfterList" ></app-rich-text>
+                <app-google-maps [mapsUrl]="(list.mapsUrl) ? list.mapsUrl: ''" *ngIf="!!list?.mapsUrl"></app-google-maps>
+                <app-google-maps [mapsUrl]="(list.mapsUrl2) ? list.mapsUrl2: ''" *ngIf="!!list?.mapsUrl2"></app-google-maps>
+              </ng-container>
+        </div>
+    </div>
+</section>
+
+<app-frequent-questions-block [data]="exclusive?.frequentQuestions"></app-frequent-questions-block>

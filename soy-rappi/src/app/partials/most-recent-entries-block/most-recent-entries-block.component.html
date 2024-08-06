@@ -1,0 +1,19 @@
+<div class="multimedia-sec">
+    <div class="dp-container">
+        <div class="section-head text-left mb-0" *ngIf="title ">
+            <h2 class="section-title ">{{ title }}</h2>
+        </div>
+        <div>
+            <owl-carousel-o [options]="customOptions" [ngClass]="'multimedia-slider'" (translated)="getData($event)" *ngIf="customOptions">
+                <ng-container *ngFor="let entry of data">
+                    <ng-template carouselSlide>
+                        <app-most-recent-entry-card [data]="entry?.categories"
+                                    [titleCategory]="entry?.typeCategory?.category"
+                                    [slug]="entry?.slug"
+                                   ></app-most-recent-entry-card>
+                    </ng-template>
+                </ng-container>
+            </owl-carousel-o>
+        </div>
+    </div>
+</div>

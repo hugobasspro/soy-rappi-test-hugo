@@ -1,0 +1,13 @@
+<div class="category-block"
+     [routerLink]="'../' + slug">
+    <div class="category-block-img">
+        <img [src]="getImage((data) ? data.image : [])"
+             class="img-fluid" />
+    </div>
+    <div class="category-block-content">
+        <p class="category">{{titleCategory}}</p>
+        <p class="category-date">{{ date }}</p>
+        <h3 class="category-title">{{data?.title}}</h3>
+        <p class="category-description">{{data?.description}}</p>
+    </div>
+</div>

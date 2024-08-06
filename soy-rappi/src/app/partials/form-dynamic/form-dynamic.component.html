@@ -1,0 +1,32 @@
+<div class="register-block-head">
+    <img [src]="uploadService.makeUrl(data?.logo)" alt="soyrappi" />
+</div>
+<div class="register-block-body">
+    <div class="register-block-info">
+      <app-rich-text [text]="data?.description"></app-rich-text>
+    </div>
+    <div class="register-form">
+      <form class="form" [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+        <div formArrayName="fields">
+          <ng-container *ngFor="let d of fields?.controls; let i = index">
+            <div [formGroupName]="i">
+              <div class="form-row">
+                <label for="inputNombre">{{ d.value.label }}*</label>
+                <input type="{{d.value.type}}" class="form-control contacto-input form-input" placeholder="{{d.value.input}}" formControlName="{{ d.value.label }}">
+                <p class="error" *ngIf="d.invalid && (d.dirty || d.touched)">
+                  Campo requerido
+                </p>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      
+        <div class="register-block-btnwrap">
+          <button type="submit" id="btnEnviar" class="boton_fondo small w-75 btn-registrarse">Enviar</button>
+        </div>
+      </form>
+    </div>
+</div>
+<div class="register-block-footer">
+    <img src="/assets/img/vector-icon.png" alt="icon" />
+</div>

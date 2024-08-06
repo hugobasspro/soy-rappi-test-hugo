@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31.532" height="22" viewBox="0 0 31.532 22">
+  <g id="Group_1" data-name="Group 1" transform="translate(-328.994 -19)">
+    <g id="icon-menu" transform="translate(329 19)">
+      <path id="Trazado_1873" data-name="Trazado 1873" d="M29.417,12.83H5.583A1.244,1.244,0,0,1,4.5,11.477h0a1.244,1.244,0,0,1,1.083-1.352H29.417A1.244,1.244,0,0,1,30.5,11.477h0a1.244,1.244,0,0,1-1.083,1.353Z" transform="translate(-4.5 -10.125)" fill="#fff"/>
+      <path id="Trazado_1874" data-name="Trazado 1874" d="M34.709,19.58H5.813A1.337,1.337,0,0,1,4.5,18.227h0a1.337,1.337,0,0,1,1.313-1.352h28.9a1.337,1.337,0,0,1,1.313,1.352h0a1.337,1.337,0,0,1-1.317,1.353Z" transform="translate(-4.5 -7.227)" fill="#fff"/>
+      <path id="Trazado_1875" data-name="Trazado 1875" d="M24.586,26.33H5.373c-.48,0-.873-.609-.873-1.352h0c0-.744.393-1.352.873-1.352H24.586c.48,0,.873.609.873,1.352h0C25.46,25.721,25.067,26.33,24.586,26.33Z" transform="translate(-4.5 -4.33)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

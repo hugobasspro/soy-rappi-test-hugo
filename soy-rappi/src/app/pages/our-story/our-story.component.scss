@@ -1,0 +1,35 @@
+.text-one{
+  max-width: 1060px;
+  margin: 0 auto;
+}
+.text-second{
+  max-width: 875px;
+  margin: 0 auto;
+}
+.story{
+  &.container{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1052px;
+  }
+}
+
+::ng-deep {
+  .standard-banner-sec {
+    .banner-title {
+      max-width: 890px !important;
+      p {
+        font-size: 4rem;
+        line-height: 72px;
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    .big-box{
+      img{
+        height: 461px;
+        max-width: 693px;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<section *ngIf="!!data " >
+    <div class="container">
+        <ol class="order-list"
+            *ngIf="!!data">
+            <li *ngFor="let item of data; let i = index">
+                <div>
+                    <span class="list-number">{{(startIndex || 0) + i + 1 }}.</span>
+                    <p>{{ item.text }}</p>
+                </div>
+                <img class="img-fluid" *ngIf="item.image && item.image.length > 0"
+                     [src]="uploadService.makeUrl(item.image.length ? item.image[0] : item.image)" />
+            </li>
+        </ol>
+        <ol class="order-list"
+            *ngIf="!!dataBlog">
+            <li *ngFor="let item of (dataBlog) ? dataBlog.listItem : []; let i = index">
+                <div>
+                    <span class="list-number">{{(startIndex || 0) + i + 1 }}.</span>
+                    <p>{{ item.text }}</p>
+                </div>
+                <img class="img-fluid" *ngIf="isImage((item) ? item.image : [])"
+                     [src]="getImage((item) ? item.image : [])" />
+            </li>
+        </ol>
+    </div>
+</section>

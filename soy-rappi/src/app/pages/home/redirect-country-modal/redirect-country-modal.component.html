@@ -1,0 +1,16 @@
+<div *ngIf="showModal" class="blur-modal-redirect">
+<div class="container animate__animated animate__backInUp animate__delay-1s">
+  <div  class="redirect-modal">
+    <div class="cancel-position" (click)="closeRedirectModal()">
+      <img src="assets/img/countries/countries-redirect/cancel.svg" alt="Close">
+    </div>
+    <h1>¿En qué país estás?</h1>
+    <div *ngFor="let c of countries"  (click)="redirectCountry(c.link)" class="hover-countries">
+      <div>
+        <img class="country-size" src='{{c.flag}}'>
+        <label class="country-label">{{c.name}}</label>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

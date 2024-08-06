@@ -1,0 +1,27 @@
+<section class="seccion-faqs mt-5 reveal animate__animated" data-effect="animate__lightSpeedInLeft">
+    <div class="container">
+        <h1 class="titulo text-center">Preguntas frecuentes</h1>
+
+        <div class="accordion mt-5" id="accordionFaqs">
+
+            <div class="card" *ngFor="let item of lista; let i = index">
+                <div class="card-header" [id]="'heading' + i">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link text-left" type="button" data-toggle="collapse"  [attr.data-target]="'#collapse' + i" [attr.aria-controls]="'collapse' + i"  aria-expanded="true">
+                            {{ item.pregunta }}
+                        </button>
+                    </h5>
+                </div>
+
+                <div [id]="'collapse' + i" class="collapse"  [attr.aria-labelledby]="'heading' + i" data-parent="#accordionFaqs">
+                    <div class="card-body" [innerHtml]="item.texto | safehtml">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>

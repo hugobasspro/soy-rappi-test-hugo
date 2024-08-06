@@ -1,0 +1,29 @@
+.banner {
+  background-image: url("/assets/img/benefits/banner--insurance.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 12.75rem max(0.94rem, 3.4976%) 12.69rem;
+  width: 100%;
+
+  @media screen and (min-width: 64rem) {
+    background-image: url("/assets/img/benefits/desktop-banner--insurance.png");
+    padding: 9.87rem 8.12rem 24.44rem;
+    aspect-ratio: 91.9375 / 31.9375;
+  }
+
+  &__title {
+    color: #FFF;
+    font-size: 3.3rem;
+    font-weight: 700;
+    line-height: 96%;
+
+    @media screen and (min-width: 25.875rem) {
+      font-size: 3.75rem;
+    }
+
+    @media screen and (min-width: 64rem) {
+      width: 13ch;
+    }
+  }
+}

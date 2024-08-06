@@ -1,0 +1,33 @@
+{
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	"mainEntity": [{
+		"@type": "Question",
+		"name": "¿Qué pasa si no me conecto en el punto de inicio que reservé?",
+		"acceptedAnswer": {
+			"@type": "Answer",
+			"text": "Si en la primera reserva que tengas en el día no te conectas en el punto de inicio que previamente escogiste, la aplicación no tendrá forma de asignarte pedidos. Las demás reservas que tengas en el mismo día puedes comenzarlas desde otra zona en caso que las entregas de la reserva anterior te hayan hecho desplazarte a otro lugar."
+		}
+	}, {
+		"@type": "Question",
+		"name": "¿Qué hago si los pedidos me llevan a otra zona?",
+		"acceptedAnswer": {
+			"@type": "Answer",
+			"text": "Si al hacer entregas terminas moviéndote a otra zona diferente a la que reservaste, vas a seguir recibiendo pedidos sin problema. Lo importante es que la primer conexión del día sea en el punto de inicio de tu primer reserva Las demás reservas las puedes iniciar en cualquier zona, sin embargo, lo más recomendable para que mantengas la prioridad ante la aplicación es que intentes siempre volver a la zona reservada."
+		}
+	}, {
+		"@type": "Question",
+		"name": "¿Qué hago si quiero descansar o necesito ir a un baño?",
+		"acceptedAnswer": {
+			"@type": "Answer",
+			"text": "Debes completar al menos el 75 % del tiempo de tu reserva para que esta sea contada como completa en tus valoraciones. Esto quiere decir que puedes usar un 25 % para descansar o ir a un baño en caso que lo necesites. Por ejemplo, en una reserva de 2 horas (120 minutos) debes estar conectado al menos 90 minutos y cuentas con 30 minutos para desconectarte en caso que lo necesites."
+		}
+	}, {
+		"@type": "Question",
+		"name": "¿Puedo conectarme sin reservar?",
+		"acceptedAnswer": {
+			"@type": "Answer",
+			"text": "Puedes hacerlo, sin embargo, va a ser más difícil que la aplicación te asigne pedidos pues le dará prioridad a los repartidores que previamente indicaron lugar y hora de conexión a través de la reserva."
+		}
+	}]
+}

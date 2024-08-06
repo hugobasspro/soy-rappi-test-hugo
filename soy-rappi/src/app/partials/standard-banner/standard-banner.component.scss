@@ -1,0 +1,30 @@
+@import "../../../assets/css/tools/variable.scss";
+.standard-banner-sec {
+  padding: 7% 140px;
+  height: 21.875rem;
+  background-position: center center !important;
+
+  .banner-title {
+    max-width: 622px;
+    p {
+      font-family: "pp_object_sansbold";
+      font-size: 4rem;
+      line-height: 1;
+      color: $white-color;
+      @media (max-width: 900px) {
+        font-size: 3.4rem;
+      }
+      @media (max-width: 767px) {
+        font-size: 2.2rem;
+      }
+      @media (max-width: 320px) {
+        font-size: 2rem;
+      }
+    }
+    
+  }
+  @media (max-width: 767px) {
+    padding: 26% 42px 7% 12px;
+    background-position: center center !important;
+  }
+}

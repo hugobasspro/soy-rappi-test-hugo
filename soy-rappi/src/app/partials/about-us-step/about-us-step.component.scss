@@ -1,0 +1,72 @@
+@import "../../../assets/css/tools/variable.scss";
+
+.about-section{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  .about-img{
+    img{
+      border-radius: 10px;
+    }
+    @media (max-width: 991px) {
+      width: 50%;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+      order: 1;
+      margin-bottom: 2rem;
+      margin-top: 50px;
+    }
+  }
+  .about-img-left{
+    margin-right: 5rem;
+    @media (max-width: 767px) {
+      margin-right: 0;
+    }
+  }
+  .about-img-right{
+    margin-left: 5rem;
+    @media (max-width: 767px) {
+      margin-left: 0;
+    }
+  }
+  .about-content{
+    width: 37%;
+    h2{
+      font-family: "pp_object_sansbold";
+      font-size: 2.375rem;
+      color: $base-color;
+      margin-bottom: 1.25rem;
+      @media (max-width: 767px) {
+        font-size: 1.75rem;
+        position: absolute;
+        top: 0;
+      }
+    }
+    p{
+      font-family: "pp_object_sansregular";
+      font-size: 1.125rem;
+      line-height: 1.5rem;
+      color: $base-color;
+    }
+    @media (max-width: 991px) {
+      width: 50%;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+      order: 2;
+    }
+    .btn{
+      width: 11.625rem;
+      height: 3.438rem;
+    }
+  }
+  @media (min-width: 1400px){
+
+  }
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+
+}

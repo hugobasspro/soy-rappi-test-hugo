@@ -1,0 +1,14 @@
+<section class="section-content vehicle">
+    <div class="container">
+        <div class="section-head text-center">
+            <h2 class="section-title">{{title}}</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-4" *ngFor="let vehicleTypeBox of vehicleTypeBoxes">
+                <app-vehicle-type-box [vehicleImage]="uploadService.makeUrl(vehicleTypeBox.image)" [type]="vehicleTypeBox.title" [requirements]="vehicleTypeBox?.textItems">
+                </app-vehicle-type-box>
+            </div>
+        </div>
+        <hr class="line" style="margin: 50px 0;">
+    </div>  
+</section>

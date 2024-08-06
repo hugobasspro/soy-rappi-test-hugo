@@ -1,0 +1,21 @@
+<section class="faq">
+  <img class="faq__stars" [src]="uploadService.makeUrl(data.image)">
+
+  <h2 class="faq__header">
+    <span class="faq__title">{{data.title}}</span>
+  </h2>
+
+  <ul class="faq__dropdowns">
+    <li class="faq__item" *ngFor="let faq of data.faq; index as i">
+      <div class="faq__question" [ngClass]="{'faq__line': !faq.active}" (click)="toggleAnswer(i)">
+        <p>{{faq.question}}</p>
+        <img class="faq__arrow" [ngClass]="{'faq__arrow--active': faq.active}" src="/assets/svg/dropdown.svg"
+          alt="Arrow down">
+      </div>
+
+      <div *ngIf="faq.active" class="faq__answer" [ngClass]="{'faq__line': faq.active}">
+        <p>{{faq.answer}}</p>
+      </div>
+    </li>
+  </ul>
+</section>

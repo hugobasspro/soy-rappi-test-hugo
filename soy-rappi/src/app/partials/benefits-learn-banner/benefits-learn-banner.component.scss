@@ -1,0 +1,20 @@
+.banner {
+  background-image: url("/assets/img/benefits/banner--learn.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 18.88rem 1.69rem 6.5rem 1.56rem;
+  max-width: 100vw;
+
+  @media screen and (min-width: 64rem) {
+    background-image: url("/assets/img/benefits/desktop-banner--learn.png");
+    aspect-ratio: 91.9375 / 31.9375;
+  }
+
+  &__title {
+    color: #FFF;
+    font-size: 3.75rem;
+    font-weight: 700;
+    line-height: 96%;
+  }
+}

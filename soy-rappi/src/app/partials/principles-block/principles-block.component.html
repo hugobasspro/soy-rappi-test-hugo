@@ -1,0 +1,11 @@
+<section class="principal-section section-content bg-gray my-5">
+  <div class="container">
+    <h2 class="section-title mb-5 text-center">{{data?.title}}</h2>
+    <div class="d-flex flex-wrap justify-content-center">
+        <app-principle-box *ngFor="let principle of (data?.principles) ? data?.principles : []; let i = index"
+                           [text]="principle.text"
+                           [icon]="uploadService.makeUrl(principle.icon)"
+                           [index]="i+1"></app-principle-box>
+    </div>
+</div>
+</section>

@@ -1,0 +1,13 @@
+<app-left-text-banner [data]="fiveStars?.banner"></app-left-text-banner>
+<app-breadcrumb-tabs-block></app-breadcrumb-tabs-block>
+<!-- Note: app-tab-content-desktop component shows only in desktop -->
+<app-title-text-block [data]="(fiveStars?.titleTextBlock) ? fiveStars?.titleTextBlock : undefined"></app-title-text-block>
+<app-tab-content-desktop class="d-none d-md-block"
+                         [data]="fiveStars?.tabContent"
+                         [tabs]="fiveStars?.howToSteps"></app-tab-content-desktop>
+<!-- Note: app-top-content-mobile-carousel component shows only in mobile -->
+<app-top-content-mobile-carousel class="d-sm-block d-md-none"
+                                [data]="fiveStars?.tabContent"
+                                [tabs]="fiveStars?.howToSteps"></app-top-content-mobile-carousel>
+
+<app-frequent-questions-block [data]="fiveStars?.frequentQuestions"></app-frequent-questions-block>

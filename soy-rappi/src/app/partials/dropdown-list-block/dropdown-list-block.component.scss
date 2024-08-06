@@ -1,0 +1,64 @@
+@import "../../../assets/css/tools/variable.scss";
+@import "../../../assets/css/fonts.scss";
+
+h2 {
+    font-family: 'pp_object_sansbold';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    color: $base-color;
+}
+
+button {
+    font-family: 'Nunito';
+    min-width: min(16vw, 183px);
+    height: 56px;
+    background: $button-gray;
+    border-radius: 8px;
+    color: $base-color;
+    margin: 0px 20px 16px 0;
+    border-width: unset;
+    border-style: unset;
+    border-color: unset;
+    border-image: unset;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 34px;
+}
+
+.active {
+    background-color: $button-green;
+    color: $white-color;
+}
+
+.tags-container {
+    margin: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container {
+    max-width: min(84vw, 1440px);
+}
+
+@media (max-width: 560px) {
+    h2 {
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 40px;
+    }
+    button {
+        min-width: 25vw;
+        height: 45px;
+        margin: 0px 17px 16px 0;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+    .tags-container {
+        margin: 20px 0;
+    }
+    .container {
+        max-width: unset;
+    }
+}

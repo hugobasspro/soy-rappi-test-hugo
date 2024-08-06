@@ -1,0 +1,46 @@
+@import "../../../assets/css/tools/variable.scss";
+.benefits-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 380px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  .benefits-img {
+    width: 165px;
+    height: 165px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  h3 {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+    font-family: 'pp_object_sansbold';
+    margin-bottom: 15px;
+    width: 14ch;
+    height: 3.5rem;
+    text-align: center;
+    color: $base-color;
+    @media (max-width: 575px) {
+      display: block;
+      font-size: 1.25rem;
+    }
+  }
+  p {
+    font-family: 'pp_object_sansregular';
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    color: $base-color;
+    padding: 0 3%;
+    @media (max-width: 575px) {
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 991px) {
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+}

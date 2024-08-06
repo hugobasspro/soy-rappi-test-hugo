@@ -1,0 +1,39 @@
+@import "../../../assets/css/tools/variable.scss";
+.order-list{
+  li{
+    margin-bottom: 10px;
+    font-size: 1.125rem;
+    display: flex;
+    flex-flow: column nowrap;
+    padding-top: 25px;
+    gap: 30px;
+    div {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+    img {
+      width: fit-content;
+    }
+  }
+}
+
+.list-number{
+  background-color: $light-orange-bg-color;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'pp_object_sansbold';
+  color: $purple-color;
+  margin-right: 15px;
+  flex: none;
+  font-size: 1.5rem;
+  @media (max-width: 575px){
+    width: 58px;
+    height: 58px;
+    font-size: 1rem;
+  }
+}

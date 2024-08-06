@@ -1,0 +1,13 @@
+<div class="news-card"
+     [routerLink]="data?.slug">
+    <div class="news-card-content">
+        <div class="image-background" [style]="'background-image: url(' + getImage((data) ? data.categories.image : []) + ') ;'">
+
+        </div>
+        <div class="news-card-desc">
+            <p class="date">{{ data?.categories?.date }}</p>
+            <p class="head">{{ data?.categories?.title }}</p>
+            <p class="desc">{{ data?.categories?.description }}</p>
+        </div>
+    </div>
+</div>
